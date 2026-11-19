@@ -1,0 +1,1440 @@
+/*
+ * Vježbaonica – izgled đačke sveske.
+ * Svaka boja ima značenje iz školskog pribora:
+ *   plava tinta (tekst), crvena olovka (greške), zeleno (tačno),
+ *   žuti signir (odabrano / istaknuto), ljubičasti pečat (rezultat).
+ */
+:root {
+  --paper: #fcfdff;
+  --grid: #dde8f7;
+  --rule: #cfdcf2;
+  --margin-line: #f2a2ac;
+  --ink: #1d2b6e;
+  --ink-deep: #0f1a4d;
+  --ink-soft: #4f5b8c;
+  --ink-faint: #8790b8;
+  --pen-red: #d22f47;
+  --pen-red-wash: #fdebee;
+  --green: #1b8549;
+  --green-wash: #e3f4e8;
+  --marker: #ffe45c;
+  --stamp: #6b3fc2;
+  --accent: #2f5bd8;
+  --white: #ffffff;
+
+  --font: 'Andika', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --fs-xs: 0.875rem;
+  --fs-sm: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.3125rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2.25rem;
+  --fs-3xl: 3rem;
+
+  --margin-x: 26px;
+  --radius: 14px;
+
+  color-scheme: light;
+  font-family: var(--font);
+  font-size: 100%;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: var(--fs-md);
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+mark {
+  background: linear-gradient(transparent 12%, var(--marker) 12%, var(--marker) 88%, transparent 88%);
+  color: inherit;
+  padding: 0 0.08em;
+  margin: 0 -0.08em;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+[tabindex='-1']:focus {
+  outline: none;
+}
+
+/* ---------- Papir ---------- */
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--paper);
+}
+
+.paper-grid {
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.paper-lines {
+  background-image: linear-gradient(transparent 31px, var(--rule) 31px, var(--rule) 32px, transparent 32px);
+  background-size: 100% 32px;
+}
+
+.page-inner {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0 18px 40px calc(var(--margin-x) + 18px);
+}
+
+/* Crvena margina sveske */
+.page-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--margin-x);
+  width: 2px;
+  background: var(--margin-line);
+  pointer-events: none;
+}
+
+.page-footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  border-top: 2px solid var(--rule);
+  padding: 12px 18px calc(12px + env(safe-area-inset-bottom));
+}
+
+.page-footer.tone-correct {
+  background: var(--green-wash);
+  border-top-color: var(--green);
+}
+
+.page-footer.tone-wrong {
+  background: var(--pen-red-wash);
+  border-top-color: var(--pen-red);
+}
+
+.page-footer-inner {
+  max-width: calc(46rem - var(--margin-x) - 36px);
+  margin: 0 auto;
+}
+
+/* ---------- Opšte ---------- */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 72px;
+}
+
+.topbar-title {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--ink-soft);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: 2px solid var(--rule);
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
+  text-decoration: none;
+  touch-action: manipulation;
+  box-shadow: 0 3px 0 var(--rule);
+}
+
+.icon-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--rule);
+}
+
+.page-title {
+  font-size: var(--fs-2xl);
+  line-height: 1.15;
+  font-weight: 700;
+  margin: 8px 0 20px;
+  text-wrap: balance;
+}
+
+.section-title {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  margin: 32px 0 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 60px;
+  padding: 10px 24px;
+  border-radius: var(--radius);
+  border: 2px solid var(--ink);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition:
+    transform 70ms ease-out,
+    box-shadow 70ms ease-out;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--white);
+  box-shadow: 0 5px 0 var(--ink-deep);
+}
+
+.btn-primary:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--ink-deep);
+}
+
+.btn-primary:disabled {
+  background: #c4cbe4;
+  border-color: #c4cbe4;
+  color: var(--white);
+  box-shadow: 0 5px 0 #aab2d1;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 0 5px 0 var(--rule);
+}
+
+.btn-secondary:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--rule);
+}
+
+.btn-danger {
+  background: var(--pen-red);
+  border-color: var(--pen-red);
+  color: var(--white);
+  box-shadow: 0 5px 0 #9e1f31;
+}
+
+.btn-wide {
+  width: 100%;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  padding: 8px 0;
+  color: var(--ink-soft);
+  font-size: var(--fs-sm);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.link-btn.danger {
+  color: var(--pen-red);
+}
+
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  flex: none;
+  vertical-align: middle;
+}
+
+.star-on {
+  fill: #ffc531;
+  stroke: #c98a00;
+}
+
+.star-off {
+  fill: var(--white);
+  stroke: var(--rule);
+}
+
+/* ---------- Početna ---------- */
+
+.home-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: var(--fs-lg);
+}
+
+.home-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.home-hero {
+  margin: 12px 0 24px;
+}
+
+.home-title {
+  font-size: var(--fs-2xl);
+  line-height: 1.1;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.home-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+  margin-top: 14px;
+}
+
+.grade-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--marker);
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid var(--ink);
+}
+
+.grade-chip-action {
+  font-weight: 400;
+  font-size: var(--fs-sm);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.grade-chip.static {
+  border-color: transparent;
+}
+
+.streak {
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}
+
+.continue {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 28px;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 2px dashed var(--ink-faint);
+  text-decoration: none;
+}
+
+.continue-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.continue-caption {
+  display: block;
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}
+
+.continue-title {
+  display: block;
+  font-weight: 700;
+  font-size: var(--fs-lg);
+  line-height: 1.25;
+}
+
+/* ---------- Korice sveske ---------- */
+
+.covers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 18px;
+}
+
+@media (min-width: 640px) {
+  .covers {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.cover {
+  --cover: var(--accent);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  aspect-ratio: 5 / 7;
+  padding: 12px 9px 12px 21px;
+  border-radius: 5px 16px 16px 5px;
+  background:
+    linear-gradient(118deg, rgb(255 255 255 / 0.22), transparent 38%),
+    var(--cover);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow:
+    3px 3px 0 var(--white),
+    5px 5px 0 var(--rule),
+    7px 8px 0 rgb(29 43 110 / 0.16);
+  overflow: hidden;
+  touch-action: manipulation;
+  transition: transform 90ms ease-out;
+}
+
+/* hrbat sveske */
+.cover::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 13px;
+  background: rgb(0 0 0 / 0.22);
+  box-shadow: 1px 0 0 rgb(255 255 255 / 0.25);
+}
+
+.cover:active {
+  transform: translateY(3px) rotate(-0.6deg);
+}
+
+.cover-icon {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  font-size: 2.6rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 0 rgb(0 0 0 / 0.18));
+}
+
+.cover-number {
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.cover-label {
+  position: relative;
+  display: block;
+  padding: 8px 8px 9px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 2px rgb(29 43 110 / 0.12);
+}
+
+.cover-caption {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--ink-faint);
+  line-height: 1.2;
+}
+
+.cover-name {
+  display: block;
+  font-weight: 700;
+  font-size: clamp(1rem, 4.4vw, var(--fs-lg));
+  line-height: 1.15;
+  padding-bottom: 3px;
+  border-bottom: 2px dotted var(--rule);
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.cover-progress {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 7px;
+}
+
+.cover-progress i {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+  border: 1.5px solid var(--rule);
+}
+
+.cover-progress i.on {
+  background: var(--cover);
+  border-color: var(--cover);
+}
+
+.cover-note {
+  margin-top: 10px;
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}
+
+/* ---------- Predmet: lista tema ---------- */
+
+.subject-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.subject-head .page-title {
+  font-size: var(--fs-xl);
+  margin: 0;
+}
+
+.subject-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--accent);
+  font-size: 2rem;
+  box-shadow: 3px 3px 0 rgb(29 43 110 / 0.16);
+}
+
+.topic-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: grid;
+  gap: 14px;
+}
+
+.topic-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  min-height: 68px;
+  padding: 12px 14px 12px 12px;
+  background: var(--white);
+  border: 2px solid var(--rule);
+  border-left: 10px solid var(--accent);
+  border-radius: 6px var(--radius) var(--radius) 6px;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+
+.topic-row:active {
+  background: #fffbe0;
+}
+
+.topic-num {
+  font-weight: 700;
+  font-size: var(--fs-lg);
+  color: var(--ink-faint);
+  min-width: 1.6em;
+}
+
+.topic-title {
+  display: block;
+  font-weight: 700;
+  font-size: var(--fs-md);
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.topic-desc {
+  display: block;
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+  line-height: 1.35;
+  margin-top: 2px;
+}
+
+.topic-text .stars {
+  margin-top: 6px;
+}
+
+/* ---------- Lekcija ---------- */
+
+.topic-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.topic-head .page-title {
+  margin-bottom: 8px;
+}
+
+.best {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+}
+
+.lesson {
+  display: grid;
+  gap: 20px;
+  margin-top: 12px;
+  font-size: var(--fs-lg);
+  line-height: 1.55;
+  max-width: 38em;
+}
+
+.paper-lines .lesson {
+  line-height: 32px;
+}
+
+.lesson ul {
+  padding-left: 1.2em;
+  display: grid;
+  gap: 6px;
+}
+
+.lesson li::marker {
+  color: var(--accent);
+}
+
+.remember,
+.example {
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.remember {
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--marker);
+}
+
+.remember-title,
+.example-title {
+  font-weight: 700;
+  font-size: var(--fs-md);
+  margin-bottom: 4px;
+}
+
+.remember-title {
+  color: var(--pen-red);
+}
+
+.example {
+  border: 2px dashed var(--ink-faint);
+  background-color: var(--white);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.example-title {
+  color: var(--ink-soft);
+}
+
+.lesson-empty {
+  color: var(--ink-soft);
+}
+
+/* ---------- Vježba ---------- */
+
+.practice-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 76px;
+}
+
+.squares {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.square {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  background: var(--white);
+  border: 2px solid var(--rule);
+  border-radius: 3px;
+}
+
+.square.now {
+  border-color: var(--ink);
+  background: var(--marker);
+}
+
+.square.ok {
+  border-color: var(--green);
+  background: var(--green-wash);
+  color: var(--green);
+}
+
+.square.bad {
+  border-color: var(--pen-red);
+  background: var(--pen-red-wash);
+  color: var(--pen-red);
+}
+
+.question {
+  padding: 4px 0 28px;
+}
+
+.question-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+}
+
+.instruction {
+  font-size: var(--fs-md);
+  color: var(--ink-soft);
+}
+
+.retry-badge {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 2px 10px;
+  border-radius: 6px;
+  background: var(--marker);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+}
+
+.picture {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  margin: 8px 0 0;
+  letter-spacing: 0.08em;
+  overflow-wrap: anywhere;
+}
+
+.prompt {
+  font-size: var(--fs-xl);
+  line-height: 1.35;
+  font-weight: 700;
+  margin: 10px 0 26px;
+  text-wrap: pretty;
+}
+
+.prompt-big {
+  font-size: var(--fs-3xl);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  margin: 18px 0 30px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Ponuđeni odgovori */
+
+.options {
+  display: grid;
+  gap: 14px;
+}
+
+.options-compact {
+  grid-template-columns: repeat(auto-fit, minmax(84px, 1fr));
+}
+
+.option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 64px;
+  padding: 12px 18px;
+  background: var(--white);
+  border: 2px solid var(--rule);
+  border-radius: var(--radius);
+  font-size: var(--fs-lg);
+  line-height: 1.3;
+  text-align: left;
+  color: var(--ink);
+  box-shadow: 0 4px 0 var(--rule);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition:
+    transform 70ms ease-out,
+    box-shadow 70ms ease-out,
+    background-color 120ms;
+}
+
+.option:not(:disabled):active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--rule);
+}
+
+.options-short .option {
+  font-size: var(--fs-xl);
+}
+
+@media (min-width: 560px) {
+  .options-short {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.options-compact .option {
+  justify-content: center;
+  min-height: 76px;
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  text-align: center;
+}
+
+.options-compact .option .icon {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+.option.selected {
+  background: var(--marker);
+  border-color: var(--ink);
+  box-shadow: 0 4px 0 var(--ink);
+}
+
+.option:disabled {
+  cursor: default;
+}
+
+.option.correct,
+.option.reveal {
+  background: var(--green-wash);
+  border-color: var(--green);
+  box-shadow: 0 4px 0 var(--green);
+  color: var(--ink);
+}
+
+.option.correct .icon,
+.option.reveal .icon {
+  color: var(--green);
+}
+
+.option.reveal {
+  border-style: dashed;
+}
+
+.option.wrong {
+  background: var(--pen-red-wash);
+  border-color: var(--pen-red);
+  box-shadow: 0 4px 0 var(--pen-red);
+}
+
+.option.wrong .icon {
+  color: var(--pen-red);
+}
+
+.option.wrong .option-text {
+  text-decoration: line-through;
+  text-decoration-color: var(--pen-red);
+  text-decoration-thickness: 3px;
+}
+
+.option.dim {
+  opacity: 0.5;
+}
+
+.options-truefalse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.options-truefalse .option {
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  min-height: 112px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tf-symbol {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+}
+
+.tf-yes .tf-symbol {
+  color: var(--green);
+}
+
+.tf-no .tf-symbol {
+  color: var(--pen-red);
+}
+
+.options-truefalse .option > .icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+/* Upis odgovora */
+
+.answer-form {
+  display: grid;
+  gap: 14px;
+}
+
+.answer-input {
+  width: 100%;
+  min-height: 68px;
+  padding: 10px 18px;
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--white);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: inset 0 3px 0 var(--grid);
+}
+
+.answer-input.numeric {
+  max-width: 11rem;
+  font-size: var(--fs-2xl);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.answer-input::placeholder {
+  color: var(--ink-faint);
+  font-weight: 400;
+}
+
+.answer-input:focus-visible {
+  outline: 4px solid var(--marker);
+  outline-offset: 0;
+}
+
+.answer-input.correct {
+  border-color: var(--green);
+  background: var(--green-wash);
+}
+
+.answer-input.wrong {
+  border-color: var(--pen-red);
+  background: var(--pen-red-wash);
+  text-decoration: line-through;
+  text-decoration-color: var(--pen-red);
+  text-decoration-thickness: 3px;
+}
+
+.answer-input:disabled {
+  opacity: 1;
+  -webkit-text-fill-color: var(--ink);
+}
+
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.letter {
+  min-width: 52px;
+  min-height: 48px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  border: 2px solid var(--rule);
+  background: var(--white);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  box-shadow: 0 3px 0 var(--rule);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.letter:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--rule);
+}
+
+/* Poredaj */
+
+.order {
+  display: grid;
+  gap: 18px;
+}
+
+.order-slots {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.slot {
+  display: grid;
+  place-items: center;
+  min-width: 64px;
+  min-height: 60px;
+  border-radius: 12px;
+}
+
+.slot.empty {
+  border: 2px dashed var(--ink-faint);
+  background: rgb(255 255 255 / 0.7);
+  color: var(--ink-faint);
+  font-size: var(--fs-sm);
+}
+
+.order-pool {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 2px dotted var(--rule);
+}
+
+.tile {
+  min-width: 64px;
+  min-height: 60px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 2px solid var(--rule);
+  background: var(--white);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  box-shadow: 0 4px 0 var(--rule);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.tile:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--rule);
+}
+
+.tile.placed {
+  background: var(--marker);
+  border-color: var(--ink);
+  box-shadow: 0 4px 0 var(--ink);
+}
+
+.slot.correct .tile {
+  background: var(--green-wash);
+  border-color: var(--green);
+  box-shadow: 0 4px 0 var(--green);
+}
+
+.slot.wrong .tile {
+  background: var(--pen-red-wash);
+  border-color: var(--pen-red);
+  box-shadow: 0 4px 0 var(--pen-red);
+}
+
+.tile:disabled {
+  cursor: default;
+  color: var(--ink);
+}
+
+/* Povratna informacija */
+
+.feedback {
+  display: grid;
+  gap: 14px;
+  animation: feedback-in 200ms ease-out;
+}
+
+.feedback-text {
+  display: grid;
+  gap: 4px;
+  font-size: var(--fs-md);
+}
+
+.feedback-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-xl);
+  font-weight: 700;
+}
+
+.tone-correct .feedback-title {
+  color: var(--green);
+}
+
+.tone-wrong .feedback-title {
+  color: var(--pen-red);
+}
+
+.feedback-explanation {
+  color: var(--ink-soft);
+}
+
+.feedback-note {
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}
+
+@keyframes feedback-in {
+  from {
+    transform: translateY(14px);
+    opacity: 0;
+  }
+}
+
+/* ---------- Rezultat i pečat ---------- */
+
+.results {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: 8px 0 24px;
+}
+
+.stamp-wrap {
+  width: min(70vw, 270px);
+  margin: 4px auto 8px;
+}
+
+.stamp {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--stamp);
+  font-family: var(--font);
+  transform: rotate(-9deg);
+  animation: stamp-in 460ms cubic-bezier(0.2, 0.9, 0.3, 1.15) 150ms both;
+}
+
+@keyframes stamp-in {
+  0% {
+    opacity: 0;
+    transform: scale(1.8) rotate(-1deg);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(0.94) rotate(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-9deg);
+  }
+}
+
+.results-score {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.results-actions {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  max-width: 22rem;
+  margin-top: 24px;
+}
+
+.mistakes {
+  width: 100%;
+  text-align: left;
+  margin-top: 16px;
+}
+
+.mistakes ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.mistakes li {
+  display: grid;
+  gap: 2px;
+  padding: 10px 14px;
+  background: var(--white);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+}
+
+.mistake-q {
+  font-size: var(--fs-md);
+}
+
+.mistake-a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+/* ---------- Napredak ---------- */
+
+.report {
+  margin: 4px 0 8px;
+  padding: 18px 18px 8px;
+  background: #f4fbf6;
+  border: 2px solid #9cc9ab;
+  border-radius: 6px;
+  box-shadow: 5px 5px 0 rgb(29 43 110 / 0.12);
+}
+
+.report-title {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #9cc9ab;
+}
+
+.report-rows > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dotted #9cc9ab;
+}
+
+.report-rows > div:last-child {
+  border-bottom: none;
+}
+
+.report-rows dt {
+  color: var(--ink-soft);
+}
+
+.report-rows dd {
+  font-weight: 700;
+  font-size: var(--fs-lg);
+  color: var(--stamp);
+}
+
+.progress-subject {
+  margin-bottom: 18px;
+}
+
+.progress-subject-title {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.progress-topics {
+  list-style: none;
+  padding: 0;
+  background: var(--white);
+  border: 2px solid var(--rule);
+  border-radius: 12px;
+}
+
+.progress-topics li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--grid);
+}
+
+.progress-topics li:last-child {
+  border-bottom: none;
+}
+
+.empty-note {
+  color: var(--ink-soft);
+  font-size: var(--fs-sm);
+  margin: 16px 0;
+}
+
+.danger-zone {
+  margin-top: 28px;
+}
+
+.confirm {
+  padding: 16px;
+  background: var(--white);
+  border: 2px solid var(--pen-red);
+  border-radius: var(--radius);
+}
+
+.confirm-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* ---------- Postavke ---------- */
+
+.setting {
+  border: none;
+  padding: 0;
+  margin: 0 0 26px;
+}
+
+.setting legend {
+  font-weight: 700;
+  font-size: var(--fs-md);
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.segmented {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.segmented label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  border: 2px solid var(--rule);
+  background: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 0 var(--rule);
+  touch-action: manipulation;
+}
+
+.segmented label.on {
+  background: var(--marker);
+  border-color: var(--ink);
+  box-shadow: 0 3px 0 var(--ink);
+}
+
+.segmented input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.segmented label:has(input:focus-visible) {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.setting-note {
+  margin-top: 8px;
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}
+
+.about {
+  margin-top: 40px;
+  font-size: var(--fs-sm);
+  color: var(--ink-faint);
+}
+
+/* ---------- Manji ekrani ---------- */
+
+@media (max-width: 420px) {
+  :root {
+    --margin-x: 20px;
+  }
+  .page-inner {
+    padding-right: 14px;
+    padding-left: calc(var(--margin-x) + 14px);
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --margin-x: 16px;
+  }
+  .page-inner {
+    padding-right: 14px;
+    padding-left: calc(var(--margin-x) + 14px);
+  }
+  .covers {
+    gap: 18px 14px;
+  }
+  .prompt-big {
+    font-size: 2.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.lead {
+  font-size: var(--fs-lg);
+  color: var(--ink-soft);
+  margin: -8px 0 24px;
+}

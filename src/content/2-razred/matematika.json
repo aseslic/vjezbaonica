@@ -1,0 +1,389 @@
+{
+  "grade": 2,
+  "id": "matematika",
+  "name": "Matematika",
+  "order": 1,
+  "icon": "🔢",
+  "color": "#2F6FED",
+  "paper": "grid",
+  "topics": [
+    {
+      "id": "brojevi-do-100",
+      "title": "Brojevi do 100",
+      "description": "Desetice i jedinice, poređenje, prethodnik i sljedbenik",
+      "lesson": [
+        { "type": "text", "text": "Svaki dvocifreni broj ima **desetice** i **jedinice**. Broj 47 ima 4 desetice i 7 jedinica." },
+        { "type": "example", "text": "47 = 40 + 7\n4 desetice i 7 jedinica" },
+        { "type": "text", "text": "Brojeve poredimo znakovima **<** (manje od), **>** (veće od) i **=** (jednako)." },
+        { "type": "example", "text": "35 < 53\n80 > 18\n46 = 46" },
+        {
+          "type": "remember",
+          "text": "**Prethodnik** je broj koji dolazi neposredno prije, a **sljedbenik** broj koji dolazi neposredno poslije. Prethodnik broja 40 je 39, a sljedbenik je 41."
+        },
+        { "type": "text", "text": "**Parni** brojevi završavaju cifrom 0, 2, 4, 6 ili 8. **Neparni** završavaju cifrom 1, 3, 5, 7 ili 9." }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "question": "Koji je najveći dvocifreni broj?",
+          "answer": "99",
+          "explanation": "Najveći dvocifreni broj je 99. Poslije njega dolazi 100, a on ima tri cifre."
+        },
+        { "type": "input", "question": "Koji je najmanji dvocifreni broj?", "answer": "10" },
+        { "type": "input", "question": "Koliko desetica ima broj 100?", "answer": "10", "explanation": "100 = 10 desetica." },
+        {
+          "type": "choice",
+          "question": "Koji broj je paran?",
+          "options": ["35", "48", "51", "77"],
+          "answer": "48",
+          "explanation": "Parni brojevi završavaju cifrom 0, 2, 4, 6 ili 8."
+        },
+        {
+          "type": "choice",
+          "question": "Koji broj je neparan?",
+          "options": ["20", "64", "86", "93"],
+          "answer": "93",
+          "explanation": "Neparni brojevi završavaju cifrom 1, 3, 5, 7 ili 9."
+        },
+        { "type": "order", "question": "Poredaj brojeve od najmanjeg do najvećeg.", "items": ["19", "37", "52", "70", "91"] },
+        { "type": "truefalse", "statement": "Broj 60 ima 6 desetica i 0 jedinica.", "answer": true },
+        { "type": "input", "instruction": "Napiši brojem", "question": "sedamdeset dva", "answer": "72" },
+        { "type": "input", "instruction": "Napiši brojem", "question": "četrdeset devet", "answer": "49" }
+      ],
+      "generators": [
+        { "type": "place-value", "max": 99, "count": 12 },
+        { "type": "compare", "max": 100, "count": 12 },
+        { "type": "neighbors", "max": 100, "count": 12 }
+      ]
+    },
+    {
+      "id": "sabiranje-i-oduzimanje-do-100",
+      "title": "Sabiranje i oduzimanje do 100",
+      "description": "Prvo desetice pa jedinice, tekstualni zadaci",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Kad sabiramo dvocifrene brojeve, prvo saberemo **desetice**, zatim **jedinice**, i na kraju saberemo ta dva rezultata."
+        },
+        { "type": "example", "text": "34 + 25 = ?\n30 + 20 = 50\n4 + 5 = 9\n50 + 9 = 59" },
+        { "type": "text", "text": "Kad oduzimamo, od prvog broja oduzmemo prvo desetice, a zatim jedinice drugog broja." },
+        { "type": "example", "text": "68 − 23 = ?\n68 − 20 = 48\n48 − 3 = 45" },
+        {
+          "type": "remember",
+          "text": "Sabirci mogu zamijeniti mjesta, a **zbir** ostaje isti: 25 + 4 = 4 + 25 = 29. Kod oduzimanja to ne vrijedi!"
+        },
+        { "type": "text", "text": "Rezultat sabiranja zove se **zbir**, a rezultat oduzimanja **razlika**." }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Amra ima 25 sličica. Na rođendanu je dobila još 12 sličica. Koliko sličica sada ima Amra?",
+          "answer": "37",
+          "explanation": "25 + 12 = 37"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "U autobusu je bilo 46 putnika. Na stanici je izašlo 14 putnika. Koliko je putnika ostalo u autobusu?",
+          "answer": "32",
+          "explanation": "46 − 14 = 32"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Haris je pročitao 18 stranica, a Lejla 7 stranica više. Koliko je stranica pročitala Lejla?",
+          "answer": "25",
+          "explanation": "„Više“ znači da sabiramo: 18 + 7 = 25."
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Na drvetu je bilo 50 jabuka. Tarik je ubrao 23 jabuke. Koliko je jabuka ostalo na drvetu?",
+          "answer": "27",
+          "explanation": "50 − 23 = 27"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "U razredu je 14 djevojčica i 13 dječaka. Koliko je učenika u razredu?",
+          "answer": "27",
+          "explanation": "14 + 13 = 27"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Ena je imala 70 feninga. Kupila je bombonu za 45 feninga. Koliko joj je feninga ostalo?",
+          "answer": "25",
+          "explanation": "70 − 45 = 25"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Luka ima 9 godina. Njegov djed je 58 godina stariji. Koliko godina ima djed?",
+          "answer": "67",
+          "explanation": "„Stariji“ znači da sabiramo: 9 + 58 = 67."
+        },
+        { "type": "truefalse", "statement": "Zbir brojeva 40 i 30 je 70.", "answer": true },
+        {
+          "type": "choice",
+          "question": "Koji račun ima rezultat 50?",
+          "options": ["25 + 25", "30 + 30", "60 − 20", "45 + 15"],
+          "answer": "25 + 25"
+        }
+      ],
+      "generators": [
+        { "type": "addition", "max": 100, "count": 15 },
+        { "type": "subtraction", "max": 100, "count": 15 },
+        { "type": "missing-addend", "max": 100, "count": 8 }
+      ]
+    },
+    {
+      "id": "mnozenje-2-3-4-5-10",
+      "title": "Množenje brojevima 2, 3, 4, 5 i 10",
+      "description": "Množenje kao sabiranje jednakih sabiraka",
+      "lesson": [
+        { "type": "text", "text": "Množenje je skraćeno sabiranje **jednakih sabiraka**." },
+        { "type": "example", "text": "4 + 4 + 4 = 3 · 4 = 12\nČitamo: tri puta četiri jednako je dvanaest." },
+        { "type": "text", "text": "Brojeve koje množimo zovemo **činioci**, a rezultat množenja zove se **proizvod**." },
+        { "type": "remember", "text": "Činioci mogu zamijeniti mjesta, a proizvod ostaje isti: 3 · 4 = 4 · 3 = 12." },
+        { "type": "text", "text": "Kad broj pomnožimo sa 1, dobijemo isti broj: 7 · 1 = 7. Kad ga pomnožimo sa 0, dobijemo 0: 7 · 0 = 0." }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kako se 5 + 5 + 5 zapisuje kao množenje?",
+          "options": ["3 · 5", "5 · 5", "3 + 5", "15 · 3"],
+          "answer": "3 · 5",
+          "explanation": "Broj 5 sabiramo 3 puta: 3 · 5 = 15."
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "U jednoj kutiji su 4 olovke. Koliko je olovaka u 5 kutija?",
+          "answer": "20",
+          "explanation": "5 · 4 = 20"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Bicikl ima 2 točka. Koliko točkova ima 6 bicikala?",
+          "answer": "12",
+          "explanation": "6 · 2 = 12"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Na jednoj ruci je 5 prstiju. Koliko je prstiju na 4 ruke?",
+          "answer": "20",
+          "explanation": "4 · 5 = 20"
+        },
+        { "type": "truefalse", "statement": "3 · 4 i 4 · 3 imaju isti proizvod.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Proizvod brojeva 10 i 6 je 16.",
+          "answer": false,
+          "explanation": "10 · 6 = 60. Broj 16 je zbir: 10 + 6 = 16."
+        },
+        { "type": "input", "question": "8 · 0 = ?", "answer": "0", "explanation": "Svaki broj pomnožen nulom daje 0." },
+        { "type": "input", "question": "9 · 1 = ?", "answer": "9", "explanation": "Broj pomnožen jedinicom ostaje isti." }
+      ],
+      "generators": [{ "type": "multiplication", "tables": [2, 3, 4, 5, 10], "count": 25 }]
+    },
+    {
+      "id": "mnozenje-6-7-8-9",
+      "title": "Množenje brojevima 6, 7, 8 i 9",
+      "description": "Ostatak tablice množenja",
+      "lesson": [
+        { "type": "text", "text": "Kad znaš množiti brojevima 2, 3, 4, 5 i 10, lakše ćeš naučiti i ostatak tablice množenja." },
+        { "type": "remember", "text": "Zamjena mjesta činilaca pomaže: ako znaš da je 3 · 7 = 21, znaš i da je 7 · 3 = 21." },
+        { "type": "example", "title": "Trik za množenje sa 9", "text": "6 · 9 = 6 · 10 − 6\n60 − 6 = 54" },
+        { "type": "text", "text": "Vježbaj svaki dan pomalo. Tablica množenja se najbolje uči ponavljanjem." }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Sedmica ima 7 dana. Koliko je dana u 4 sedmice?",
+          "answer": "28",
+          "explanation": "4 · 7 = 28"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Pauk ima 8 nogu. Koliko nogu imaju 3 pauka?",
+          "answer": "24",
+          "explanation": "3 · 8 = 24"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "U jednom redu je 6 stolica. Koliko je stolica u 5 redova?",
+          "answer": "30",
+          "explanation": "5 · 6 = 30"
+        },
+        { "type": "truefalse", "statement": "9 · 9 = 81", "answer": true },
+        {
+          "type": "choice",
+          "question": "Koliko je 7 · 8?",
+          "options": ["48", "54", "56", "64"],
+          "answer": "56",
+          "explanation": "7 · 8 = 56"
+        }
+      ],
+      "generators": [{ "type": "multiplication", "tables": [6, 7, 8, 9], "count": 25 }]
+    },
+    {
+      "id": "dijeljenje",
+      "title": "Dijeljenje",
+      "description": "Dijeljenje na jednake dijelove, veza s množenjem",
+      "lesson": [
+        { "type": "text", "text": "Dijeljenjem nešto dijelimo na **jednake dijelove**." },
+        { "type": "example", "text": "12 bombona podijelimo jednako na troje djece:\n12 : 3 = 4\nSvako dijete dobije 4 bombone." },
+        { "type": "text", "text": "U računu 12 : 3 = 4 broj 12 je **djeljenik**, 3 je **djelilac**, a 4 je **količnik**." },
+        {
+          "type": "remember",
+          "text": "Dijeljenje je obrnuto od množenja. Ako je 3 · 4 = 12, onda je 12 : 3 = 4 i 12 : 4 = 3."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Mama je 20 jagoda podijelila jednako na četvero djece. Koliko je jagoda dobilo svako dijete?",
+          "answer": "5",
+          "explanation": "20 : 4 = 5"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Učiteljica je 18 učenika podijelila u grupe po 3 učenika. Koliko je grupa?",
+          "answer": "6",
+          "explanation": "18 : 3 = 6"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Djed je 30 jaja složio u kutije po 10 jaja. Koliko je kutija?",
+          "answer": "3",
+          "explanation": "30 : 10 = 3"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se zove rezultat dijeljenja?",
+          "options": ["zbir", "razlika", "proizvod", "količnik"],
+          "answer": "količnik"
+        },
+        { "type": "truefalse", "statement": "Ako je 6 · 7 = 42, onda je 42 : 7 = 6.", "answer": true }
+      ],
+      "generators": [{ "type": "division", "tables": [2, 3, 4, 5, 6, 7, 8, 9, 10], "count": 25 }]
+    },
+    {
+      "id": "mjerenje",
+      "title": "Mjerenje: dužina, vrijeme i novac",
+      "description": "Metar i centimetar, sat i minuta, KM i fening",
+      "lesson": [
+        { "type": "text", "text": "Dužinu mjerimo **metrom (m)** i **centimetrom (cm)**. Za mjerenje koristimo lenjir ili metar." },
+        { "type": "remember", "text": "1 m = 100 cm" },
+        { "type": "text", "text": "Vrijeme mjerimo satom. Jedan **sat (h)** ima **60 minuta (min)**. Dan ima 24 sata." },
+        {
+          "type": "text",
+          "text": "Novac u Bosni i Hercegovini je **konvertibilna marka (KM)**. Jedna marka ima 100 feninga."
+        },
+        { "type": "remember", "text": "1 KM = 100 feninga" }
+      ],
+      "exercises": [
+        { "type": "input", "question": "Koliko centimetara ima 1 metar?", "answer": "100" },
+        { "type": "input", "question": "Koliko minuta ima 1 sat?", "answer": "60" },
+        { "type": "input", "question": "Koliko sati ima jedan dan?", "answer": "24" },
+        { "type": "input", "question": "Koliko feninga ima 1 KM?", "answer": "100" },
+        {
+          "type": "choice",
+          "question": "Čime ćeš izmjeriti dužinu olovke?",
+          "options": ["lenjirom", "satom", "vagom", "termometrom"],
+          "answer": "lenjirom"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je duže?",
+          "options": ["1 m", "90 cm"],
+          "answer": "1 m",
+          "explanation": "1 m = 100 cm, a 100 cm je više od 90 cm."
+        },
+        {
+          "type": "choice",
+          "picture": "🕒",
+          "question": "Mala kazaljka je na 3, a velika na 12. Koliko je sati?",
+          "options": ["3 sata", "12 sati", "4 sata", "pola tri"],
+          "answer": "3 sata"
+        },
+        {
+          "type": "input",
+          "instruction": "Upiši koliko KM",
+          "question": "Sara je kupila sok za 2 KM i kifle za 3 KM. Koliko je ukupno platila?",
+          "answer": "5",
+          "explanation": "2 KM + 3 KM = 5 KM"
+        },
+        { "type": "truefalse", "statement": "Pola sata je 30 minuta.", "answer": true },
+        { "type": "truefalse", "statement": "Školski čas traje 45 minuta.", "answer": true }
+      ]
+    },
+    {
+      "id": "geometrija",
+      "title": "Geometrija: linije i oblici",
+      "description": "Tačka, prava, duž, kvadrat, pravougaonik, trougao, krug",
+      "lesson": [
+        { "type": "text", "text": "**Tačka** je najmanji geometrijski oblik. Označavamo je velikim slovom, npr. tačka A." },
+        {
+          "type": "text",
+          "text": "**Prava** linija nema ni početak ni kraj. **Duž** je dio prave između dvije tačke, npr. duž AB."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**kvadrat** ima 4 jednake stranice",
+            "**pravougaonik** ima 4 stranice, a naspramne stranice su jednake",
+            "**trougao** ima 3 stranice",
+            "**krug** nema ni stranice ni uglove"
+          ]
+        },
+        { "type": "remember", "text": "Kvadrat, pravougaonik i trougao imaju onoliko uglova koliko imaju stranica." }
+      ],
+      "exercises": [
+        { "type": "choice", "question": "Koliko stranica ima trougao?", "options": ["2", "3", "4", "5"], "answer": "3", "shuffle": false },
+        { "type": "choice", "question": "Koliko uglova ima kvadrat?", "options": ["3", "4", "5", "6"], "answer": "4", "shuffle": false },
+        {
+          "type": "choice",
+          "question": "Koji oblik nema uglove?",
+          "options": ["kvadrat", "trougao", "krug", "pravougaonik"],
+          "answer": "krug"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se zove dio prave između dvije tačke?",
+          "options": ["duž", "krug", "ugao", "kvadrat"],
+          "answer": "duž"
+        },
+        { "type": "truefalse", "statement": "Kvadrat ima četiri jednake stranice.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Prava linija ima početak i kraj.",
+          "answer": false,
+          "explanation": "Prava nema ni početak ni kraj. Duž ima početak i kraj."
+        },
+        {
+          "type": "choice",
+          "question": "Koji predmet ima oblik kruga?",
+          "options": ["točak bicikla", "knjiga", "vrata", "kutija"],
+          "answer": "točak bicikla"
+        },
+        {
+          "type": "choice",
+          "question": "Koji predmet ima oblik pravougaonika?",
+          "options": ["vrata", "lopta", "novčić", "tanjir"],
+          "answer": "vrata"
+        }
+      ]
+    }
+  ]
+}

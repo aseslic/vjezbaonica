@@ -1,0 +1,69 @@
+{
+  "grade": 3,
+  "id": "matematika",
+  "name": "Matematika",
+  "order": 1,
+  "icon": "🔢",
+  "color": "#2F6FED",
+  "paper": "grid",
+  "topics": [
+    {
+      "id": "sabiranje-i-oduzimanje-do-1000",
+      "title": "Sabiranje i oduzimanje do 1000",
+      "description": "Stotice, desetice i jedinice",
+      "lesson": [
+        { "type": "text", "text": "Trocifreni brojevi imaju **stotice**, **desetice** i **jedinice**. Broj 352 ima 3 stotice, 5 desetica i 2 jedinice." },
+        { "type": "example", "text": "352 = 300 + 50 + 2" },
+        { "type": "remember", "text": "Sabiramo i oduzimamo redom: stotice sa stoticama, desetice s deseticama, jedinice s jedinicama." },
+        { "type": "example", "text": "245 + 132 = ?\n200 + 100 = 300\n40 + 30 = 70\n5 + 2 = 7\n300 + 70 + 7 = 377" }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "U školi je 245 dječaka i 238 djevojčica. Koliko je učenika u školi?",
+          "answer": "483",
+          "explanation": "245 + 238 = 483"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Knjiga ima 320 stranica. Mia je pročitala 145 stranica. Koliko joj je još stranica ostalo da pročita?",
+          "answer": "175",
+          "explanation": "320 − 145 = 175"
+        }
+      ],
+      "generators": [
+        { "type": "addition", "max": 1000, "count": 15 },
+        { "type": "subtraction", "max": 1000, "count": 15 }
+      ]
+    },
+    {
+      "id": "tablica-mnozenja",
+      "title": "Tablica množenja (ponavljanje)",
+      "description": "Cijela tablica množenja do 10 · 10",
+      "lesson": [
+        { "type": "remember", "text": "Tablicu množenja treba znati napamet. Vježbaj svaki dan po nekoliko minuta." }
+      ],
+      "generators": [{ "type": "multiplication", "tables": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "count": 30 }]
+    },
+    {
+      "id": "dijeljenje",
+      "title": "Dijeljenje (ponavljanje)",
+      "description": "Dijeljenje u tablici množenja",
+      "lesson": [
+        { "type": "remember", "text": "Dijeljenje provjeravamo množenjem: 56 : 8 = 7, jer je 7 · 8 = 56." }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Nikola je 48 klikera podijelio u 6 kesica jednako. Koliko je klikera u svakoj kesici?",
+          "answer": "8",
+          "explanation": "48 : 6 = 8"
+        }
+      ],
+      "generators": [{ "type": "division", "tables": [2, 3, 4, 5, 6, 7, 8, 9, 10], "count": 30 }]
+    }
+  ]
+}

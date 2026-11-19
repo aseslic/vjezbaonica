@@ -1,0 +1,63 @@
+# Pri svakoj promjeni: provjera koda, testovi sadržaja i build.
+# Ako je repozitorij javan, aplikacija se objavljuje na GitHub Pages
+# (jednom uključi: Settings → Pages → Source: GitHub Actions).
+name: Provjera i objava
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+jobs:
+  provjera:
+    name: Testovi i build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Instalacija
+        run: npm ci
+
+      - name: Provjera koda
+        run: npm run lint
+
+      - name: Testovi (uključujući provjeru sadržaja)
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      - name: Priprema za GitHub Pages
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && !github.event.repository.private
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  objava:
+    name: Objava na GitHub Pages
+    needs: provjera
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && !github.event.repository.private
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Objava
+        id: deployment
+        uses: actions/deploy-pages@v5

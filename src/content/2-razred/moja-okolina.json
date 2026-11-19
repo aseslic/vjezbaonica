@@ -1,0 +1,283 @@
+{
+  "grade": 2,
+  "id": "moja-okolina",
+  "name": "Moja okolina",
+  "order": 3,
+  "icon": "🌳",
+  "color": "#2E9E5B",
+  "paper": "lines",
+  "topics": [
+    {
+      "id": "dani-u-sedmici",
+      "title": "Dani u sedmici",
+      "description": "Radni dani i vikend, jučer, danas, sutra",
+      "lesson": [
+        { "type": "text", "text": "Sedmica ima **7 dana**." },
+        { "type": "example", "title": "Dani u sedmici", "text": "ponedjeljak, utorak, srijeda, četvrtak,\npetak, subota, nedjelja" },
+        {
+          "type": "text",
+          "text": "Od ponedjeljka do petka su **radni dani**. Tada idemo u školu. Subota i nedjelja su **vikend**."
+        },
+        { "type": "remember", "text": "Ako je danas utorak, jučer je bio ponedjeljak, a sutra je srijeda." }
+      ],
+      "exercises": [
+        { "type": "input", "question": "Koliko dana ima sedmica?", "answer": "7" },
+        {
+          "type": "choice",
+          "question": "Koji dan dolazi poslije utorka?",
+          "options": ["ponedjeljak", "srijeda", "četvrtak", "petak"],
+          "answer": "srijeda"
+        },
+        {
+          "type": "choice",
+          "question": "Koji dan je prije petka?",
+          "options": ["četvrtak", "subota", "srijeda", "nedjelja"],
+          "answer": "četvrtak"
+        },
+        {
+          "type": "choice",
+          "question": "Ako je danas ponedjeljak, koji je dan bio jučer?",
+          "options": ["nedjelja", "utorak", "subota", "petak"],
+          "answer": "nedjelja"
+        },
+        {
+          "type": "choice",
+          "question": "Ako je danas srijeda, koji je dan sutra?",
+          "options": ["utorak", "četvrtak", "petak", "ponedjeljak"],
+          "answer": "četvrtak"
+        },
+        {
+          "type": "order",
+          "question": "Poredaj radne dane redom.",
+          "items": ["ponedjeljak", "utorak", "srijeda", "četvrtak", "petak"]
+        },
+        { "type": "truefalse", "statement": "Subota i nedjelja su dani vikenda.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Srijeda je prvi dan u sedmici.",
+          "answer": false,
+          "explanation": "Prvi dan u sedmici je ponedjeljak."
+        },
+        { "type": "input", "question": "Koji dan dolazi poslije nedjelje?", "answer": "ponedjeljak" }
+      ]
+    },
+    {
+      "id": "mjeseci-i-godisnja-doba",
+      "title": "Mjeseci i godišnja doba",
+      "description": "12 mjeseci, proljeće, ljeto, jesen i zima",
+      "lesson": [
+        { "type": "text", "text": "Godina ima **12 mjeseci** i **4 godišnja doba**." },
+        {
+          "type": "example",
+          "title": "Mjeseci",
+          "text": "januar, februar, mart, april,\nmaj, juni, juli, august,\nseptembar, oktobar, novembar, decembar"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Proljeće**: priroda se budi, cvjeta cvijeće.",
+            "**Ljeto**: najtoplije je, imamo ljetni raspust.",
+            "**Jesen**: lišće žuti i opada, beremo plodove.",
+            "**Zima**: najhladnije je, pada snijeg."
+          ]
+        },
+        { "type": "remember", "text": "Proljeće počinje u martu, ljeto u junu, jesen u septembru, a zima u decembru." }
+      ],
+      "exercises": [
+        { "type": "input", "question": "Koliko mjeseci ima godina?", "answer": "12" },
+        {
+          "type": "choice",
+          "question": "Koji je prvi mjesec u godini?",
+          "options": ["januar", "mart", "septembar", "decembar"],
+          "answer": "januar"
+        },
+        { "type": "choice", "question": "Koji mjesec dolazi poslije juna?", "options": ["maj", "juli", "august", "april"], "answer": "juli" },
+        {
+          "type": "choice",
+          "question": "U kojem godišnjem dobu lišće žuti i opada?",
+          "options": ["u proljeće", "ljeti", "na jesen", "zimi"],
+          "answer": "na jesen",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kada najčešće pada snijeg?",
+          "options": ["u proljeće", "ljeti", "na jesen", "zimi"],
+          "answer": "zimi",
+          "shuffle": false
+        },
+        {
+          "type": "order",
+          "question": "Poredaj godišnja doba. Počni od proljeća.",
+          "items": ["proljeće", "ljeto", "jesen", "zima"]
+        },
+        { "type": "truefalse", "statement": "Nova godina se slavi 1. januara.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Ljetni raspust je u decembru.",
+          "answer": false,
+          "explanation": "Ljetni raspust je ljeti: u junu, julu i augustu."
+        },
+        {
+          "type": "choice",
+          "question": "U kojem mjesecu počinje nova školska godina?",
+          "options": ["septembar", "januar", "juni", "mart"],
+          "answer": "septembar"
+        }
+      ]
+    },
+    {
+      "id": "saobracaj",
+      "title": "Saobraćaj",
+      "description": "Pješak, semafor, pješački prelaz",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Na ulici smo **pješaci**. Hodamo po **trotoaru**, a ulicu prelazimo na **pješačkom prelazu** (zebri)."
+        },
+        {
+          "type": "list",
+          "items": ["**Crveno** svjetlo za pješake: stani i čekaj.", "**Zeleno** svjetlo za pješake: pažljivo pređi ulicu."]
+        },
+        {
+          "type": "remember",
+          "text": "Prije prelaska pogledaj **lijevo, desno, pa opet lijevo**. Ulicu prelazi hodajući, nikad trčeći."
+        },
+        {
+          "type": "text",
+          "text": "Ako nema trotoara, hodamo **lijevom stranom** puta, tako da vidimo vozila koja nam dolaze u susret."
+        },
+        { "type": "text", "text": "U autu se uvijek **vežemo sigurnosnim pojasom**, a mala djeca sjede u autosjedalici." }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta znači crveno svjetlo na semaforu za pješake?",
+          "options": ["Stani i čekaj.", "Pređi brzo.", "Trči preko ulice."],
+          "answer": "Stani i čekaj."
+        },
+        {
+          "type": "choice",
+          "question": "Gdje prelazimo ulicu?",
+          "options": ["na pješačkom prelazu", "između parkiranih automobila", "bilo gdje", "na krivini"],
+          "answer": "na pješačkom prelazu"
+        },
+        {
+          "type": "choice",
+          "question": "Kojom stranom puta hodamo kad nema trotoara?",
+          "options": ["lijevom stranom", "desnom stranom", "sredinom puta"],
+          "answer": "lijevom stranom",
+          "explanation": "Hodamo lijevom stranom da vidimo vozila koja nam dolaze u susret."
+        },
+        { "type": "truefalse", "statement": "Ulicu smijemo prelaziti trčeći između parkiranih automobila.", "answer": false },
+        { "type": "truefalse", "statement": "U autu se uvijek vežemo sigurnosnim pojasom.", "answer": true },
+        {
+          "type": "order",
+          "question": "Kako gledamo prije prelaska ulice? Poredaj.",
+          "items": ["lijevo", "desno", "opet lijevo"]
+        },
+        {
+          "type": "choice",
+          "question": "Kako se zove dio ulice po kojem hodaju pješaci?",
+          "options": ["trotoar", "kolovoz", "parking", "raskrsnica"],
+          "answer": "trotoar"
+        },
+        { "type": "truefalse", "statement": "Na zeleno svjetlo za pješake ulicu prelazimo pažljivo.", "answer": true }
+      ]
+    },
+    {
+      "id": "biljke-i-zivotinje",
+      "title": "Biljke i životinje",
+      "description": "Dijelovi biljke, domaće i divlje životinje, mladunci",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Dijelovi biljke su: **korijen**, **stabljika** (kod drveta **stablo**), **list**, **cvijet** i **plod**."
+        },
+        {
+          "type": "remember",
+          "text": "Korijen upija vodu iz zemlje. Biljkama trebaju voda, zrak, svjetlost i toplota."
+        },
+        {
+          "type": "text",
+          "text": "**Domaće životinje** žive uz čovjeka: krava, ovca, koza, kokoš, pas, mačka. **Divlje životinje** žive slobodno u prirodi: medvjed, vuk, lisica, srna."
+        },
+        {
+          "type": "example",
+          "title": "Životinje i njihovi mladunci",
+          "text": "krava – tele\novca – janje\nkoza – jare\nkokoš – pile\nkonj – ždrijebe\npas – štene\nmačka – mače"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koji dio biljke upija vodu iz zemlje?",
+          "options": ["korijen", "list", "cvijet", "plod"],
+          "answer": "korijen"
+        },
+        { "type": "choice", "question": "Kako se zove mladunče krave?", "options": ["tele", "jare", "janje", "mače"], "answer": "tele" },
+        { "type": "choice", "question": "Koja životinja je divlja?", "options": ["krava", "vuk", "ovca", "kokoš"], "answer": "vuk" },
+        {
+          "type": "truefalse",
+          "statement": "Medvjed je domaća životinja.",
+          "answer": false,
+          "explanation": "Medvjed je divlja životinja, živi u šumi."
+        },
+        { "type": "truefalse", "statement": "Mladunče ovce je janje.", "answer": true },
+        { "type": "input", "question": "Kako se zove mladunče psa?", "answer": ["štene", "kuče", "psić"] },
+        { "type": "choice", "question": "Koji dio biljke je jabuka?", "options": ["plod", "korijen", "list", "stablo"], "answer": "plod" },
+        { "type": "choice", "question": "Kako se zove mladunče kokoši?", "options": ["pile", "tele", "mače", "jare"], "answer": "pile" }
+      ]
+    },
+    {
+      "id": "zdrav-zivot",
+      "title": "Zdrav život",
+      "description": "Higijena, zdrava hrana, kretanje i san",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Da bismo bili zdravi, trebamo se pravilno hraniti, kretati, odmarati i održavati čistoću."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ruke peremo sapunom **prije jela** i **poslije toaleta**.",
+            "Zube peremo **najmanje dva puta dnevno**: ujutro i navečer.",
+            "Jedemo **voće i povrće** i pijemo **vodu**.",
+            "Svaki dan se igramo i krećemo na svježem zraku.",
+            "Djeca trebaju spavati **oko 10 sati** svake noći."
+          ]
+        },
+        { "type": "remember", "text": "Slatkiše i gazirane sokove jedemo i pijemo rijetko." }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koliko puta dnevno trebamo prati zube?",
+          "options": ["najmanje dva puta", "jednom sedmično", "samo kad boli zub"],
+          "answer": "najmanje dva puta"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je najbolja užina?",
+          "options": ["jabuka", "čips", "gazirani sok", "bombone"],
+          "answer": "jabuka"
+        },
+        { "type": "truefalse", "statement": "Ruke peremo prije jela i poslije toaleta.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Djeci je dovoljno da spavaju 5 sati.",
+          "answer": false,
+          "explanation": "Djeca trebaju spavati oko 10 sati svake noći."
+        },
+        {
+          "type": "choice",
+          "question": "Šta je najbolje piti kad smo žedni?",
+          "options": ["vodu", "gazirani sok", "energetski napitak"],
+          "answer": "vodu"
+        },
+        { "type": "truefalse", "statement": "Kretanje i igra na svježem zraku dobri su za zdravlje.", "answer": true }
+      ]
+    }
+  ]
+}
