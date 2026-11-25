@@ -7,7 +7,7 @@
  */
 import { plural } from './plural'
 import { pick, randInt, type Rng } from './random'
-import type { ChoiceExercise, Exercise, Generator, InputExercise } from './types'
+import type { ChoiceExercise, Exercise, Generator, InputExercise, UnitGroup } from './types'
 
 export const DEFAULT_GENERATED_COUNT = 20
 
@@ -73,6 +73,63 @@ function multiplicationExplanation(x: number, y: number): string {
 
 const desetica = (n: number) => `${n} ${plural(n, 'desetica', 'desetice', 'desetica')}`
 const jedinica = (n: number) => `${n} ${plural(n, 'jedinica', 'jedinice', 'jedinica')}`
+const stotica = (n: number) => `${n} ${plural(n, 'stotica', 'stotice', 'stotica')}`
+const hiljada = (n: number) => `${n} ${plural(n, 'hiljada', 'hiljade', 'hiljada')}`
+
+/** Mjesne vrijednosti od desna: jedinice, desetice, stotice, hiljade (u genitivu množine). */
+const PLACES = ['jedinica', 'desetica', 'stotica', 'hiljada']
+const PLACE_COUNT = [jedinica, desetica, stotica, hiljada]
+
+/** 4357 → [4000, 300, 50, 7] (bez nula). */
+export function expandedForm(n: number): number[] {
+  const digits = String(n).split('').map(Number)
+  return digits.map((d, i) => d * 10 ** (digits.length - 1 - i)).filter((part) => part > 0)
+}
+
+const DEFAULT_DIGITS = [2, 3, 4, 5, 6, 7, 8, 9]
+
+const ROUNDING_NAMES: Record<number, string> = { 10: 'desetice', 100: 'stotice', 1000: 'hiljade' }
+
+/** Parovi jedinica [veća, manja, koliko manjih ima u jednoj većoj]. */
+export const UNIT_PAIRS: Record<UnitGroup, Array<[string, string, number]>> = {
+  length: [
+    ['km', 'm', 1000],
+    ['m', 'dm', 10],
+    ['m', 'cm', 100],
+    ['dm', 'cm', 10],
+    ['cm', 'mm', 10],
+  ],
+  mass: [
+    ['kg', 'dag', 100],
+    ['kg', 'g', 1000],
+    ['dag', 'g', 10],
+  ],
+  volume: [
+    ['hl', 'l', 100],
+    ['l', 'dl', 10],
+    ['l', 'cl', 100],
+    ['l', 'ml', 1000],
+  ],
+}
+
+/** Nazivi jedinica: [1 metar, 2 metra, 5 metara]. */
+const UNIT_NAMES: Record<string, [string, string, string]> = {
+  km: ['kilometar', 'kilometra', 'kilometara'],
+  m: ['metar', 'metra', 'metara'],
+  dm: ['decimetar', 'decimetra', 'decimetara'],
+  cm: ['centimetar', 'centimetra', 'centimetara'],
+  mm: ['milimetar', 'milimetra', 'milimetara'],
+  kg: ['kilogram', 'kilograma', 'kilograma'],
+  dag: ['dekagram', 'dekagrama', 'dekagrama'],
+  g: ['gram', 'grama', 'grama'],
+  hl: ['hektolitar', 'hektolitra', 'hektolitara'],
+  l: ['litar', 'litra', 'litara'],
+  dl: ['decilitar', 'decilitra', 'decilitara'],
+  cl: ['centilitar', 'centilitra', 'centilitara'],
+  ml: ['mililitar', 'mililitra', 'mililitara'],
+}
+
+const unitName = (n: number, unit: string) => `${n} ${plural(n, ...UNIT_NAMES[unit])}`
 
 function generateOne(gen: Generator, rng: Rng): Exercise {
   switch (gen.type) {
@@ -171,6 +228,7 @@ function generateOne(gen: Generator, rng: Rng): Exercise {
       )
     }
     case 'place-value': {
+      if (gen.max >= 100) return largePlaceValue(randInt(rng, 100, Math.min(gen.max, 9999)), rng)
       const n = randInt(rng, 10, Math.min(gen.max, 99))
       const tens = Math.floor(n / 10)
       const units = n % 10
@@ -187,7 +245,106 @@ function generateOne(gen: Generator, rng: Rng): Exercise {
       const q = `Koji broj ima ${desetica(tens)} i ${jedinica(units)}?`
       return numberTask(q, n, q, explanation, 'Upiši broj')
     }
+    case 'rounding': {
+      const to = gen.to
+      let n = randInt(rng, to + 1, gen.max)
+      while (n % to === 0) n = randInt(rng, to + 1, gen.max)
+      const lower = n - (n % to)
+      const upper = lower + to
+      const answer = (n % to) * 2 >= to ? upper : lower
+      const name = ROUNDING_NAMES[to]
+      const explanation =
+        (n % to) * 2 === to
+          ? `${n} je tačno na sredini između ${lower} i ${upper}. Tada zaokružujemo naviše: ${n} ≈ ${upper}.`
+          : `${n} je između ${lower} i ${upper}, a bliže je broju ${answer}. Zato je ${n} ≈ ${answer}.`
+      return numberTask(String(n), answer, `Zaokruži broj ${n} na ${name}.`, explanation, `Zaokruži na ${name}`)
+    }
+    case 'long-multiplication': {
+      const d = pick(gen.digits ?? DEFAULT_DIGITS, rng)
+      const x = randInt(rng, 11, Math.max(11, Math.floor(gen.max / d)))
+      const parts = expandedForm(x)
+      const explanation =
+        parts.length > 1
+          ? `${x} ${TIMES} ${d} = ${parts.map((p) => `${p} ${TIMES} ${d}`).join(' + ')} = ${parts.map((p) => p * d).join(' + ')} = ${x * d}.`
+          : `${x} ${TIMES} ${d} = ${x * d}.`
+      return numberTask(`${x} ${TIMES} ${d} = ?`, x * d, `Koliko je ${x} puta ${d}?`, explanation)
+    }
+    case 'long-division': {
+      const d = pick(gen.digits ?? DEFAULT_DIGITS, rng)
+      const q = randInt(rng, 11, Math.max(11, Math.floor(gen.max / d)))
+      const n = q * d
+      return numberTask(
+        `${n} ${DIVIDE} ${d} = ?`,
+        q,
+        `Koliko je ${n} podijeljeno sa ${d}?`,
+        `${n} ${DIVIDE} ${d} = ${q}, jer je ${q} ${TIMES} ${d} = ${n}.`,
+      )
+    }
+    case 'division-remainder': {
+      const d = pick(gen.digits ?? DEFAULT_DIGITS, rng)
+      const q = randInt(rng, 1, Math.max(1, Math.floor((gen.max - (d - 1)) / d)))
+      const r = randInt(rng, 1, d - 1)
+      const n = q * d + r
+      const label = (quotient: number, rest: number) => `${quotient}, ostatak ${rest}`
+      const answer = label(q, r)
+      const options = [answer, label(q + 1, r), label(q, r === d - 1 ? r - 1 : r + 1), label(q - 1, r + d)]
+      const task: ChoiceExercise = {
+        type: 'choice',
+        instruction: 'Odaberi rezultat i ostatak',
+        question: `${n} ${DIVIDE} ${d} = ?`,
+        options: [...new Set(options)],
+        answer,
+        speak: `Koliko je ${n} podijeljeno sa ${d}, i koliki je ostatak?`,
+        explanation: `${q} ${TIMES} ${d} = ${q * d}, a ${n} ${MINUS} ${q * d} = ${r}. Ostatak je uvijek manji od djelioca.`,
+      }
+      return task
+    }
+    case 'unit-conversion': {
+      const [big, small, factor] = pick(UNIT_PAIRS[pick(gen.units, rng)], rng)
+      const n = randInt(rng, 2, 9)
+      const m = n * factor
+      if (rng() < 0.6) {
+        return numberTask(
+          `${n} ${big} = ? ${small}`,
+          m,
+          `Koliko ${UNIT_NAMES[small][2]} ima ${unitName(n, big)}?`,
+          `1 ${big} = ${factor} ${small}, a ${n} ${TIMES} ${factor} = ${m}, pa je ${n} ${big} = ${m} ${small}.`,
+          'Pretvori mjerne jedinice',
+        )
+      }
+      return numberTask(
+        `${m} ${small} = ? ${big}`,
+        n,
+        `Koliko ${UNIT_NAMES[big][2]} je ${unitName(m, small)}?`,
+        `1 ${big} = ${factor} ${small}, a ${m} ${DIVIDE} ${factor} = ${n}, pa je ${m} ${small} = ${n} ${big}.`,
+        'Pretvori mjerne jedinice',
+      )
+    }
   }
+}
+
+/** Brojevi do 10 000: hiljade, stotice, desetice i jedinice. */
+function largePlaceValue(n: number, rng: Rng): Exercise {
+  const digits = String(n).split('').map(Number).reverse()
+  const parts = expandedForm(n)
+  const explanation = `${n} = ${parts.join(' + ')}`
+  const variant = randInt(rng, 0, 2)
+  if (variant === 0) {
+    const place = randInt(rng, 0, digits.length - 1)
+    const q = `Koja cifra je na mjestu ${PLACES[place]} u broju ${n}?`
+    return numberTask(q, digits[place], q, explanation, 'Upiši cifru')
+  }
+  if (variant === 1) {
+    const q = parts.join(' + ')
+    return numberTask(`${q} = ?`, n, `Koji broj je ${q}?`, explanation, 'Napiši broj')
+  }
+  const named = digits
+    .map((d, place) => (d > 0 ? PLACE_COUNT[place](d) : ''))
+    .filter(Boolean)
+    .reverse()
+  const phrase = named.length > 1 ? `${named.slice(0, -1).join(', ')} i ${named[named.length - 1]}` : named[0]
+  const q = `Koji broj ima ${phrase}?`
+  return numberTask(q, n, q, explanation, 'Upiši broj')
 }
 
 /** Pravi zadane brojeve zadataka bez ponavljanja istog pitanja. */

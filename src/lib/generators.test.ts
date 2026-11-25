@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { generate } from './generators'
+import { expandedForm, generate, UNIT_PAIRS } from './generators'
 import { createRng } from './random'
 import type { Exercise, Generator } from './types'
 
@@ -107,5 +107,83 @@ describe('generatori', () => {
     const a = generate({ type: 'addition', max: 100, count: 5 }, createRng(42))
     const b = generate({ type: 'addition', max: 100, count: 5 }, createRng(42))
     expect(a).toEqual(b)
+  })
+
+  it('pismeno množenje: proizvod ne prelazi max, objašnjenje je po mjesnim vrijednostima', () => {
+    for (const ex of many({ type: 'long-multiplication', max: 1000 })) {
+      if (ex.type !== 'input') throw new Error('očekivan upis')
+      const result = Number(answerOf(ex))
+      expect(result).toBeLessThanOrEqual(1000)
+      expect(solve(ex.question)).toBe(result)
+      expect(ex.explanation).toContain(`= ${result}.`)
+    }
+  })
+
+  it('pismeno dijeljenje je bez ostatka i u zadanom opsegu', () => {
+    for (const ex of many({ type: 'long-division', max: 1000, digits: [3, 7] })) {
+      if (ex.type !== 'input') throw new Error('očekivan upis')
+      const [n, d] = ex.question.split(' : ').map((x) => parseInt(x, 10))
+      expect([3, 7]).toContain(d)
+      expect(n).toBeLessThanOrEqual(1000)
+      expect(n % d).toBe(0)
+      expect(Number(answerOf(ex))).toBe(n / d)
+    }
+  })
+
+  it('dijeljenje sa ostatkom: tačan odgovor je među ponuđenima, a ostatak manji od djelioca', () => {
+    for (const ex of many({ type: 'division-remainder', max: 100 })) {
+      if (ex.type !== 'choice') throw new Error('očekivan izbor')
+      const [n, d] = ex.question.split(' : ').map((x) => parseInt(x, 10))
+      expect(n).toBeLessThanOrEqual(100)
+      expect(ex.answer).toBe(`${Math.floor(n / d)}, ostatak ${n % d}`)
+      expect(n % d).toBeGreaterThan(0)
+      expect(ex.options).toContain(ex.answer)
+      expect(new Set(ex.options).size).toBe(ex.options.length)
+      expect(ex.options.length).toBeGreaterThanOrEqual(3)
+    }
+  })
+
+  it('zaokruživanje: najbliža desetica, stotica ili hiljada; polovina se zaokružuje naviše', () => {
+    for (const to of [10, 100, 1000] as const) {
+      for (const ex of many({ type: 'rounding', to, max: 10000 })) {
+        if (ex.type !== 'input') throw new Error('očekivan upis')
+        const n = Number(ex.question)
+        const answer = Number(answerOf(ex))
+        expect(answer % to).toBe(0)
+        expect(Math.abs(answer - n)).toBeLessThanOrEqual(to / 2)
+        if (n % to === to / 2) expect(answer).toBeGreaterThan(n)
+      }
+    }
+  })
+
+  it('pretvaranje mjernih jedinica računa tačno u oba smjera', () => {
+    const factors = new Map(Object.values(UNIT_PAIRS).flat().map(([big, small, f]) => [`${big}>${small}`, f]))
+    for (const ex of many({ type: 'unit-conversion', units: ['length', 'mass', 'volume'] })) {
+      if (ex.type !== 'input') throw new Error('očekivan upis')
+      const m = ex.question.match(/^(\d+) (\w+) = \? (\w+)$/)
+      if (!m) throw new Error(`Nepoznat oblik: ${ex.question}`)
+      const [value, from, to] = [Number(m[1]), m[2], m[3]]
+      const answer = Number(answerOf(ex))
+      if (factors.has(`${from}>${to}`)) expect(answer).toBe(value * factors.get(`${from}>${to}`)!)
+      else expect(answer).toBe(value / factors.get(`${to}>${from}`)!)
+    }
+  })
+
+  it('brojevi do 10 000: mjesne vrijednosti su tačne', () => {
+    expect(expandedForm(4057)).toEqual([4000, 50, 7])
+    for (const ex of many({ type: 'place-value', max: 9999 })) {
+      if (ex.type !== 'input') throw new Error('očekivan upis')
+      const answer = Number(answerOf(ex))
+      const place = ex.question.match(/na mjestu (\w+) u broju (\d+)/)
+      if (place) {
+        const idx = ['jedinica', 'desetica', 'stotica', 'hiljada'].indexOf(place[1])
+        expect(answer).toBe(Math.floor(Number(place[2]) / 10 ** idx) % 10)
+      } else if (ex.question.endsWith('= ?')) {
+        const sum = ex.question.replace(' = ?', '').split(' + ').map(Number).reduce((a, b) => a + b, 0)
+        expect(answer).toBe(sum)
+      } else {
+        expect(ex.explanation).toBe(`${answer} = ${expandedForm(answer).join(' + ')}`)
+      }
+    }
   })
 })

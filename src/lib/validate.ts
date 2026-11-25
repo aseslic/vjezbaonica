@@ -6,7 +6,9 @@ import { acceptedAnswers } from './answers'
 import { isRecord } from './store'
 
 const EXERCISE_TYPES = ['choice', 'input', 'truefalse', 'order']
-const BLOCK_TYPES = ['text', 'remember', 'example', 'list']
+const BLOCK_TYPES = ['text', 'remember', 'example', 'list', 'calculation']
+const CALCULATION_OPERATORS = ['+', '−', '·', ':']
+/** Najmanja dozvoljena vrijednost za "max" kod generatora koji ga koriste. */
 const GENERATOR_MIN_MAX: Record<string, number> = {
   addition: 2,
   subtraction: 2,
@@ -14,8 +16,15 @@ const GENERATOR_MIN_MAX: Record<string, number> = {
   compare: 1,
   neighbors: 2,
   'place-value': 10,
+  'long-multiplication': 100,
+  'long-division': 100,
+  'division-remainder': 20,
 }
 const TABLE_GENERATORS = ['multiplication', 'division']
+const DIGIT_GENERATORS = ['long-multiplication', 'long-division', 'division-remainder']
+const ROUNDING_TO = [10, 100, 1000]
+const UNIT_GROUPS = ['length', 'mass', 'volume']
+const GENERATOR_TYPES = [...Object.keys(GENERATOR_MIN_MAX), ...TABLE_GENERATORS, 'rounding', 'unit-conversion']
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const COLOR_PATTERN = /^#[0-9a-fA-F]{6}$/
 
@@ -31,6 +40,12 @@ function validateBlock(block: unknown, where: string, errors: string[]) {
   }
   if (block.type === 'list') {
     if (!isTextList(block.items, 1)) errors.push(`${where}: "items" mora biti lista s barem jednom stavkom.`)
+  } else if (block.type === 'calculation') {
+    if (!isTextList(block.rows, 2)) errors.push(`${where}: "rows" mora imati barem 2 broja, npr. ["347", "285"].`)
+    if (!CALCULATION_OPERATORS.includes(String(block.operator))) {
+      errors.push(`${where}: "operator" mora biti jedan od znakova ${CALCULATION_OPERATORS.join(' ')}.`)
+    }
+    if (!isText(block.result)) errors.push(`${where}: nedostaje rezultat ("result").`)
   } else if (!isText(block.text)) {
     errors.push(`${where}: nedostaje "text".`)
   }
@@ -90,19 +105,40 @@ function validateGenerator(gen: unknown, where: string, errors: string[]) {
     return
   }
   const type = String(gen.type)
-  if (type in GENERATOR_MIN_MAX) {
-    if (!isPositiveInt(gen.max) || gen.max < GENERATOR_MIN_MAX[type]) {
-      errors.push(`${where}: "max" mora biti cijeli broj, najmanje ${GENERATOR_MIN_MAX[type]}.`)
-    }
-  } else if (TABLE_GENERATORS.includes(type)) {
+  if (!GENERATOR_TYPES.includes(type)) {
+    errors.push(`${where}: nepoznat generator "${type}" (dozvoljeno: ${GENERATOR_TYPES.join(', ')}).`)
+    return
+  }
+  if (type in GENERATOR_MIN_MAX && (!isPositiveInt(gen.max) || gen.max < GENERATOR_MIN_MAX[type])) {
+    errors.push(`${where}: "max" mora biti cijeli broj, najmanje ${GENERATOR_MIN_MAX[type]}.`)
+  }
+  if (TABLE_GENERATORS.includes(type)) {
     const ok =
       Array.isArray(gen.tables) &&
       gen.tables.length > 0 &&
       gen.tables.every((t) => isPositiveInt(t) && t <= 10)
     if (!ok) errors.push(`${where}: "tables" mora biti lista brojeva od 1 do 10, npr. [2, 3, 4].`)
-  } else {
-    const known = [...Object.keys(GENERATOR_MIN_MAX), ...TABLE_GENERATORS].join(', ')
-    errors.push(`${where}: nepoznat generator "${type}" (dozvoljeno: ${known}).`)
+  }
+  if (DIGIT_GENERATORS.includes(type) && 'digits' in gen) {
+    const ok =
+      Array.isArray(gen.digits) &&
+      gen.digits.length > 0 &&
+      gen.digits.every((d) => isPositiveInt(d) && d >= 2 && d <= 9)
+    if (!ok) errors.push(`${where}: "digits" mora biti lista jednocifrenih brojeva od 2 do 9, npr. [2, 3, 4].`)
+  }
+  if (type === 'rounding') {
+    if (!ROUNDING_TO.includes(Number(gen.to))) {
+      errors.push(`${where}: "to" mora biti 10 (desetice), 100 (stotice) ili 1000 (hiljade).`)
+    } else if (!isPositiveInt(gen.max) || gen.max < 2 * Number(gen.to)) {
+      errors.push(`${where}: "max" mora biti cijeli broj, najmanje ${2 * Number(gen.to)}.`)
+    }
+  }
+  if (type === 'unit-conversion') {
+    const ok =
+      Array.isArray(gen.units) && gen.units.length > 0 && gen.units.every((u) => UNIT_GROUPS.includes(String(u)))
+    if (!ok) {
+      errors.push(`${where}: "units" mora biti lista od: "length" (dužina), "mass" (masa), "volume" (zapremina).`)
+    }
   }
   if ('count' in gen && !isPositiveInt(gen.count)) errors.push(`${where}: "count" mora biti pozitivan cijeli broj.`)
 }

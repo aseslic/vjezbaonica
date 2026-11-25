@@ -8,7 +8,7 @@ pročita kratku lekciju i riješi zadatke. Za svaku temu dobija zvjezdice, a na 
 ## Šta aplikacija radi
 
 - **Lekcije i vježbe** po razredima, predmetima i temama. Za početak:
-  2. razred (Matematika, Bosanski, hrvatski i srpski jezik i književnost, Moja okolina) te matematika za 1. i 3. razred.
+  2. i 4. razred (Matematika, Bosanski, hrvatski i srpski jezik i književnost, Moja okolina) te matematika za 1. i 3. razred.
 - **Četiri vrste zadataka:** izbor ponuđenog odgovora, upis, tačno/netačno i slaganje pravilnim redom.
 - **Matematički zadaci se generišu sami**, pa je svaka vježba drugačija. Uz svaki zadatak ide objašnjenje,
   npr. *„Saberi desetice pa jedinice: 30 + 20 = 50, 4 + 5 = 9, pa je 50 + 9 = 59.”*
@@ -49,7 +49,7 @@ Nova datoteka se automatski pojavi u aplikaciji. Sve vrste zadataka, lekcija i g
 
 Poslije izmjene pokreni `npm run provjeri`. Provjera javlja tačno šta i gdje ne valja.
 
-> Sadržaj za 2. razred napisan je prema gradivu 2. razreda u Kantonu Sarajevo.
+> Sadržaj za 2. i 4. razred napisan je prema nastavnom planu i programu Kantona Sarajevo.
 > Prije šire upotrebe dobro je da ga pregleda učiteljica ili učitelj.
 
 ## Objavljivanje na internetu

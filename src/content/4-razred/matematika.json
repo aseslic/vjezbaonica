@@ -1,0 +1,383 @@
+{
+  "grade": 4,
+  "id": "matematika",
+  "name": "Matematika",
+  "order": 1,
+  "icon": "🔢",
+  "color": "#2F6FED",
+  "paper": "grid",
+  "topics": [
+    {
+      "id": "brojevi-do-10000",
+      "title": "Brojevi do 10 000",
+      "description": "Hiljade, stotice, desetice i jedinice; poređenje",
+      "lesson": [
+        { "type": "text", "text": "Četverocifreni brojevi imaju **hiljade**, **stotice**, **desetice** i **jedinice**." },
+        { "type": "example", "text": "4357 = 4000 + 300 + 50 + 7\n4 hiljade, 3 stotice, 5 desetica i 7 jedinica" },
+        {
+          "type": "remember",
+          "text": "10 jedinica = 1 desetica\n10 desetica = 1 stotica\n10 stotica = 1 hiljada\n10 hiljada = 10 000"
+        },
+        {
+          "type": "text",
+          "text": "Kad poredimo brojeve, prvo gledamo hiljade, zatim stotice, pa desetice i na kraju jedinice."
+        },
+        { "type": "example", "text": "3521 > 3498, jer 5 stotica ima više od 4 stotice." }
+      ],
+      "exercises": [
+        { "type": "input", "question": "Koji je najveći četverocifreni broj?", "answer": "9999" },
+        { "type": "input", "question": "Koji je najmanji četverocifreni broj?", "answer": "1000" },
+        { "type": "input", "instruction": "Napiši brojem", "question": "tri hiljade četiristo dvadeset pet", "answer": "3425" },
+        {
+          "type": "input",
+          "instruction": "Napiši brojem",
+          "question": "pet hiljada osam",
+          "answer": "5008",
+          "explanation": "Pet hiljada osam: nema stotica ni desetica, pa na njihova mjesta pišemo nule: 5008."
+        },
+        { "type": "input", "instruction": "Napiši brojem", "question": "deset hiljada", "answer": "10000" },
+        { "type": "truefalse", "statement": "Jedna hiljada ima 10 stotica.", "answer": true },
+        { "type": "order", "question": "Poredaj brojeve od najmanjeg do najvećeg.", "items": ["1099", "1909", "1990", "9011"] },
+        {
+          "type": "choice",
+          "question": "Koji broj je najveći?",
+          "options": ["4589", "4598", "4859", "4895"],
+          "answer": "4895",
+          "explanation": "Svi imaju 4 hiljade. Najviše stotica (8) imaju 4859 i 4895, a od njih 4895 ima više desetica."
+        }
+      ],
+      "generators": [
+        { "type": "place-value", "max": 9999, "count": 15 },
+        { "type": "compare", "max": 10000, "count": 10 },
+        { "type": "neighbors", "max": 10000, "count": 8 }
+      ]
+    },
+    {
+      "id": "pismeno-sabiranje-i-oduzimanje",
+      "title": "Pismeno sabiranje i oduzimanje",
+      "description": "U prvoj hiljadi i do 10 000",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Kod pismenog sabiranja brojeve pišemo jedan ispod drugog: jedinice ispod jedinica, desetice ispod desetica, stotice ispod stotica."
+        },
+        { "type": "calculation", "title": "Pismeno sabiranje", "rows": ["347", "285"], "operator": "+", "result": "632" },
+        {
+          "type": "text",
+          "text": "Sabiramo od jedinica: 7 + 5 = 12, pišemo 2, a 1 **pamtimo**. Zatim 4 + 8 + 1 = 13, pišemo 3, a 1 pamtimo. Na kraju 3 + 2 + 1 = 6."
+        },
+        { "type": "calculation", "title": "Pismeno oduzimanje", "rows": ["642", "358"], "operator": "−", "result": "284" },
+        { "type": "remember", "text": "Oduzimanje provjeravamo sabiranjem: 284 + 358 = 642." }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "U biblioteci je bilo 1250 knjiga. Kupljeno je još 375 knjiga. Koliko sada ima knjiga?",
+          "answer": "1625",
+          "explanation": "1250 + 375 = 1625"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Na utakmici je bilo 4500 gledalaca. Prije kraja je otišlo 1280 gledalaca. Koliko je gledalaca ostalo?",
+          "answer": "3220",
+          "explanation": "4500 − 1280 = 3220"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Amar je skupio 368 bodova, a Ena 457 bodova. Koliko su bodova skupili zajedno?",
+          "answer": "825",
+          "explanation": "368 + 457 = 825"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Bjelašnica je visoka 2067 m, a Igman 1502 m. Za koliko metara je Bjelašnica viša?",
+          "answer": "565",
+          "explanation": "„Za koliko je viša“ znači da oduzimamo: 2067 − 1502 = 565."
+        },
+        { "type": "truefalse", "statement": "Rezultat oduzimanja možemo provjeriti sabiranjem.", "answer": true }
+      ],
+      "generators": [
+        { "type": "addition", "max": 1000, "count": 10 },
+        { "type": "subtraction", "max": 1000, "count": 10 },
+        { "type": "addition", "max": 10000, "count": 8 },
+        { "type": "subtraction", "max": 10000, "count": 8 }
+      ]
+    },
+    {
+      "id": "pismeno-mnozenje",
+      "title": "Pismeno množenje",
+      "description": "Množenje višecifrenog broja jednocifrenim",
+      "lesson": [
+        { "type": "text", "text": "Kod pismenog množenja množimo redom: prvo jedinice, zatim desetice, pa stotice." },
+        {
+          "type": "example",
+          "text": "324 · 3 = ?\n4 · 3 = 12, pišemo 2, a 1 pamtimo\n2 · 3 = 6, i 1 je 7\n3 · 3 = 9\n324 · 3 = 972"
+        },
+        { "type": "remember", "text": "Množenje možemo provjeriti dijeljenjem: 972 : 3 = 324." },
+        { "type": "text", "text": "Vantablično množenje: 15 · 2 = 10 · 2 + 5 · 2 = 20 + 10 = 30." }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Jedna karta za kino košta 6 KM. Koliko KM košta 125 karata?",
+          "answer": "750",
+          "explanation": "125 · 6 = 750"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Autobus ima 48 sjedišta. Koliko je sjedišta u 7 autobusa?",
+          "answer": "336",
+          "explanation": "48 · 7 = 336"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "U jednoj kutiji su 144 olovke. Koliko je olovaka u 5 kutija?",
+          "answer": "720",
+          "explanation": "144 · 5 = 720"
+        },
+        { "type": "truefalse", "statement": "250 · 4 = 1000", "answer": true }
+      ],
+      "generators": [
+        { "type": "long-multiplication", "max": 100, "count": 8 },
+        { "type": "long-multiplication", "max": 1000, "count": 20 }
+      ]
+    },
+    {
+      "id": "dijeljenje-u-prvoj-hiljadi",
+      "title": "Dijeljenje u prvoj hiljadi",
+      "description": "Pismeno dijeljenje jednocifrenim brojem",
+      "lesson": [
+        { "type": "text", "text": "Kod pismenog dijeljenja dijelimo redom: prvo stotice, zatim desetice, pa jedinice." },
+        { "type": "example", "text": "856 : 4 = ?\n8 : 4 = 2\n5 : 4 = 1, ostaje 1\n16 : 4 = 4\n856 : 4 = 214" },
+        { "type": "remember", "text": "Dijeljenje provjeravamo množenjem: 214 · 4 = 856." },
+        { "type": "text", "text": "Vantablično dijeljenje: 30 : 2 = 15, jer je 15 · 2 = 30." }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Za 4 jednaka bicikla plaćeno je 960 KM. Koliko KM košta jedan bicikl?",
+          "answer": "240",
+          "explanation": "960 : 4 = 240"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Na izlet je krenulo 186 učenika u 3 autobusa, u svakom jednako. Koliko je učenika u jednom autobusu?",
+          "answer": "62",
+          "explanation": "186 : 3 = 62"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Konopac dug 750 cm presječen je na 5 jednakih dijelova. Koliko centimetara je dug jedan dio?",
+          "answer": "150",
+          "explanation": "750 : 5 = 150"
+        },
+        { "type": "truefalse", "statement": "Ako je 125 · 4 = 500, onda je 500 : 4 = 125.", "answer": true }
+      ],
+      "generators": [
+        { "type": "long-division", "max": 100, "count": 8 },
+        { "type": "long-division", "max": 1000, "count": 20 }
+      ]
+    },
+    {
+      "id": "dijeljenje-sa-ostatkom",
+      "title": "Dijeljenje sa ostatkom",
+      "description": "Ostatak je uvijek manji od djelioca",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Ponekad se broj ne može podijeliti bez ostatka. Ono što preostane zovemo **ostatak**."
+        },
+        { "type": "example", "text": "17 : 5 = 3, ostatak 2\njer je 3 · 5 = 15, a 17 − 15 = 2" },
+        {
+          "type": "remember",
+          "text": "Ostatak je uvijek **manji od djelioca**. Kod dijeljenja sa 5 ostatak može biti 1, 2, 3 ili 4."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "instruction": "Tekstualni zadatak",
+          "question": "Mama je 23 bombone podijelila jednako na petero djece. Koliko je bombona dobilo svako dijete i koliko ih je ostalo?",
+          "options": ["4, ostatak 3", "5, ostatak 2", "4, ostatak 2", "3, ostatak 8"],
+          "answer": "4, ostatak 3",
+          "explanation": "4 · 5 = 20, a 23 − 20 = 3."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Kod dijeljenja sa 4 ostatak može biti 5.",
+          "answer": false,
+          "explanation": "Ostatak mora biti manji od djelioca, dakle 1, 2 ili 3."
+        },
+        {
+          "type": "choice",
+          "question": "Koji ostatak je moguć kod dijeljenja sa 3?",
+          "options": ["1", "3", "4", "5"],
+          "answer": "1",
+          "shuffle": false,
+          "explanation": "Kod dijeljenja sa 3 ostatak može biti samo 1 ili 2."
+        },
+        {
+          "type": "input",
+          "question": "Koliki je ostatak kad 29 podijelimo sa 6?",
+          "answer": "5",
+          "explanation": "4 · 6 = 24, a 29 − 24 = 5."
+        }
+      ],
+      "generators": [
+        { "type": "division-remainder", "max": 50, "count": 12 },
+        { "type": "division-remainder", "max": 100, "count": 12 }
+      ]
+    },
+    {
+      "id": "zaokruzivanje",
+      "title": "Zaokruživanje brojeva",
+      "description": "Na desetice, stotice i hiljade",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Kad nam ne treba tačan broj, zaokružimo ga na najbližu deseticu, stoticu ili hiljadu. Znak ≈ čitamo „približno je jednako“."
+        },
+        { "type": "example", "text": "347 ≈ 350 (na desetice)\n347 ≈ 300 (na stotice)" },
+        {
+          "type": "remember",
+          "text": "Gledamo cifru desno od mjesta na koje zaokružujemo. Ako je 0, 1, 2, 3 ili 4, zaokružujemo **naniže**. Ako je 5, 6, 7, 8 ili 9, zaokružujemo **naviše**."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "truefalse",
+          "statement": "Broj 2650 zaokružen na hiljade je 3000.",
+          "answer": true,
+          "explanation": "Cifra stotica je 6, pa zaokružujemo naviše: 2650 ≈ 3000."
+        },
+        {
+          "type": "choice",
+          "question": "Koji broj zaokružen na desetice daje 80?",
+          "options": ["74", "76", "85", "88"],
+          "answer": "76",
+          "explanation": "76 je bliže broju 80 nego broju 70."
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Pekara je ispekla 1987 kifli. Zaokruži taj broj na stotice.",
+          "answer": "2000",
+          "explanation": "Cifra desetica je 8, pa zaokružujemo naviše: 1987 ≈ 2000."
+        }
+      ],
+      "generators": [
+        { "type": "rounding", "to": 10, "max": 1000, "count": 10 },
+        { "type": "rounding", "to": 100, "max": 10000, "count": 10 },
+        { "type": "rounding", "to": 1000, "max": 10000, "count": 8 }
+      ]
+    },
+    {
+      "id": "mjerne-jedinice",
+      "title": "Mjerne jedinice",
+      "description": "Dužina, masa i zapremina tečnosti",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Dužinu mjerimo kilometrima (km), metrima (m), decimetrima (dm), centimetrima (cm) i milimetrima (mm)."
+        },
+        { "type": "example", "title": "Dužina", "text": "1 km = 1000 m\n1 m = 10 dm = 100 cm\n1 dm = 10 cm\n1 cm = 10 mm" },
+        { "type": "example", "title": "Masa", "text": "1 kg = 100 dag = 1000 g\n1 dag = 10 g" },
+        { "type": "example", "title": "Zapremina tečnosti", "text": "1 hl = 100 l\n1 l = 10 dl = 100 cl = 1000 ml" },
+        {
+          "type": "remember",
+          "text": "Kad veću jedinicu pretvaramo u manju, **množimo**. Kad manju jedinicu pretvaramo u veću, **dijelimo**."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta je teže: 1 kg perja ili 1 kg željeza?",
+          "options": ["perje", "željezo", "jednako su teški"],
+          "answer": "jednako su teški",
+          "explanation": "I perje i željezo imaju masu 1 kg."
+        },
+        { "type": "choice", "question": "Čime mjerimo masu?", "options": ["vagom", "metrom", "satom", "termometrom"], "answer": "vagom" },
+        {
+          "type": "choice",
+          "question": "Kojom jedinicom ćemo izraziti udaljenost od Sarajeva do Mostara?",
+          "options": ["kilometrima", "centimetrima", "milimetrima", "decimetrima"],
+          "answer": "kilometrima"
+        },
+        {
+          "type": "input",
+          "question": "Flaša vode ima 1 l. Koliko je to decilitara?",
+          "answer": "10",
+          "explanation": "1 l = 10 dl"
+        },
+        {
+          "type": "input",
+          "question": "Koliko je dekagrama u pola kilograma?",
+          "answer": "50",
+          "explanation": "1 kg = 100 dag, pa je pola kilograma 50 dag."
+        }
+      ],
+      "generators": [{ "type": "unit-conversion", "units": ["length", "mass", "volume"], "count": 25 }]
+    },
+    {
+      "id": "prave-krug-i-kruznica",
+      "title": "Prave, krug i kružnica",
+      "description": "Paralelne i okomite prave, šestar",
+      "lesson": [
+        { "type": "text", "text": "**Paralelne** prave se nikada ne sijeku, kao šine na pruzi." },
+        { "type": "text", "text": "**Okomite** prave se sijeku pod pravim uglom, kao ivice lista u svesci." },
+        {
+          "type": "text",
+          "text": "**Kružnica** je kriva linija čije su sve tačke jednako udaljene od **središta**. **Krug** je dio ravni omeđen kružnicom."
+        },
+        {
+          "type": "remember",
+          "text": "Kružnicu crtamo **šestarom**. Udaljenost od središta do kružnice je **poluprečnik**, a **prečnik** je dva poluprečnika."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kako se zovu prave koje se nikada ne sijeku?",
+          "options": ["paralelne", "okomite", "kose"],
+          "answer": "paralelne"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se zovu prave koje se sijeku pod pravim uglom?",
+          "options": ["okomite", "paralelne", "zakrivljene"],
+          "answer": "okomite"
+        },
+        { "type": "choice", "question": "Čime crtamo kružnicu?", "options": ["šestarom", "lenjirom", "uglomjerom"], "answer": "šestarom" },
+        { "type": "truefalse", "statement": "Sve tačke kružnice jednako su udaljene od njenog središta.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Krug i kružnica su isto.",
+          "answer": false,
+          "explanation": "Kružnica je linija, a krug je cijeli dio ravni unutar nje, zajedno s kružnicom."
+        },
+        {
+          "type": "input",
+          "question": "Poluprečnik kružnice je 4 cm. Koliko centimetara je dug prečnik?",
+          "answer": "8",
+          "explanation": "Prečnik je dva poluprečnika: 2 · 4 cm = 8 cm."
+        },
+        {
+          "type": "choice",
+          "question": "Šta ima oblik kruga?",
+          "options": ["dno čaše", "list papira", "vrata", "lenjir"],
+          "answer": "dno čaše"
+        }
+      ]
+    }
+  ]
+}

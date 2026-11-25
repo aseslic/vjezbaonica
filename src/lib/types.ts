@@ -12,6 +12,8 @@ export type LessonBlock =
   | { type: 'remember'; text: string }
   | { type: 'example'; title?: string; text: string }
   | { type: 'list'; items: string[] }
+  /** Pismeno računanje: brojevi jedan ispod drugog, crta i rezultat. */
+  | { type: 'calculation'; title?: string; rows: string[]; operator: string; result: string }
 
 interface ExerciseBase {
   /** Kratka uputa iznad pitanja, npr. "Izračunaj". Ako je nema, koristi se zadana uputa za tip zadatka. */
@@ -72,6 +74,14 @@ export type Generator =
   | { type: 'compare'; max: number; count?: number }
   | { type: 'neighbors'; max: number; count?: number }
   | { type: 'place-value'; max: number; count?: number }
+  | { type: 'rounding'; max: number; to: 10 | 100 | 1000; count?: number }
+  | { type: 'long-multiplication'; max: number; digits?: number[]; count?: number }
+  | { type: 'long-division'; max: number; digits?: number[]; count?: number }
+  | { type: 'division-remainder'; max: number; digits?: number[]; count?: number }
+  | { type: 'unit-conversion'; units: UnitGroup[]; count?: number }
+
+/** Grupe mjernih jedinica: dužina, masa i zapremina tečnosti. */
+export type UnitGroup = 'length' | 'mass' | 'volume'
 
 export type GeneratorType = Generator['type']
 

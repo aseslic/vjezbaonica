@@ -1,0 +1,496 @@
+{
+  "grade": 4,
+  "id": "moja-okolina",
+  "name": "Moja okolina",
+  "order": 3,
+  "icon": "🌳",
+  "color": "#2E9E5B",
+  "paper": "lines",
+  "topics": [
+    {
+      "id": "strane-svijeta",
+      "title": "Strane svijeta i orijentacija",
+      "description": "Sjever, jug, istok i zapad; Sunce i kompas",
+      "lesson": [
+        { "type": "text", "text": "Četiri glavne strane svijeta su **sjever**, **jug**, **istok** i **zapad**." },
+        {
+          "type": "list",
+          "items": [
+            "Sunce izlazi na **istoku**, a zalazi na **zapadu**.",
+            "U podne je Sunce na **jugu**.",
+            "Igla kompasa uvijek pokazuje prema **sjeveru**."
+          ]
+        },
+        { "type": "remember", "text": "Kad stojiš licem prema sjeveru, iza tebe je jug, desno istok, a lijevo zapad." }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Gdje izlazi Sunce?",
+          "options": ["na istoku", "na zapadu", "na sjeveru", "na jugu"],
+          "answer": "na istoku"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje zalazi Sunce?",
+          "options": ["na zapadu", "na istoku", "na sjeveru", "na jugu"],
+          "answer": "na zapadu"
+        },
+        {
+          "type": "choice",
+          "question": "Prema kojoj strani svijeta pokazuje igla kompasa?",
+          "options": ["prema sjeveru", "prema jugu", "prema istoku", "prema zapadu"],
+          "answer": "prema sjeveru"
+        },
+        {
+          "type": "choice",
+          "question": "Stojiš licem prema sjeveru. Koja strana svijeta ti je desno?",
+          "options": ["istok", "zapad", "jug", "sjever"],
+          "answer": "istok"
+        },
+        {
+          "type": "choice",
+          "question": "Stojiš licem prema sjeveru. Šta ti je iza leđa?",
+          "options": ["jug", "istok", "zapad", "sjever"],
+          "answer": "jug"
+        },
+        {
+          "type": "order",
+          "question": "Poredaj strane svijeta u smjeru kazaljke na satu. Počni od sjevera.",
+          "items": ["sjever", "istok", "jug", "zapad"]
+        },
+        { "type": "truefalse", "statement": "U podne je Sunce na jugu.", "answer": true }
+      ]
+    },
+    {
+      "id": "plan-i-karta",
+      "title": "Plan i geografska karta",
+      "description": "Tumač znakova, boje i strane svijeta na karti",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Plan** je crtež manjeg prostora gledanog odozgo, npr. učionice ili škole. **Geografska karta** prikazuje veći prostor: kanton, državu ili cijeli svijet."
+        },
+        { "type": "text", "text": "Na karti je **sjever gore**, jug dolje, istok desno, a zapad lijevo." },
+        {
+          "type": "list",
+          "items": [
+            "**zelena** boja: nizije i ravnice",
+            "**žuta i svijetlosmeđa**: brda",
+            "**tamnosmeđa**: visoke planine",
+            "**plava**: vode (rijeke, jezera, mora)"
+          ]
+        },
+        { "type": "remember", "text": "Znakove na karti objašnjava **tumač znakova** (legenda)." }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kojom bojom su na karti označene vode?",
+          "options": ["plavom", "zelenom", "smeđom", "crvenom"],
+          "answer": "plavom"
+        },
+        {
+          "type": "choice",
+          "question": "Kojom bojom su na karti označene visoke planine?",
+          "options": ["tamnosmeđom", "plavom", "zelenom"],
+          "answer": "tamnosmeđom"
+        },
+        {
+          "type": "choice",
+          "question": "Kojom bojom su na karti označene nizije?",
+          "options": ["zelenom", "plavom", "tamnosmeđom"],
+          "answer": "zelenom"
+        },
+        {
+          "type": "choice",
+          "question": "Koja strana svijeta je na karti gore?",
+          "options": ["sjever", "jug", "istok", "zapad"],
+          "answer": "sjever",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Šta objašnjava znakove na karti?",
+          "options": ["tumač znakova", "naslov karte", "kompas"],
+          "answer": "tumač znakova"
+        },
+        { "type": "truefalse", "statement": "Plan prikazuje prostor gledan odozgo.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Na karti je istok lijevo.",
+          "answer": false,
+          "explanation": "Na karti je istok desno, a zapad lijevo."
+        }
+      ]
+    },
+    {
+      "id": "kanton-sarajevo",
+      "title": "Kanton Sarajevo",
+      "description": "Moj širi zavičaj: općine, rijeke, planine i znamenitosti",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Moj širi zavičaj je **Kanton Sarajevo**. Njegovo središte je **Sarajevo**, glavni grad Bosne i Hercegovine."
+        },
+        {
+          "type": "text",
+          "text": "Kanton Sarajevo ima **9 općina**: Centar, Stari Grad, Novo Sarajevo, Novi Grad, Ilidža, Vogošća, Hadžići, Ilijaš i Trnovo."
+        },
+        {
+          "type": "text",
+          "text": "Kroz Sarajevo teče rijeka **Miljacka**. Rijeka **Bosna** izvire na **Vrelu Bosne** kod Ilidže. Na planinama **Igman** i **Bjelašnica** održane su 1984. godine Zimske olimpijske igre."
+        },
+        {
+          "type": "remember",
+          "text": "Poznate znamenitosti Sarajeva su Baščaršija sa Sebiljem, Gazi Husrev-begova džamija, Katedrala Srca Isusova, Stara pravoslavna crkva, Aškenaška sinagoga, Vijećnica i Latinska ćuprija."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koji je glavni grad Bosne i Hercegovine?",
+          "options": ["Sarajevo", "Mostar", "Tuzla", "Zenica"],
+          "answer": "Sarajevo"
+        },
+        { "type": "input", "question": "Koliko općina ima Kanton Sarajevo?", "answer": "9" },
+        {
+          "type": "choice",
+          "question": "Koja rijeka teče kroz Sarajevo?",
+          "options": ["Miljacka", "Neretva", "Una", "Vrbas"],
+          "answer": "Miljacka"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje izvire rijeka Bosna?",
+          "options": ["na Vrelu Bosne kod Ilidže", "na Baščaršiji", "u Vogošći", "na Trebeviću"],
+          "answer": "na Vrelu Bosne kod Ilidže"
+        },
+        {
+          "type": "choice",
+          "question": "Koje godine su u Sarajevu održane Zimske olimpijske igre?",
+          "options": ["1974", "1984", "1994", "2004"],
+          "answer": "1984",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Koja od ovih općina pripada Kantonu Sarajevo?",
+          "options": ["Ilidža", "Mostar", "Bihać", "Tuzla"],
+          "answer": "Ilidža"
+        },
+        {
+          "type": "choice",
+          "question": "Šta se nalazi na Baščaršiji?",
+          "options": ["Sebilj", "Vrelo Bosne", "Bjelašnica", "Igman"],
+          "answer": "Sebilj"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Kanton Sarajevo ima 20 općina.",
+          "answer": false,
+          "explanation": "Kanton Sarajevo ima 9 općina."
+        }
+      ]
+    },
+    {
+      "id": "vremenska-traka",
+      "title": "Prošlost i lenta vremena",
+      "description": "Decenija, stoljeće, milenij",
+      "lesson": [
+        { "type": "list", "items": ["**decenija** = 10 godina", "**stoljeće** = 100 godina", "**milenij** = 1000 godina"] },
+        { "type": "text", "text": "Na **lenti vremena** događaje redamo od starijih prema novijim." },
+        { "type": "remember", "text": "Danas živimo u **21. stoljeću**. Godine od 2001. do 2100. pripadaju 21. stoljeću." },
+        {
+          "type": "text",
+          "text": "Prošlost svog kraja upoznajemo preko **kulturno-historijskih spomenika**, starih fotografija, muzeja i priča starijih."
+        }
+      ],
+      "exercises": [
+        { "type": "input", "question": "Koliko godina ima jedno stoljeće?", "answer": "100" },
+        { "type": "input", "question": "Koliko godina ima jedna decenija?", "answer": "10" },
+        { "type": "input", "question": "Koliko decenija ima jedno stoljeće?", "answer": "10" },
+        { "type": "input", "instruction": "Upiši broj", "question": "U kojem stoljeću živimo?", "answer": "21" },
+        {
+          "type": "choice",
+          "question": "Kojem stoljeću pripada 1984. godina?",
+          "options": ["19. stoljeću", "20. stoljeću", "21. stoljeću"],
+          "answer": "20. stoljeću",
+          "shuffle": false,
+          "explanation": "20. stoljeću pripadaju godine od 1901. do 2000."
+        },
+        {
+          "type": "order",
+          "question": "Poredaj godine od najstarije do najnovije.",
+          "items": ["1462", "1878", "1914", "1984", "2026"]
+        },
+        { "type": "truefalse", "statement": "Dvije decenije su 20 godina.", "answer": true }
+      ]
+    },
+    {
+      "id": "ljudsko-tijelo",
+      "title": "Ljudsko tijelo",
+      "description": "Unutrašnji organi i kako rade zajedno",
+      "lesson": [
+        { "type": "text", "text": "Unutrašnji organi nalaze se unutar tijela i rade zajedno kao cjelina." },
+        {
+          "type": "list",
+          "items": [
+            "**srce** pumpa krv kroz cijelo tijelo",
+            "**pluća** služe za disanje",
+            "**mozak** upravlja radom cijelog tijela",
+            "**želudac** i **crijeva** vare hranu",
+            "**bubrezi** čiste krv"
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Kostur daje tijelu oslonac i štiti organe: lobanja štiti mozak, a rebra štite srce i pluća."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koji organ pumpa krv kroz tijelo?",
+          "options": ["srce", "pluća", "želudac", "mozak"],
+          "answer": "srce"
+        },
+        {
+          "type": "choice",
+          "question": "Koji organ služi za disanje?",
+          "options": ["pluća", "srce", "bubrezi", "želudac"],
+          "answer": "pluća"
+        },
+        {
+          "type": "choice",
+          "question": "Koji organ upravlja radom cijelog tijela?",
+          "options": ["mozak", "srce", "pluća", "crijeva"],
+          "answer": "mozak"
+        },
+        { "type": "choice", "question": "Šta štiti mozak?", "options": ["lobanja", "rebra", "koljeno", "stopalo"], "answer": "lobanja" },
+        { "type": "choice", "question": "Šta štiti srce i pluća?", "options": ["rebra", "lobanja", "šake", "stopala"], "answer": "rebra" },
+        { "type": "truefalse", "statement": "Bubrezi čiste krv.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Hrana se vari u plućima.",
+          "answer": false,
+          "explanation": "Hranu vare želudac i crijeva. Pluća služe za disanje."
+        }
+      ]
+    },
+    {
+      "id": "ziva-bica",
+      "title": "Živa bića",
+      "description": "Kičmenjaci i beskičmenjaci, životni ciklus",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Životinje koje imaju kičmu zovu se **kičmenjaci**: ribe, vodozemci, gmizavci, ptice i sisari. Životinje bez kičme su **beskičmenjaci**: insekti, puževi, gliste."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**insekti** imaju 6 nogu",
+            "**ribe** dišu škrgama",
+            "**ptice** imaju perje i polažu jaja",
+            "**sisari** hrane mladunce mlijekom"
+          ]
+        },
+        { "type": "example", "title": "Životni ciklus leptira", "text": "jaje → gusjenica → lutka → leptir" },
+        { "type": "remember", "text": "Biljke cvjetnice razmnožavaju se sjemenom. Iz sjemena izrasta nova biljka." }
+      ],
+      "exercises": [
+        { "type": "choice", "question": "Koliko nogu ima insekt?", "options": ["4", "6", "8", "10"], "answer": "6", "shuffle": false },
+        {
+          "type": "choice",
+          "question": "Koja životinja je sisar?",
+          "options": ["delfin", "ajkula", "pastrmka", "žaba"],
+          "answer": "delfin",
+          "explanation": "Delfin diše plućima i hrani mladunce mlijekom."
+        },
+        { "type": "choice", "question": "Koja životinja je beskičmenjak?", "options": ["puž", "mačka", "vrabac", "šaran"], "answer": "puž" },
+        { "type": "choice", "question": "Čime dišu ribe?", "options": ["škrgama", "plućima", "kožom"], "answer": "škrgama" },
+        { "type": "order", "question": "Poredaj životni ciklus leptira.", "items": ["jaje", "gusjenica", "lutka", "leptir"] },
+        {
+          "type": "truefalse",
+          "statement": "Pauk je insekt.",
+          "answer": false,
+          "explanation": "Pauk ima 8 nogu, pa nije insekt."
+        },
+        { "type": "truefalse", "statement": "Ptice imaju perje i polažu jaja.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Kit je riba.",
+          "answer": false,
+          "explanation": "Kit je sisar: diše plućima i hrani mladunce mlijekom."
+        }
+      ]
+    },
+    {
+      "id": "tvari-smjese-i-magnet",
+      "title": "Tvari, smjese i magnet",
+      "description": "Čvrsto, tečno i gasovito; razdvajanje smjesa",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Tvari mogu biti **čvrste**, **tečne** ili **gasovite**. Voda može biti sve troje: led, voda i vodena para."
+        },
+        {
+          "type": "list",
+          "items": ["Na 0 °C voda se **ledi**, a led se **topi**.", "Na 100 °C voda **ključa** i pretvara se u paru."]
+        },
+        {
+          "type": "text",
+          "text": "**Magnet** privlači predmete od željeza, npr. ekser ili spajalicu. Ne privlači drvo, papir, staklo ni plastiku."
+        },
+        { "type": "remember", "text": "Magnet ima dva pola. **Različiti** polovi se privlače, a **isti** se odbijaju." },
+        {
+          "type": "text",
+          "text": "**Smjese** razdvajamo: pijesak iz vode **filtriranjem**, željezne opiljke iz pijeska **magnetom**, a so iz vode **isparavanjem**."
+        },
+        { "type": "text", "text": "Neke promjene se ne mogu vratiti: drvo koje je izgorjelo ili željezo koje je zahrđalo." }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta će privući magnet?",
+          "options": ["ekser", "drvenu olovku", "gumicu", "staklenu čašu"],
+          "answer": "ekser"
+        },
+        { "type": "choice", "question": "Kako se zove voda u čvrstom stanju?", "options": ["led", "para", "kiša"], "answer": "led" },
+        {
+          "type": "choice",
+          "question": "Na kojoj temperaturi voda ključa?",
+          "options": ["0 °C", "20 °C", "50 °C", "100 °C"],
+          "answer": "100 °C",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kako ćemo odvojiti pijesak od vode?",
+          "options": ["filtriranjem", "magnetom", "mućkanjem"],
+          "answer": "filtriranjem"
+        },
+        {
+          "type": "choice",
+          "question": "Kako ćemo odvojiti željezne opiljke od pijeska?",
+          "options": ["magnetom", "vodom", "filtriranjem"],
+          "answer": "magnetom"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Isti polovi magneta se privlače.",
+          "answer": false,
+          "explanation": "Isti polovi se odbijaju, a različiti privlače."
+        },
+        { "type": "truefalse", "statement": "Zrak je tvar u gasovitom stanju.", "answer": true },
+        { "type": "truefalse", "statement": "Drvo koje je izgorjelo ne možemo vratiti u drvo.", "answer": true }
+      ]
+    },
+    {
+      "id": "energija",
+      "title": "Energija",
+      "description": "Obnovljivi i neobnovljivi izvori, štednja energije",
+      "lesson": [
+        { "type": "text", "text": "Energiju koristimo za svjetlo, grijanje, kretanje i rad mašina." },
+        {
+          "type": "list",
+          "items": [
+            "**obnovljivi** izvori se ne troše: Sunce, vjetar, voda",
+            "**neobnovljivi** izvori se jednom potroše: ugalj, nafta, prirodni plin"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Električnu energiju proizvodimo u elektranama: **hidroelektrane** koriste snagu vode, **vjetroelektrane** vjetar, a **solarne elektrane** Sunčevu svjetlost."
+        },
+        {
+          "type": "remember",
+          "text": "Štedimo energiju: gasimo svjetlo kad izlazimo iz sobe i ne ostavljamo uređaje uključene bez potrebe."
+        }
+      ],
+      "exercises": [
+        { "type": "choice", "question": "Koji izvor energije je obnovljiv?", "options": ["vjetar", "ugalj", "nafta"], "answer": "vjetar" },
+        {
+          "type": "choice",
+          "question": "Koji izvor energije je neobnovljiv?",
+          "options": ["ugalj", "Sunce", "voda", "vjetar"],
+          "answer": "ugalj"
+        },
+        {
+          "type": "choice",
+          "question": "Šta koristi hidroelektrana?",
+          "options": ["snagu vode", "ugalj", "vjetar", "Sunčevu svjetlost"],
+          "answer": "snagu vode"
+        },
+        { "type": "truefalse", "statement": "Nafta je obnovljivi izvor energije.", "answer": false },
+        {
+          "type": "truefalse",
+          "statement": "Solarne ploče pretvaraju Sunčevu svjetlost u električnu energiju.",
+          "answer": true
+        },
+        {
+          "type": "choice",
+          "question": "Kako štedimo energiju?",
+          "options": [
+            "gasimo svjetlo kad izađemo iz sobe",
+            "ostavljamo televizor uključen",
+            "otvaramo prozor dok radi grijanje"
+          ],
+          "answer": "gasimo svjetlo kad izađemo iz sobe"
+        }
+      ]
+    },
+    {
+      "id": "zdravlje-i-zarazne-bolesti",
+      "title": "Zdravlje i zarazne bolesti",
+      "description": "Uzročnici, prenošenje i zaštita",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Zarazne bolesti** izazivaju sitni uzročnici koje ne vidimo golim okom: **virusi** i **bakterije**."
+        },
+        { "type": "text", "text": "Prenose se kašljanjem, kihanjem, dodirom i preko prljavih ruku." },
+        {
+          "type": "list",
+          "items": [
+            "Zarazne bolesti djetinjstva su npr. **vodene kozice**, **ospice** i **zaušnjaci**.",
+            "Česta zarazna bolest je i **gripa**."
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Štitimo se: često peremo ruke sapunom, kišemo i kašljemo u lakat ili maramicu, a kad smo bolesni, ostajemo kod kuće. Od nekih bolesti nas štite **vakcine**."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta izaziva zarazne bolesti?",
+          "options": ["virusi i bakterije", "hladna voda", "dug san"],
+          "answer": "virusi i bakterije"
+        },
+        {
+          "type": "choice",
+          "question": "Kako treba kihati?",
+          "options": ["u lakat ili maramicu", "u dlanove", "prema drugima"],
+          "answer": "u lakat ili maramicu"
+        },
+        {
+          "type": "choice",
+          "question": "Šta nas štiti od nekih zaraznih bolesti?",
+          "options": ["vakcine", "slatkiši", "gazirani sokovi"],
+          "answer": "vakcine"
+        },
+        { "type": "truefalse", "statement": "Vodene kozice su zarazna bolest.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Kad smo bolesni, najbolje je ići u školu da ne propustimo gradivo.",
+          "answer": false,
+          "explanation": "Kad smo bolesni, ostajemo kod kuće da se odmorimo i da ne zarazimo druge."
+        },
+        { "type": "truefalse", "statement": "Ruke treba prati sapunom.", "answer": true }
+      ]
+    }
+  ]
+}

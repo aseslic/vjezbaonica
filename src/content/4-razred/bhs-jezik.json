@@ -1,0 +1,534 @@
+{
+  "grade": 4,
+  "id": "bhs-jezik",
+  "name": "Bosanski, hrvatski i srpski jezik i književnost",
+  "shortName": "BHS jezik",
+  "order": 2,
+  "icon": "📖",
+  "color": "#E04A5A",
+  "paper": "lines",
+  "topics": [
+    {
+      "id": "vrste-rijeci",
+      "title": "Vrste riječi",
+      "description": "Imenice, glagoli, pridjevi, zamjenice i brojevi",
+      "lesson": [
+        {
+          "type": "list",
+          "items": [
+            "**imenice** imenuju bića, stvari i pojave: dječak, knjiga, kiša",
+            "**glagoli** kazuju radnju, stanje ili zbivanje: trči, spava, pada",
+            "**pridjevi** kazuju osobine: lijep, mamin, drveni",
+            "**zamjenice** zamjenjuju imenice: ja, ti, on, moj, tvoj",
+            "**brojevi** kazuju koliko čega ima ili koje je po redu: pet, peti"
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Pitanja pomažu: **ko? šta?** (imenica), **šta radi?** (glagol), **kakav? čiji?** (pridjev), **koliko? koji po redu?** (broj)."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "instruction": "Koja je ovo vrsta riječi?",
+          "question": "trčati",
+          "options": ["imenica", "glagol", "pridjev", "zamjenica", "broj"],
+          "answer": "glagol",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Koja je ovo vrsta riječi?",
+          "question": "planina",
+          "options": ["imenica", "glagol", "pridjev", "zamjenica", "broj"],
+          "answer": "imenica",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Koja je ovo vrsta riječi?",
+          "question": "zelen",
+          "options": ["imenica", "glagol", "pridjev", "zamjenica", "broj"],
+          "answer": "pridjev",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Koja je ovo vrsta riječi?",
+          "question": "mi",
+          "options": ["imenica", "glagol", "pridjev", "zamjenica", "broj"],
+          "answer": "zamjenica",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Koja je ovo vrsta riječi?",
+          "question": "deset",
+          "options": ["imenica", "glagol", "pridjev", "zamjenica", "broj"],
+          "answer": "broj",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Koja je ovo vrsta riječi?",
+          "question": "vrijedan",
+          "options": ["imenica", "glagol", "pridjev", "zamjenica", "broj"],
+          "answer": "pridjev",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Koja riječ je glagol?",
+          "options": ["piše", "pisac", "pismo", "pisani"],
+          "answer": "piše",
+          "explanation": "„Piše“ kazuje radnju (šta radi?)."
+        }
+      ]
+    },
+    {
+      "id": "imenice-rod-i-broj",
+      "title": "Imenice: rod i broj",
+      "description": "Muški, ženski i srednji rod; jednina i množina",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Imenice mogu biti **muškog**, **ženskog** ili **srednjeg** roda. Pomaže kad ispred imenice stavimo riječ **ovaj**, **ova** ili **ovo**."
+        },
+        { "type": "example", "text": "ovaj prozor (muški rod)\nova stolica (ženski rod)\novo sunce (srednji rod)" },
+        { "type": "text", "text": "Imenice imaju **jedninu** (jedno) i **množinu** (više)." },
+        { "type": "example", "text": "knjiga – knjige\nprozor – prozori\nselo – sela" },
+        {
+          "type": "remember",
+          "text": "Neke imenice imaju neobičnu množinu: dijete – djeca, čovjek – ljudi, oko – oči, uho – uši."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "instruction": "Kojeg je roda ova imenica?",
+          "question": "sunce",
+          "options": ["muškog roda", "ženskog roda", "srednjeg roda"],
+          "answer": "srednjeg roda",
+          "shuffle": false,
+          "explanation": "Kažemo „ovo sunce“."
+        },
+        {
+          "type": "choice",
+          "instruction": "Kojeg je roda ova imenica?",
+          "question": "stolica",
+          "options": ["muškog roda", "ženskog roda", "srednjeg roda"],
+          "answer": "ženskog roda",
+          "shuffle": false,
+          "explanation": "Kažemo „ova stolica“."
+        },
+        {
+          "type": "choice",
+          "instruction": "Kojeg je roda ova imenica?",
+          "question": "prozor",
+          "options": ["muškog roda", "ženskog roda", "srednjeg roda"],
+          "answer": "muškog roda",
+          "shuffle": false,
+          "explanation": "Kažemo „ovaj prozor“."
+        },
+        {
+          "type": "choice",
+          "instruction": "Kojeg je roda ova imenica?",
+          "question": "noć",
+          "options": ["muškog roda", "ženskog roda", "srednjeg roda"],
+          "answer": "ženskog roda",
+          "shuffle": false,
+          "explanation": "Kažemo „ova noć“."
+        },
+        { "type": "input", "instruction": "Napiši množinu", "question": "dijete", "answer": "djeca" },
+        { "type": "input", "instruction": "Napiši množinu", "question": "čovjek", "answer": "ljudi" },
+        { "type": "input", "instruction": "Napiši množinu", "question": "oko", "answer": "oči" },
+        { "type": "truefalse", "statement": "Imenica „sela“ je u množini.", "answer": true }
+      ]
+    },
+    {
+      "id": "zamjenice",
+      "title": "Zamjenice",
+      "description": "Lične i prisvojne zamjenice",
+      "lesson": [
+        { "type": "text", "text": "**Zamjenice** zamjenjuju imenice, da ih ne bismo stalno ponavljali." },
+        { "type": "example", "title": "Lične zamjenice", "text": "ja, ti, on, ona, ono\nmi, vi, oni, one, ona" },
+        { "type": "example", "title": "Prisvojne zamjenice", "text": "moj, tvoj, njegov, njen\nnaš, vaš, njihov" },
+        {
+          "type": "remember",
+          "text": "Prisvojne zamjenice odgovaraju na pitanje **čiji?**: moja knjiga, tvoj pas, naša škola."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "instruction": "Koja lična zamjenica ide umjesto imena?",
+          "question": "Amra",
+          "options": ["on", "ona", "ono", "oni"],
+          "answer": "ona",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Koja lična zamjenica ide umjesto imena?",
+          "question": "Haris i Tarik",
+          "options": ["on", "oni", "one", "ona"],
+          "answer": "oni",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Koja lična zamjenica ide umjesto imena?",
+          "question": "Lejla i Ena",
+          "options": ["oni", "one", "ona", "mi"],
+          "answer": "one",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Koja lična zamjenica ide umjesto imenice?",
+          "question": "dijete",
+          "options": ["on", "ona", "ono"],
+          "answer": "ono",
+          "shuffle": false
+        },
+        { "type": "choice", "question": "Koja zamjenica je prisvojna?", "options": ["moj", "ja", "ti", "on"], "answer": "moj" },
+        {
+          "type": "choice",
+          "question": "Ova knjiga pripada meni. To je ___ knjiga.",
+          "options": ["moja", "tvoja", "njihova"],
+          "answer": "moja"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Riječ „naš“ je lična zamjenica.",
+          "answer": false,
+          "explanation": "„Naš“ je prisvojna zamjenica (čiji?). Lične su ja, ti, on, ona, ono, mi, vi, oni, one, ona."
+        }
+      ]
+    },
+    {
+      "id": "pridjevi",
+      "title": "Pridjevi",
+      "description": "Opisni, prisvojni i gradivni pridjevi",
+      "lesson": [
+        { "type": "text", "text": "**Pridjevi** su riječi koje kazuju kakvo je nešto, čije je ili od čega je napravljeno." },
+        {
+          "type": "list",
+          "items": [
+            "**opisni** (kakav?): visok, hladan, veseo",
+            "**prisvojni** (čiji?): mamin, Harisov, sestrin",
+            "**gradivni** (od čega?): drveni, zlatni, vuneni"
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Prisvojne pridjeve napravljene od imena pišemo velikim slovom: Lejlina torba, Amarov bicikl."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "instruction": "Kakav je ovo pridjev?",
+          "question": "drveni sto",
+          "options": ["opisni", "prisvojni", "gradivni"],
+          "answer": "gradivni",
+          "shuffle": false,
+          "explanation": "Od čega je sto? Od drveta."
+        },
+        {
+          "type": "choice",
+          "instruction": "Kakav je ovo pridjev?",
+          "question": "mamina torba",
+          "options": ["opisni", "prisvojni", "gradivni"],
+          "answer": "prisvojni",
+          "shuffle": false,
+          "explanation": "Čija je torba? Mamina."
+        },
+        {
+          "type": "choice",
+          "instruction": "Kakav je ovo pridjev?",
+          "question": "visoka planina",
+          "options": ["opisni", "prisvojni", "gradivni"],
+          "answer": "opisni",
+          "shuffle": false,
+          "explanation": "Kakva je planina? Visoka."
+        },
+        {
+          "type": "choice",
+          "instruction": "Kakav je ovo pridjev?",
+          "question": "zlatni prsten",
+          "options": ["opisni", "prisvojni", "gradivni"],
+          "answer": "gradivni",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Kakav je ovo pridjev?",
+          "question": "bratov bicikl",
+          "options": ["opisni", "prisvojni", "gradivni"],
+          "answer": "prisvojni",
+          "shuffle": false
+        },
+        {
+          "type": "input",
+          "instruction": "Upiši prisvojni pridjev",
+          "question": "Torba koja pripada Lejli je ___ torba.",
+          "answer": "Lejlina",
+          "caseSensitive": true,
+          "explanation": "Lejlina torba. Pridjev od imena pišemo velikim slovom."
+        },
+        {
+          "type": "input",
+          "instruction": "Upiši gradivni pridjev",
+          "question": "Sto napravljen od drveta je ___ sto.",
+          "answer": "drveni"
+        },
+        { "type": "choice", "question": "Koja riječ je pridjev?", "options": ["hladan", "hladnoća", "hladiti"], "answer": "hladan" }
+      ]
+    },
+    {
+      "id": "glavni-i-redni-brojevi",
+      "title": "Glavni i redni brojevi",
+      "description": "Koliko? i Koji po redu?",
+      "lesson": [
+        { "type": "text", "text": "**Glavni** brojevi kazuju koliko čega ima: jedan, pet, dvadeset." },
+        { "type": "text", "text": "**Redni** brojevi kazuju ko je ili šta je po redu: prvi, peti, dvadeseti." },
+        {
+          "type": "remember",
+          "text": "Kad redni broj pišemo ciframa, iza njega stavljamo **tačku**: 4. razred (četvrti razred), 1. mjesto."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "instruction": "Kakav je ovo broj?",
+          "question": "treći",
+          "options": ["glavni", "redni"],
+          "answer": "redni",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Kakav je ovo broj?",
+          "question": "sedam",
+          "options": ["glavni", "redni"],
+          "answer": "glavni",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Kakav je ovo broj?",
+          "question": "deseti",
+          "options": ["glavni", "redni"],
+          "answer": "redni",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Kakav je ovo broj?",
+          "question": "sto",
+          "options": ["glavni", "redni"],
+          "answer": "glavni",
+          "shuffle": false
+        },
+        {
+          "type": "input",
+          "instruction": "Napiši ciframa",
+          "question": "četvrti razred",
+          "answer": ["4. razred", "4.razred"],
+          "explanation": "Iza rednog broja napisanog ciframa ide tačka: 4. razred."
+        },
+        { "type": "truefalse", "statement": "U rečenici „Ena je bila prva u trci.“ riječ „prva“ je redni broj.", "answer": true },
+        { "type": "input", "question": "Kako glasi redni broj od broja pet?", "answer": "peti" }
+      ]
+    },
+    {
+      "id": "subjekat-i-predikat",
+      "title": "Subjekat i predikat",
+      "description": "Prosta i proširena rečenica",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Predikat** kazuje šta neko radi ili šta se s nekim događa. Pronalazimo ga pitanjem **šta radi?**"
+        },
+        { "type": "text", "text": "**Subjekat** je onaj ko vrši radnju. Pronalazimo ga pitanjem **ko?** ili **šta?**" },
+        { "type": "example", "text": "Ptica pjeva.\nŠta radi? Pjeva. To je predikat.\nKo pjeva? Ptica. To je subjekat." },
+        {
+          "type": "remember",
+          "text": "Rečenica koja ima samo subjekat i predikat je **prosta rečenica**. Kad joj dodamo još riječi, dobijemo **proširenu rečenicu**: Mala ptica veselo pjeva."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "instruction": "Koja riječ je predikat?",
+          "question": "Haris čita knjigu.",
+          "options": ["Haris", "čita", "knjigu"],
+          "answer": "čita",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Koja riječ je subjekat?",
+          "question": "Haris čita knjigu.",
+          "options": ["Haris", "čita", "knjigu"],
+          "answer": "Haris",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Koja riječ je subjekat?",
+          "question": "Jutros je padala kiša.",
+          "options": ["Jutros", "je padala", "kiša"],
+          "answer": "kiša",
+          "shuffle": false,
+          "explanation": "Šta je padalo? Kiša."
+        },
+        {
+          "type": "choice",
+          "instruction": "Koja riječ je predikat?",
+          "question": "Lejla piše domaću zadaću.",
+          "options": ["Lejla", "piše", "domaću", "zadaću"],
+          "answer": "piše",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "instruction": "Koja riječ je subjekat?",
+          "question": "U šumi živi medvjed.",
+          "options": ["U šumi", "živi", "medvjed"],
+          "answer": "medvjed",
+          "shuffle": false,
+          "explanation": "Ko živi u šumi? Medvjed."
+        },
+        { "type": "truefalse", "statement": "U rečenici „Sunce sija.“ riječ „sunce“ je subjekat.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Predikat pronalazimo pitanjem „ko?“.",
+          "answer": false,
+          "explanation": "Predikat pronalazimo pitanjem „šta radi?“, a subjekat pitanjem „ko?“ ili „šta?“."
+        }
+      ]
+    },
+    {
+      "id": "veliko-slovo-u-naslovima",
+      "title": "Veliko slovo u naslovima i nazivima",
+      "description": "Naslovi knjiga, nazivi škola i imena životinja",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "U naslovima knjiga, pjesama i časopisa velikim slovom pišemo samo **prvu riječ**, a ostale riječi samo ako su vlastita imena."
+        },
+        { "type": "example", "text": "Plavi vjetar\nKraljica iz dvorišta\nPatuljak vam priča" },
+        {
+          "type": "text",
+          "text": "U nazivima škola i ustanova velikim slovom pišemo prvu riječ i vlastita imena: Osnovna škola „Mehmedalija Mak Dizdar“, Narodno pozorište Sarajevo."
+        },
+        { "type": "remember", "text": "Imena životinja pišemo velikim slovom: pas Žućko, mačka Maza, konj Zekan." }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koji naslov je pravilno napisan?",
+          "options": ["Kraljica iz dvorišta", "Kraljica Iz Dvorišta", "kraljica iz dvorišta"],
+          "answer": "Kraljica iz dvorišta"
+        },
+        {
+          "type": "choice",
+          "question": "Koji naslov je pravilno napisan?",
+          "options": ["Patuljak vam priča", "Patuljak Vam Priča", "patuljak vam priča"],
+          "answer": "Patuljak vam priča"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše naziv škole?",
+          "options": [
+            "Osnovna škola „Mehmedalija Mak Dizdar“",
+            "osnovna škola „Mehmedalija Mak Dizdar“",
+            "Osnovna Škola „mehmedalija mak dizdar“"
+          ],
+          "answer": "Osnovna škola „Mehmedalija Mak Dizdar“"
+        },
+        {
+          "type": "input",
+          "instruction": "Napiši pravilno naslov",
+          "question": "plavi vjetar",
+          "answer": "Plavi vjetar",
+          "caseSensitive": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "U naslovu knjige „Plavi vjetar“ obje riječi pišemo velikim slovom.",
+          "answer": false,
+          "explanation": "Velikim slovom pišemo samo prvu riječ: Plavi vjetar."
+        },
+        { "type": "truefalse", "statement": "Ime psa pišemo velikim početnim slovom: Žućko.", "answer": true }
+      ]
+    },
+    {
+      "id": "knjizevnost",
+      "title": "Pjesma, priča i igrokaz",
+      "description": "Stih, strofa, rima, govor lika, didaskalije, lektira",
+      "lesson": [
+        {
+          "type": "list",
+          "items": [
+            "**Stih** je jedan red pjesme.",
+            "**Strofa** je skup stihova.",
+            "**Rima** je glasovno podudaranje krajeva stihova: kuća – sreća.",
+            "**Pjesnička slika** je ono što zamišljamo dok čitamo pjesmu."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "U priči razlikujemo **piščev govor** (pisac pripovijeda) i **govor lika** (lik govori, obično pod navodnicima ili iza crtice)."
+        },
+        {
+          "type": "text",
+          "text": "U igrokazu su **didaskalije** riječi u zagradi koje kazuju šta likovi rade i kako govore."
+        },
+        {
+          "type": "example",
+          "title": "Lektira",
+          "text": "„Plavi vjetar“, Ivica Vanja Rorić\n„Kraljica iz dvorišta“, Bisera Alikadić\n„Patuljak vam priča“, Ahmed Hromadžić\n„Pinokio“, Karlo Kolodi"
+        }
+      ],
+      "exercises": [
+        { "type": "choice", "question": "Kako se zove jedan red pjesme?", "options": ["stih", "strofa", "rima", "naslov"], "answer": "stih" },
+        { "type": "choice", "question": "Kako se zove skup stihova?", "options": ["strofa", "stih", "rima", "naslov"], "answer": "strofa" },
+        {
+          "type": "choice",
+          "question": "Riječi „kuća“ i „sreća“ na kraju dva stiha čine…",
+          "options": ["rimu", "naslov", "strofu", "didaskaliju"],
+          "answer": "rimu"
+        },
+        {
+          "type": "choice",
+          "question": "Šta su didaskalije?",
+          "options": ["riječi u zagradi koje kazuju šta likovi rade", "naslovi pjesama", "imena pisaca"],
+          "answer": "riječi u zagradi koje kazuju šta likovi rade"
+        },
+        {
+          "type": "choice",
+          "question": "Ko je napisao „Pinokija“?",
+          "options": ["Karlo Kolodi", "Bisera Alikadić", "Ahmed Hromadžić", "Ivica Vanja Rorić"],
+          "answer": "Karlo Kolodi"
+        },
+        {
+          "type": "choice",
+          "question": "Ko je napisao „Kraljicu iz dvorišta“?",
+          "options": ["Bisera Alikadić", "Karlo Kolodi", "Ahmed Hromadžić", "Ivica Vanja Rorić"],
+          "answer": "Bisera Alikadić"
+        },
+        {
+          "type": "choice",
+          "question": "Ko je napisao knjigu „Patuljak vam priča“?",
+          "options": ["Ahmed Hromadžić", "Bisera Alikadić", "Karlo Kolodi", "Ivica Vanja Rorić"],
+          "answer": "Ahmed Hromadžić"
+        },
+        { "type": "truefalse", "statement": "Govor lika često pišemo pod navodnicima.", "answer": true }
+      ]
+    }
+  ]
+}

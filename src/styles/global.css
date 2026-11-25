@@ -697,6 +697,50 @@ mark {
   color: var(--ink-soft);
 }
 
+.calculation-wrap {
+  margin: 0;
+  justify-self: start;
+}
+
+.calculation {
+  display: inline-grid;
+  padding: 10px 22px 12px 16px;
+  background-color: var(--white);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 18px 18px;
+  border: 2px dashed var(--ink-faint);
+  border-radius: var(--radius);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  line-height: 1.35;
+  font-variant-numeric: tabular-nums;
+}
+
+.calc-row {
+  display: grid;
+  grid-template-columns: 1.4em auto;
+}
+
+.calc-op {
+  color: var(--ink-soft);
+}
+
+.calc-num {
+  text-align: right;
+  letter-spacing: 0.12em;
+}
+
+.calc-line {
+  border-top: 3px solid var(--ink);
+  margin: 4px 0 2px;
+}
+
+.calc-result .calc-num {
+  color: var(--green);
+}
+
 .lesson-empty {
   color: var(--ink-soft);
 }

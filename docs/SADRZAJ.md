@@ -11,8 +11,12 @@ src/content/
 │   ├── matematika.json
 │   ├── bhs-jezik.json
 │   └── moja-okolina.json
-└── 3-razred/
-    └── matematika.json
+├── 3-razred/
+│   └── matematika.json
+└── 4-razred/
+    ├── matematika.json
+    ├── bhs-jezik.json
+    └── moja-okolina.json
 ```
 
 Jedna datoteka sadrži **jedan predmet za jedan razred**. Nova datoteka se sama pojavi u aplikaciji.
@@ -77,7 +81,8 @@ Lekcija je lista dijelova. Svaki dio ima `type`:
   { "type": "text", "text": "Sedmica ima **7 dana**." },
   { "type": "example", "title": "Dani u sedmici", "text": "ponedjeljak, utorak, srijeda" },
   { "type": "remember", "text": "Subota i nedjelja su vikend." },
-  { "type": "list", "items": ["prva stavka", "druga stavka"] }
+  { "type": "list", "items": ["prva stavka", "druga stavka"] },
+  { "type": "calculation", "title": "Pismeno sabiranje", "rows": ["347", "285"], "operator": "+", "result": "632" }
 ]
 ```
 
@@ -87,6 +92,7 @@ Lekcija je lista dijelova. Svaki dio ima `type`:
 | `example`  | Okvir na kockicama s naslovom „Primjer” (ili svojim `title`). |
 | `remember` | Istaknut okvir „Zapamti!”.                                    |
 | `list`     | Lista s tačkama.                                              |
+| `calculation` | Pismeno računanje: brojevi jedan ispod drugog, crta i rezultat. `operator` je `+`, `−`, `·` ili `:`. |
 
 U svakom tekstu:
 
@@ -181,7 +187,12 @@ Generator svaki put napravi nove zadatke, pa dijete može vježbati unedogled.
 | `division`       | 42 : 6 = ?                              | `tables`: djelioci od 1 do 10 |
 | `compare`        | 47 ? 52 (odaberi <, = ili >)            | `max`: najveći broj          |
 | `neighbors`      | Koji broj je prethodnik broja 40?       | `max`: najveći broj          |
-| `place-value`    | Koliko desetica ima broj 47?            | `max`: najveći broj (do 99)  |
+| `place-value`    | Koliko desetica ima broj 47? (za `max` od 100 do 9999: Koja cifra je na mjestu stotica u broju 4357?) | `max`: najveći broj |
+| `rounding`       | Zaokruži na desetice: 347               | `to`: 10, 100 ili 1000; `max`: najveći broj |
+| `long-multiplication` | 324 · 3 = ?                        | `max`: najveći proizvod; `digits` (neobavezno): jednocifreni činioci |
+| `long-division`  | 856 : 4 = ?                             | `max`: najveći djeljenik; `digits` (neobavezno): djelioci od 2 do 9 |
+| `division-remainder` | 17 : 5 = ? (odaberi „3, ostatak 2“) | `max`: najveći djeljenik; `digits` (neobavezno) |
+| `unit-conversion` | 3 m = ? cm, 4000 g = ? kg              | `units`: lista od `"length"` (dužina), `"mass"` (masa), `"volume"` (zapremina tečnosti) |
 
 `count` je broj zadataka koje generator ubaci u temu (zadano: 20). Iz svih zadataka teme
 aplikacija nasumično bira onoliko koliko je podešeno u postavkama (5, 10 ili 15).

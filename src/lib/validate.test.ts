@@ -68,4 +68,24 @@ describe('validateSubject', () => {
     expect(errors.some((e) => e.includes('isti "id"'))).toBe(true)
     expect(errors.some((e) => e.includes('nema nijedan zadatak'))).toBe(true)
   })
+
+  it('provjerava nove generatore i pismeno računanje u lekciji', () => {
+    const topic = {
+      ...valid.topics[0],
+      lesson: [{ type: 'calculation', rows: ['347'], operator: 'x', result: '' }],
+      generators: [
+        { type: 'rounding', to: 50, max: 1000 },
+        { type: 'long-division', max: 1000, digits: [1, 12] },
+        { type: 'unit-conversion', units: ['dužina'] },
+      ],
+    }
+    const errors = validateSubject({ ...valid, topics: [topic] }, 't.json')
+    expect(errors.some((e) => e.includes('"rows" mora imati barem 2 broja'))).toBe(true)
+    expect(errors.some((e) => e.includes('"operator" mora biti'))).toBe(true)
+    expect(errors.some((e) => e.includes('nedostaje rezultat'))).toBe(true)
+    expect(errors.some((e) => e.includes('"to" mora biti 10'))).toBe(true)
+    expect(errors.some((e) => e.includes('"digits" mora biti'))).toBe(true)
+    expect(errors.some((e) => e.includes('"units" mora biti'))).toBe(true)
+  })
 })
+
