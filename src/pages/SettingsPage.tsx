@@ -1,9 +1,9 @@
-import type { ReactNode } from 'react'
+import { useSyncExternalStore, type ReactNode } from 'react'
 import { catalog, gradeLabel, resolveGrade } from '../content'
 import { Page, TopBar } from '../components/Layout'
 import { routes } from '../lib/router'
 import { SESSION_SIZES, updateSettings, useSettings, type SpeechMode } from '../lib/settings'
-import { speak, speechSupported } from '../lib/speech'
+import { currentVoice, onVoicesChanged, speak, speechSupported } from '../lib/speech'
 
 interface Choice<T> {
   value: T
@@ -46,10 +46,21 @@ function Segmented<T extends string | number | boolean>({
   )
 }
 
+/** Tekst ispod izbora čitanja: koji glas se koristi ili kako ga instalirati. */
+function voiceNote(voice: SpeechSynthesisVoice | null): string {
+  if (voice) return `Glas: ${voice.name} (${voice.lang}).`
+  return (
+    'Na uređaju nije pronađen bosanski, hrvatski ni srpski glas, pa se čita drugim glasom. ' +
+    'Android: Postavke → Pretvaranje teksta u govor → Google → instaliraj hrvatski (pa ponovo otvori aplikaciju). ' +
+    'iPhone: Postavke → Pristupačnost → Izgovoreni sadržaj → Glasovi → Hrvatski.'
+  )
+}
+
 export function SettingsPage() {
   const settings = useSettings()
   const grade = resolveGrade(settings.grade)?.grade ?? 0
   const canSpeak = speechSupported()
+  const voice = useSyncExternalStore(onVoicesChanged, currentVoice, () => null)
 
   return (
     <Page paper="grid">
@@ -99,7 +110,7 @@ export function SettingsPage() {
             updateSettings({ speech: value })
             if (value !== 'off') speak('Ovako zvuči čitanje naglas.')
           }}
-          note="Koristi glas koji je instaliran na uređaju (bosanski, hrvatski ili srpski)."
+          note={voiceNote(voice)}
         />
       ) : (
         <p className="setting-note">Ovaj pregledač ne podržava čitanje naglas.</p>
