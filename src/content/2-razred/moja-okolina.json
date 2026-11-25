@@ -8,6 +8,90 @@
   "paper": "lines",
   "topics": [
     {
+      "id": "moja-porodica",
+      "title": "Uža i šira porodica",
+      "description": "Članovi porodice i rodbinski odnosi",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Uža porodica** su roditelji i djeca koji žive zajedno: mama, tata, braća i sestre."
+        },
+        {
+          "type": "text",
+          "text": "**Šira porodica** je sva naša rodbina: djed i nana, tetke, daidže (ujaci), amidže (stričevi) i njihova djeca."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**djed** i **nana** (baka): mamini i tatini roditelji",
+            "**amidža** (stric): tatin brat, a njegova žena je **amidžinica** (strina)",
+            "**daidža** (ujak): mamin brat, a njegova žena je **daidžinica** (ujna)",
+            "**tetka**: mamina ili tatina sestra, a njen muž je **tetak**",
+            "**rođak** i **rođaka**: djeca naših tetaka, daidža i amidža",
+            "**unuk** i **unuka**: djeca naše djece (za djeda i nanu)"
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Članovi porodice se vole, poštuju i pomažu. Svako ima svoje **obaveze** u kući."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Ko pripada užoj porodici?",
+          "options": ["mama, tata, braća i sestre", "tetke i rođaci", "komšije", "drugari iz razreda"],
+          "answer": "mama, tata, braća i sestre"
+        },
+        {
+          "type": "choice",
+          "question": "Kako zovemo tatinog brata?",
+          "options": ["amidža (stric)", "daidža (ujak)", "tetak", "djed"],
+          "answer": "amidža (stric)"
+        },
+        {
+          "type": "choice",
+          "question": "Kako zovemo maminog brata?",
+          "options": ["daidža (ujak)", "amidža (stric)", "tetak", "rođak"],
+          "answer": "daidža (ujak)"
+        },
+        {
+          "type": "choice",
+          "question": "Kako zovemo maminu ili tatinu sestru?",
+          "options": ["tetka", "nana", "ujna", "rođaka"],
+          "answer": "tetka"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je tebi dijete tvoje tetke?",
+          "options": ["rođak ili rođaka", "brat ili sestra", "unuk", "amidža"],
+          "answer": "rođak ili rođaka"
+        },
+        {
+          "type": "choice",
+          "question": "Kako djed zove djecu svoje djece?",
+          "options": ["unuci", "rođaci", "braća", "komšije"],
+          "answer": "unuci",
+          "picture": "👴"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Djed i nana pripadaju široj porodici.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Tetak je tetkin muž.",
+          "answer": true
+        },
+        {
+          "type": "order",
+          "question": "Poredaj od najstarijeg do najmlađeg.",
+          "items": ["djed", "tata", "ja", "moja mlađa sestra"]
+        }
+      ]
+    },
+    {
       "id": "porodica-skola-i-dom",
       "title": "Porodica, škola i dom",
       "description": "Prava i dužnosti, kućni red, opasnosti",
@@ -81,6 +165,95 @@
         {
           "type": "truefalse",
           "statement": "Kućni red vrijedi za sve stanare i sve učenike.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "dom-i-aparati",
+      "title": "Dom i kućanski aparati",
+      "description": "Prostorije, namještaj, aparati i sigurno rukovanje",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Svaka prostorija u domu ima svoju **namjenu**: u kuhinji kuhamo, u kupatilu se peremo, u sobi spavamo i učimo, a u dnevnom boravku se družimo."
+        },
+        {
+          "type": "list",
+          "items": [
+            "🧊 **frižider** čuva hranu hladnom",
+            "🍳 **šporet** i **rerna** služe za kuhanje i pečenje",
+            "👕 **mašina za veš** pere odjeću",
+            "🍽️ **mašina za suđe** pere suđe",
+            "🧹 **usisivač** čisti prašinu",
+            "👔 **pegla** glača odjeću",
+            "💨 **fen** suši kosu"
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Aparati rade na **struju**. Uključujemo ih samo uz odrasle, ne diramo ih **mokrim rukama**, ne guramo ništa u **utičnicu** i isključujemo ih kad ih ne koristimo."
+        },
+        {
+          "type": "text",
+          "text": "Ako osjetimo miris paljevine, vidimo dim ili iskru, odmah zovemo odrasle. Broj vatrogasaca je **123**."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koji aparat čuva hranu hladnom?",
+          "options": ["frižider", "pegla", "fen", "usisivač"],
+          "answer": "frižider",
+          "picture": "🧊"
+        },
+        {
+          "type": "choice",
+          "question": "Čime peremo odjeću?",
+          "options": ["mašinom za veš", "usisivačem", "fenom", "frižiderom"],
+          "answer": "mašinom za veš",
+          "picture": "👕"
+        },
+        {
+          "type": "choice",
+          "question": "Čime čistimo prašinu s tepiha?",
+          "options": ["usisivačem", "peglom", "šporetom", "fenom"],
+          "answer": "usisivačem",
+          "picture": "🧹"
+        },
+        {
+          "type": "choice",
+          "question": "Koji aparat služi za sušenje kose?",
+          "options": ["fen", "rerna", "frižider", "mašina za suđe"],
+          "answer": "fen",
+          "picture": "💨"
+        },
+        {
+          "type": "choice",
+          "question": "U kojoj prostoriji je najčešće šporet?",
+          "options": ["u kuhinji", "u kupatilu", "u spavaćoj sobi", "u hodniku"],
+          "answer": "u kuhinji"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je od ovoga namještaj, a ne aparat?",
+          "options": ["ormar", "pegla", "usisivač", "televizor"],
+          "answer": "ormar"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Aparate ne diramo mokrim rukama.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Vruću peglu ostavljamo uključenu kad izađemo iz kuće.",
+          "answer": false,
+          "explanation": "Peglu uvijek isključimo. Može izazvati požar."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Kad aparat ne koristimo, isključimo ga i tako štedimo struju.",
           "answer": true
         }
       ]
@@ -248,6 +421,93 @@
           "statement": "Potok je vještački objekat.",
           "answer": false,
           "explanation": "Potok je nastao sam u prirodi. To je prirodni objekat."
+        }
+      ]
+    },
+    {
+      "id": "zanimanja",
+      "title": "Zanimanja ljudi",
+      "description": "Šta ljudi rade, čime rade i šta prave",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Posao kojim se čovjek bavi je njegovo **zanimanje**. Za svako zanimanje treba se školovati ili izučiti zanat."
+        },
+        {
+          "type": "list",
+          "items": [
+            "👩‍⚕️ **doktorica** liječi bolesne: stetoskop, toplomjer",
+            "👨‍🍳 **kuhar** priprema hranu: lonac, nož, šporet",
+            "🧑‍🌾 **poljoprivrednik** uzgaja biljke i životinje: traktor, motika",
+            "👷 **zidar** gradi kuće: mistrija, cigle, cement",
+            "👨‍🏫 **učitelj** uči djecu: knjige, tabla, kreda",
+            "🚌 **vozač** prevozi ljude i robu: autobus, kamion",
+            "🧵 **krojačica** šije odjeću: igla, konac, mašina za šivanje",
+            "🍞 **pekar** peče hljeb i peciva: brašno, pećnica"
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Kad opisujemo zanimanje, kažemo: **šta radi**, **čime radi** (sredstva za rad), **šta napravi** (proizvod) i **zašto je važno**."
+        },
+        {
+          "type": "text",
+          "text": "Zanimanja su povezana: pekar treba brašno od poljoprivrednika, a vozač ga doveze u pekaru."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta je proizvod pekara?",
+          "options": ["hljeb", "kuća", "odjeća", "lijek"],
+          "answer": "hljeb",
+          "picture": "🍞"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je sredstvo za rad zidara?",
+          "options": ["mistrija", "stetoskop", "igla", "kreda"],
+          "answer": "mistrija",
+          "picture": "🧱"
+        },
+        {
+          "type": "choice",
+          "question": "Ko uzgaja povrće i voće?",
+          "options": ["poljoprivrednik", "vozač", "frizer", "poštar"],
+          "answer": "poljoprivrednik",
+          "picture": "🧑‍🌾"
+        },
+        {
+          "type": "choice",
+          "question": "Čime šije krojačica?",
+          "options": ["iglom i koncem", "čekićem", "motikom", "kredom"],
+          "answer": "iglom i koncem",
+          "picture": "🧵"
+        },
+        {
+          "type": "choice",
+          "question": "Ko prevozi ljude autobusom?",
+          "options": ["vozač", "kuhar", "zidar", "pekar"],
+          "answer": "vozač",
+          "picture": "🚌"
+        },
+        {
+          "type": "choice",
+          "question": "Ko gasi požare i spašava ljude?",
+          "options": ["vatrogasac", "krojač", "pekar", "stolar"],
+          "answer": "vatrogasac",
+          "picture": "🚒"
+        },
+        {
+          "type": "choice",
+          "question": "Od koga pekar dobija brašno?",
+          "options": ["od poljoprivrednika i mlinara", "od frizera", "od poštara", "od doktora"],
+          "answer": "od poljoprivrednika i mlinara"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Svako zanimanje je važno za život ljudi.",
+          "answer": true
         }
       ]
     },
