@@ -1,0 +1,1348 @@
+{
+  "grade": 3,
+  "id": "moja-okolina",
+  "name": "Moja okolina",
+  "order": 3,
+  "icon": "🌳",
+  "color": "#2E9E5B",
+  "paper": "lines",
+  "topics": [
+    {
+      "id": "reljef-i-tlo",
+      "title": "Reljef i tlo zavičaja",
+      "description": "Ravnica, polje, kotlina, brdo, planina; vrste tla; prirodna bogatstva",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Uži zavičaj** je općina u kojoj živimo i idemo u školu. Izgled zemljišta zovemo **reljef**."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**nizija** ili **ravnica**: ravno zemljište, nisko",
+            "**polje**: ravno zemljište okruženo brdima i planinama",
+            "**kotlina**: udubljenje okruženo brdima i planinama (Sarajevo leži u kotlini)",
+            "**brdo**: uzvišenje do 500 metara",
+            "**planina**: visoko uzvišenje, više od 500 metara",
+            "**dolina**: udubljenje kroz koje najčešće teče rijeka"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "**Tlo** može biti **plodno** (crnica, dobro za biljke), **pjeskovito**, **glinovito** ili **kamenito**."
+        },
+        {
+          "type": "remember",
+          "text": "**Prirodna bogatstva** zavičaja su voda, šume, plodno tlo i rude. Moramo ih čuvati."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kako se zove visoko uzvišenje, više od 500 metara?",
+          "options": ["planina", "brdo", "polje", "dolina"],
+          "answer": "planina",
+          "picture": "⛰️"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se zove udubljenje okruženo brdima i planinama?",
+          "options": ["kotlina", "planina", "brdo", "izvor"],
+          "answer": "kotlina"
+        },
+        {
+          "type": "choice",
+          "question": "Udubljenje kroz koje teče rijeka zove se:",
+          "options": ["dolina", "brdo", "vrh", "greben"],
+          "answer": "dolina"
+        },
+        {
+          "type": "choice",
+          "question": "Koje tlo je najbolje za biljke?",
+          "options": ["plodno tlo (crnica)", "kamenito tlo", "pijesak", "asfalt"],
+          "answer": "plodno tlo (crnica)"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je prirodno bogatstvo?",
+          "options": ["šuma", "zgrada", "autobus", "most"],
+          "answer": "šuma",
+          "picture": "🌲"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Sarajevo leži u kotlini.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Brdo je više od planine.",
+          "answer": false,
+          "explanation": "Planina je viša od brda."
+        },
+        {
+          "type": "order",
+          "question": "Poredaj od najnižeg do najvišeg.",
+          "items": ["ravnica", "brdo", "planina"]
+        }
+      ]
+    },
+    {
+      "id": "vode-zavicaja",
+      "title": "Vode zavičaja",
+      "description": "Izvor, tok, ušće, obale; tekuće i stajaće vode",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Vode koje teku su **tekuće vode**: potok i rijeka. Vode koje stoje su **stajaće vode**: jezero i bara."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**izvor**: mjesto gdje voda izlazi iz zemlje",
+            "**tok**: put kojim voda teče, u **koritu**",
+            "**pritoka**: manja rijeka ili potok koji se ulijeva u veću rijeku",
+            "**ušće**: mjesto gdje se rijeka ulijeva u drugu rijeku, jezero ili more"
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Kad gledamo **niz vodu** (u smjeru u kojem rijeka teče), **desna obala** je s naše desne, a **lijeva obala** s naše lijeve strane."
+        },
+        {
+          "type": "text",
+          "text": "Kroz Sarajevo teče **Miljacka**. Ona se ulijeva u rijeku **Bosnu**, koja izvire na **Vrelu Bosne**."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kako se zove mjesto gdje voda izlazi iz zemlje?",
+          "options": ["izvor", "ušće", "obala", "korito"],
+          "answer": "izvor",
+          "picture": "💧"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se zove mjesto gdje se rijeka ulijeva u drugu rijeku?",
+          "options": ["ušće", "izvor", "kotlina", "vrh"],
+          "answer": "ušće"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je stajaća voda?",
+          "options": ["jezero", "rijeka", "potok", "slap"],
+          "answer": "jezero"
+        },
+        {
+          "type": "choice",
+          "question": "Kako zovemo manju rijeku koja se ulijeva u veću?",
+          "options": ["pritoka", "izvor", "more", "bara"],
+          "answer": "pritoka"
+        },
+        {
+          "type": "choice",
+          "question": "Koja rijeka teče kroz Sarajevo?",
+          "options": ["Miljacka", "Neretva", "Una", "Drina"],
+          "answer": "Miljacka"
+        },
+        {
+          "type": "order",
+          "question": "Poredaj dijelove vodotoka od početka do kraja.",
+          "items": ["izvor", "tok", "ušće"]
+        },
+        {
+          "type": "truefalse",
+          "statement": "Kad gledamo niz vodu, desna obala je s naše desne strane.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Bara je tekuća voda.",
+          "answer": false,
+          "explanation": "Bara je stajaća voda."
+        }
+      ]
+    },
+    {
+      "id": "naselja-i-ustanove",
+      "title": "Naselja, ustanove i rad ljudi",
+      "description": "Selo i grad, ustanove, zanatske radionice i fabrike",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Ljudi žive u **naseljima**. **Selo** ima manje kuća i ljudi, koji se često bave poljoprivredom. **Grad** ima mnogo zgrada, ulica, ustanova i fabrika."
+        },
+        {
+          "type": "list",
+          "items": [
+            "🏫 **škola**: učimo",
+            "🏥 **dom zdravlja** i **bolnica**: liječimo se",
+            "📚 **biblioteka**: posuđujemo knjige",
+            "🏛️ **muzej**: čuvaju se stari predmeti",
+            "🎭 **pozorište**: gledamo predstave",
+            "🏢 **općina**: brine o životu u općini"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "U **zanatskoj radionici** majstor ručno pravi ili popravlja malo proizvoda (stolar, kovač, obućar). U **fabrici** mašine prave mnogo istih proizvoda."
+        },
+        {
+          "type": "remember",
+          "text": "Ljudi u zavičaju su povezani: svako svojim radom pomaže drugima."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Gdje se čuvaju stari predmeti iz prošlosti?",
+          "options": ["u muzeju", "u pošti", "u apoteci", "u fabrici"],
+          "answer": "u muzeju",
+          "picture": "🏛️"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje gledamo predstave?",
+          "options": ["u pozorištu", "u biblioteci", "u bolnici", "u školi za vožnju"],
+          "answer": "u pozorištu",
+          "picture": "🎭"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje mašine prave mnogo istih proizvoda?",
+          "options": ["u fabrici", "u zanatskoj radionici", "u muzeju", "u biblioteci"],
+          "answer": "u fabrici",
+          "picture": "🏭"
+        },
+        {
+          "type": "choice",
+          "question": "Ko pravi namještaj od drveta?",
+          "options": ["stolar", "kovač", "krojač", "pekar"],
+          "answer": "stolar",
+          "picture": "🪚"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje se ljudi češće bave poljoprivredom?",
+          "options": ["na selu", "u centru grada", "u fabrici", "u pozorištu"],
+          "answer": "na selu",
+          "picture": "🚜"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Grad ima više ustanova od sela.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "U zanatskoj radionici majstor sve radi pomoću velikih mašina.",
+          "answer": false,
+          "explanation": "U radionici majstor uglavnom radi ručno i pravi manje proizvoda."
+        }
+      ]
+    },
+    {
+      "id": "praznici-i-bastina",
+      "title": "Praznici i kulturna baština",
+      "description": "Vrste praznika, spomenici kulture i običaji",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Praznici mogu biti **porodični**, **školski**, **vjerski**, **državni** i **međunarodni**."
+        },
+        {
+          "type": "list",
+          "items": [
+            "🇧🇦 **državni**: Dan nezavisnosti BiH (1. mart), Dan državnosti BiH (25. novembar), Nova godina (1. januar)",
+            "🕌⛪🕍 **vjerski**: Ramazanski i Kurban-bajram, Božić, Uskrs, Pesah",
+            "🌍 **međunarodni**: Međunarodni dan žena (8. mart), Dan planete Zemlje (22. april), Međunarodni praznik rada (1. maj)",
+            "🏙️ **Dan Grada Sarajeva**: 6. april"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "**Spomenici kulture** su stare građevine i predmeti koji pričaju o prošlosti: džamije, crkve, sinagoge, mostovi, stare kuće, tvrđave. Zajedno s običajima, pjesmama i igrama čine **kulturnu baštinu**."
+        },
+        {
+          "type": "remember",
+          "text": "Bogatstvo kultura vidimo u **narodnim nošnjama**, **plesovima**, **igrama** i **hrani**. Poštujemo i čuvamo baštinu svih ljudi."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kada je Dan planete Zemlje?",
+          "options": ["22. aprila", "1. marta", "25. novembra", "8. marta"],
+          "answer": "22. aprila",
+          "picture": "🌍"
+        },
+        {
+          "type": "choice",
+          "question": "Kada je Dan Grada Sarajeva?",
+          "options": ["6. aprila", "1. januara", "22. aprila", "1. maja"],
+          "answer": "6. aprila"
+        },
+        {
+          "type": "choice",
+          "question": "Kakav je praznik Dan državnosti Bosne i Hercegovine?",
+          "options": ["državni", "vjerski", "porodični", "školski"],
+          "answer": "državni"
+        },
+        {
+          "type": "choice",
+          "question": "Kakav je praznik Uskrs?",
+          "options": ["vjerski", "državni", "školski", "međunarodni"],
+          "answer": "vjerski"
+        },
+        {
+          "type": "choice",
+          "question": "Kakav je praznik Međunarodni dan žena?",
+          "options": ["međunarodni", "porodični", "vjerski", "školski"],
+          "answer": "međunarodni"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je spomenik kulture?",
+          "options": ["stari most", "novi parking", "kontejner", "semafor"],
+          "answer": "stari most",
+          "picture": "🌉"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Narodne nošnje, plesovi i jela dio su kulturne baštine.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Spomenike kulture smijemo išarati grafitima.",
+          "answer": false,
+          "explanation": "Spomenike kulture čuvamo i štitimo."
+        }
+      ]
+    },
+    {
+      "id": "saobracaj",
+      "title": "Saobraćaj u zavičaju",
+      "description": "Vrste saobraćaja, saobraćajni znakovi, pruga i stanice",
+      "lesson": [
+        {
+          "type": "list",
+          "items": [
+            "🚗 **cestovni** saobraćaj: automobil, autobus, kamion, tramvaj",
+            "🚆 **željeznički**: voz",
+            "🚢 **vodeni**: brod, čamac",
+            "✈️ **zračni**: avion, helikopter"
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "🔺 **znakovi opasnosti** su trouglovi s crvenim rubom",
+            "⛔ **znakovi zabrane** su krugovi s crvenim rubom, a **znakovi obaveze** plavi krugovi",
+            "🟦 **znakovi obavještenja** su plavi kvadrati ili pravougaonici (npr. pješački prijelaz)"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "**Van naselja**, gdje nema trotoara, pješaci hodaju **lijevom stranom puta**, jedan iza drugog. Noću nose nešto svijetlo ili reflektujuće."
+        },
+        {
+          "type": "remember",
+          "text": "Preko **pruge** prelazimo samo na prijelazu: stanemo, pogledamo i poslušamo dolazi li voz. Kad je **rampa** spuštena ili trepće crveno svjetlo, čekamo."
+        },
+        {
+          "type": "text",
+          "text": "Autobusi polaze s **autobuske stanice**, a vozovi sa **željezničke stanice**. Dobra saobraćajna povezanost pomaže ljudima da stignu na posao, u školu i kod doktora."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kojoj vrsti saobraćaja pripada voz?",
+          "options": ["željezničkom", "zračnom", "vodenom", "cestovnom"],
+          "answer": "željezničkom",
+          "picture": "🚆"
+        },
+        {
+          "type": "choice",
+          "question": "Kojoj vrsti saobraćaja pripada avion?",
+          "options": ["zračnom", "vodenom", "željezničkom", "cestovnom"],
+          "answer": "zračnom",
+          "picture": "✈️"
+        },
+        {
+          "type": "choice",
+          "question": "Kakvog su oblika znakovi opasnosti?",
+          "options": ["trougao s crvenim rubom", "plavi kvadrat", "zeleni krug", "žuti pravougaonik"],
+          "answer": "trougao s crvenim rubom"
+        },
+        {
+          "type": "choice",
+          "question": "Kojom stranom puta hodamo van naselja, gdje nema trotoara?",
+          "options": ["lijevom", "desnom", "sredinom", "svejedno"],
+          "answer": "lijevom",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Šta radimo kad je rampa na pruzi spuštena?",
+          "options": ["stojimo i čekamo", "brzo pretrčimo", "provučemo se ispod rampe", "idemo uz prugu"],
+          "answer": "stojimo i čekamo"
+        },
+        {
+          "type": "choice",
+          "question": "Odakle polaze vozovi?",
+          "options": ["sa željezničke stanice", "sa aerodroma", "iz luke", "sa benzinske pumpe"],
+          "answer": "sa željezničke stanice"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Plavi krug je znak obaveze.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Noću je dobro nositi nešto reflektujuće kad hodamo pored puta.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "strane-svijeta",
+      "title": "Strane svijeta i Sunce",
+      "description": "Orijentacija pomoću Sunca i vodotoka",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Četiri glavne strane svijeta su **sjever**, **jug**, **istok** i **zapad**."
+        },
+        {
+          "type": "list",
+          "items": [
+            "🌅 Sunce **izlazi** na **istoku**.",
+            "☀️ U **podne** je Sunce na **jugu**.",
+            "🌇 Sunce **zalazi** na **zapadu**."
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Stani tako da ti je **istok desno**. Tada je ispred tebe **sjever**, iza tebe jug, a lijevo zapad."
+        },
+        {
+          "type": "text",
+          "text": "Položaj predmeta zavisi od mjesta s kojeg ga gledamo: to je **stajalište**. Kad se pomjerimo, mijenja se šta nam je lijevo, a šta desno."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Gdje izlazi Sunce?",
+          "options": ["na istoku", "na zapadu", "na sjeveru", "na jugu"],
+          "answer": "na istoku",
+          "shuffle": false,
+          "picture": "🌅"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje zalazi Sunce?",
+          "options": ["na istoku", "na zapadu", "na sjeveru", "na jugu"],
+          "answer": "na zapadu",
+          "shuffle": false,
+          "picture": "🌇"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje je Sunce u podne?",
+          "options": ["na istoku", "na zapadu", "na sjeveru", "na jugu"],
+          "answer": "na jugu",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Istok ti je desno. Šta ti je ispred?",
+          "options": ["sjever", "jug", "zapad", "istok"],
+          "answer": "sjever"
+        },
+        {
+          "type": "choice",
+          "question": "Istok ti je desno. Šta ti je lijevo?",
+          "options": ["zapad", "sjever", "jug", "istok"],
+          "answer": "zapad"
+        },
+        {
+          "type": "input",
+          "question": "Koliko ima glavnih strana svijeta?",
+          "answer": "4"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Sjever i jug su suprotne strane svijeta.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "kalendar-i-sat",
+      "title": "Kalendar i sat",
+      "description": "Mjeseci i dani, datum, sat i minute; prošlost i budućnost",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Godina ima **12 mjeseci** i **365 dana**. Svake četvrte godine februar ima 29 dana, pa godina ima **366 dana**: to je **prijestupna** godina."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**31 dan**: januar, mart, maj, juli, august, oktobar, decembar",
+            "**30 dana**: april, juni, septembar, novembar",
+            "**28 ili 29 dana**: februar"
+          ]
+        },
+        {
+          "type": "example",
+          "text": "januar – siječanj, februar – veljača, mart – ožujak, april – travanj,\nmaj – svibanj, juni – lipanj, juli – srpanj, august – kolovoz,\nseptembar – rujan, oktobar – listopad, novembar – studeni, decembar – prosinac",
+          "title": "Dvojni nazivi mjeseci"
+        },
+        {
+          "type": "list",
+          "items": ["1 dan = **24 sata**", "1 sat = **60 minuta**", "1 minuta = **60 sekundi**"]
+        },
+        {
+          "type": "remember",
+          "text": "Ono što je bilo je **prošlost**, ono što je sada je **sadašnjost**, a ono što će biti je **budućnost**. Događaje redamo na **lenti vremena**."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "question": "Koliko dana ima godina koja nije prijestupna?",
+          "answer": "365"
+        },
+        {
+          "type": "input",
+          "question": "Koliko minuta ima jedan sat?",
+          "answer": "60"
+        },
+        {
+          "type": "input",
+          "question": "Koliko sati ima jedan dan?",
+          "answer": "24"
+        },
+        {
+          "type": "choice",
+          "question": "Koliko dana ima mjesec april?",
+          "options": ["30", "31", "28", "29"],
+          "answer": "30"
+        },
+        {
+          "type": "choice",
+          "question": "Koji mjesec ima 28 ili 29 dana?",
+          "options": ["februar", "mart", "juni", "decembar"],
+          "answer": "februar"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se još zove mjesec mart?",
+          "options": ["ožujak", "travanj", "svibanj", "lipanj"],
+          "answer": "ožujak"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se još zove mjesec oktobar?",
+          "options": ["listopad", "studeni", "rujan", "prosinac"],
+          "answer": "listopad"
+        },
+        {
+          "type": "order",
+          "question": "Poredaj od prošlosti prema budućnosti.",
+          "items": ["jučer", "danas", "sutra"]
+        },
+        {
+          "type": "truefalse",
+          "statement": "Prijestupna godina ima 366 dana.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "vrijeme-i-mjerenje",
+      "title": "Vrijeme, termometar i vjetrokaz",
+      "description": "Temperatura, padavine, vjetar i kalendar prirode",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Termometrom** mjerimo **temperaturu** zraka. Mjerimo je u **stepenima Celzijusa** (°C). Kad je temperatura ispod 0 °C, voda se ledi."
+        },
+        {
+          "type": "text",
+          "text": "**Vjetrokaz** pokazuje **odakle duva vjetar**. Vjetar dobija ime po strani svijeta s koje duva: **sjeverac** duva sa sjevera, **jugo** s juga."
+        },
+        {
+          "type": "list",
+          "items": ["Padavine su **kiša**, **snijeg** i **grad**.", "Na tlu se stvaraju **rosa**, **mraz** i **inje**."]
+        },
+        {
+          "type": "remember",
+          "text": "U **kalendar prirode** bilježimo vrijeme, temperaturu, padavine i vjetar, ali i promjene na biljkama, životinjama i u poslovima ljudi kroz godišnja doba."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Čime mjerimo temperaturu zraka?",
+          "options": ["termometrom", "vjetrokazom", "satom", "metrom"],
+          "answer": "termometrom",
+          "picture": "🌡️"
+        },
+        {
+          "type": "choice",
+          "question": "Šta pokazuje vjetrokaz?",
+          "options": ["odakle duva vjetar", "koliko je sati", "koliko je toplo", "koliko je pala kiša"],
+          "answer": "odakle duva vjetar"
+        },
+        {
+          "type": "choice",
+          "question": "U čemu mjerimo temperaturu?",
+          "options": ["u stepenima Celzijusa", "u metrima", "u kilogramima", "u litrima"],
+          "answer": "u stepenima Celzijusa"
+        },
+        {
+          "type": "choice",
+          "question": "Odakle duva sjeverac?",
+          "options": ["sa sjevera", "s juga", "s istoka", "sa zapada"],
+          "answer": "sa sjevera"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je od ovoga padavina?",
+          "options": ["snijeg", "rosa", "inje", "mraz"],
+          "answer": "snijeg",
+          "picture": "❄️"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Kad je temperatura ispod 0 °C, voda se ledi.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Na jesen ptice selice odlaze u toplije krajeve.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "smece-i-otpad",
+      "title": "Smeće i otpad",
+      "description": "Razvrstavanje otpada i reciklaža",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Smeće** je ono što se više ne može upotrijebiti. **Otpad** je ono što se može ponovo iskoristiti: **papir**, **staklo**, **plastika** i **metal**."
+        },
+        {
+          "type": "text",
+          "text": "Kad otpad razvrstamo, on se **reciklira**: od starog papira nastaje novi papir, od stare limenke nova limenka. Tako čuvamo šume i prirodu."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Otpad odlažemo u kontejner prema **simbolu** i natpisu.",
+            "♻️ Ovaj znak na ambalaži znači da se može reciklirati.",
+            "🔋 **Poseban otpad** su baterije, stari lijekovi, sijalice i stari uređaji. Ne bacamo ih u obično smeće, nego na posebna mjesta."
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Manje bacaj, više koristi ponovo, razvrstavaj otpad!"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta je od ovoga poseban otpad?",
+          "options": ["baterija", "novine", "staklena flaša", "kartonska kutija"],
+          "answer": "baterija",
+          "picture": "🔋"
+        },
+        {
+          "type": "choice",
+          "question": "Šta znači znak ♻️ na ambalaži?",
+          "options": ["može se reciklirati", "otrovno je", "lomljivo je", "jestivo je"],
+          "answer": "može se reciklirati"
+        },
+        {
+          "type": "choice",
+          "question": "Šta nastaje recikliranjem starog papira?",
+          "options": ["novi papir", "staklo", "metal", "plastika"],
+          "answer": "novi papir",
+          "picture": "📄"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje bacamo stare lijekove?",
+          "options": ["na posebno mjesto, npr. u apoteku", "u WC", "u rijeku", "u kontejner za papir"],
+          "answer": "na posebno mjesto, npr. u apoteku"
+        },
+        {
+          "type": "choice",
+          "question": "Šta od ovoga je otpad koji se može reciklirati?",
+          "options": ["limenka", "ogrizak jabuke", "prljava maramica", "prašina"],
+          "answer": "limenka",
+          "picture": "🥫"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Recikliranjem papira čuvamo šume.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Baterije bacamo u obično smeće.",
+          "answer": false,
+          "explanation": "Baterije su poseban otpad i odlažu se na posebna mjesta."
+        }
+      ]
+    },
+    {
+      "id": "uslovi-za-zivot",
+      "title": "Živa i neživa priroda",
+      "description": "Uslovi za život i povezanost žive i nežive prirode",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Živa bića se **rađaju**, **hrane**, **dišu**, **rastu**, **razmnožavaju** se i **umiru**. Neživa priroda to ne radi."
+        },
+        {
+          "type": "list",
+          "items": ["🌞 **Sunčeva svjetlost** i **toplota**", "💧 **voda**", "🌬️ **zrak**", "🟫 **tlo** i hrana"]
+        },
+        {
+          "type": "remember",
+          "text": "To su **uslovi za život**. Bez njih živa bića ne mogu preživjeti. Neživa priroda je zato važna za živu."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta od ovoga rade samo živa bića?",
+          "options": ["dišu", "imaju boju", "imaju težinu", "zauzimaju prostor"],
+          "answer": "dišu"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je dio nežive prirode?",
+          "options": ["tlo", "gljiva", "mahovina", "puž"],
+          "answer": "tlo"
+        },
+        {
+          "type": "choice",
+          "question": "Šta biljka treba od Sunca?",
+          "options": ["svjetlost", "snijeg", "pijesak", "vjetar"],
+          "answer": "svjetlost",
+          "picture": "🌞"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Gljiva je živo biće.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Kamen raste kao biljka.",
+          "answer": false,
+          "explanation": "Kamen je dio nežive prirode i ne raste."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Bez vode nema života.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "dijelovi-tijela-biljaka-i-zivotinja",
+      "title": "Dijelovi biljke i životinje",
+      "description": "Čemu služi koji dio tijela",
+      "lesson": [
+        {
+          "type": "list",
+          "items": [
+            "**korijen** drži biljku u tlu i upija vodu",
+            "**stabljika** ili **stablo** nosi listove i provodi vodu",
+            "**list** pravi hranu za biljku pomoću Sunčeve svjetlosti",
+            "**cvijet** služi za razmnožavanje, iz njega nastaje **plod**",
+            "**plod** čuva **sjemenke** iz kojih rastu nove biljke"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Kod životinja **noge** služe za kretanje, **krila** za letenje, **peraja** za plivanje, a **zubi** i **kljun** za uzimanje hrane."
+        },
+        {
+          "type": "remember",
+          "text": "Neki dijelovi tijela imaju **istu ulogu**, a **različitu građu**: ptica ima krila s perjem, insekt tanka prozirna krila, a riba i delfin plivaju pomoću peraja."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koji dio biljke upija vodu iz tla?",
+          "options": ["korijen", "list", "cvijet", "plod"],
+          "answer": "korijen"
+        },
+        {
+          "type": "choice",
+          "question": "Koji dio biljke pravi hranu pomoću svjetlosti?",
+          "options": ["list", "korijen", "sjemenka", "kora"],
+          "answer": "list",
+          "picture": "🍃"
+        },
+        {
+          "type": "choice",
+          "question": "Iz čega rastu nove biljke?",
+          "options": ["iz sjemenki", "iz listova", "iz kore", "iz trnja"],
+          "answer": "iz sjemenki"
+        },
+        {
+          "type": "choice",
+          "question": "Iz kojeg dijela biljke nastaje plod?",
+          "options": ["iz cvijeta", "iz korijena", "iz stabla", "iz lista"],
+          "answer": "iz cvijeta",
+          "picture": "🌸"
+        },
+        {
+          "type": "choice",
+          "question": "Šta imaju zajedničko ptica i insekt?",
+          "options": ["krila za letenje", "perje", "kljun", "četiri noge"],
+          "answer": "krila za letenje"
+        },
+        {
+          "type": "choice",
+          "question": "Čime pliva delfin?",
+          "options": ["perajama", "krilima", "nogama", "kljunom"],
+          "answer": "perajama",
+          "picture": "🐬"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Krilo ptice i krilo leptira imaju istu ulogu, ali su različito građeni.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "grupe-biljaka",
+      "title": "Grupe biljaka",
+      "description": "Zeljaste i drvenaste, žitarice, ljekovite i endemične biljke",
+      "lesson": [
+        {
+          "type": "list",
+          "items": [
+            "**zeljaste** biljke imaju mekanu, zelenu stabljiku (maslačak, djetelina)",
+            "**drvenaste** biljke imaju tvrdo, drvenasto stablo (hrast, bukva, šljiva)",
+            "**jednogodišnje** biljke žive jednu godinu (pšenica, grah), a **višegodišnje** više godina (drveće)"
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "🌾 **žitarice**: pšenica, kukuruz, raž, ječam, zob. Od njih se pravi brašno i hljeb.",
+            "🌿 **ljekovite biljke**: kamilica, nana, majčina dušica, žalfija. Od njih se pravi čaj.",
+            "🌸 **endemične biljke** rastu samo na jednom mjestu na svijetu, npr. **bosanski ljiljan** i **Pančićeva omorika**."
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Biljke su važne: daju nam **hranu**, **zrak** (kisik), **drvo** i **lijekove**, a životinjama dom i hranu."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koja biljka je žitarica?",
+          "options": ["pšenica", "kamilica", "ruža", "hrast"],
+          "answer": "pšenica",
+          "picture": "🌾"
+        },
+        {
+          "type": "choice",
+          "question": "Koja biljka je ljekovita?",
+          "options": ["kamilica", "kukuruz", "bukva", "krompir"],
+          "answer": "kamilica"
+        },
+        {
+          "type": "choice",
+          "question": "Koja biljka je drvenasta?",
+          "options": ["hrast", "maslačak", "djetelina", "pšenica"],
+          "answer": "hrast",
+          "picture": "🌳"
+        },
+        {
+          "type": "choice",
+          "question": "Kako zovemo biljke koje rastu samo na jednom mjestu na svijetu?",
+          "options": ["endemične", "ljekovite", "žitarice", "zeljaste"],
+          "answer": "endemične"
+        },
+        {
+          "type": "choice",
+          "question": "Koji dio krompira jedemo?",
+          "options": ["gomolj pod zemljom", "cvijet", "list", "sjemenku"],
+          "answer": "gomolj pod zemljom",
+          "picture": "🥔"
+        },
+        {
+          "type": "choice",
+          "question": "Od čega pravimo brašno?",
+          "options": ["od žitarica", "od ljekovitog bilja", "od cvijeća", "od kore drveta"],
+          "answer": "od žitarica"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Bosanski ljiljan je endemična biljka.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Biljke proizvode kisik koji udišemo.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "staniste-i-zivotna-zajednica",
+      "title": "Šuma i rijeka",
+      "description": "Životno stanište, životna zajednica i lanac ishrane",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Stanište** je mjesto gdje živa bića žive: šuma, livada, rijeka. Biljke i životinje koje žive zajedno na istom staništu čine **životnu zajednicu**."
+        },
+        {
+          "type": "text",
+          "text": "U **šumi** su drveće, grmlje, gljive, mahovina, srna, vjeverica, djetlić, sova i lisica. U **rijeci** i uz nju žive ribe (pastrmka), žabe, rakovi, vidra i trska."
+        },
+        {
+          "type": "example",
+          "text": "trava → zec → lisica\nlist → gusjenica → ptica",
+          "title": "Lanac ishrane"
+        },
+        {
+          "type": "remember",
+          "text": "U lancu ishrane prvo su uvijek **biljke**. Ako nestane jedna karika, to osjete sve ostale."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kako se zove mjesto gdje živa bića žive?",
+          "options": ["stanište", "lanac ishrane", "tlo", "termometar"],
+          "answer": "stanište"
+        },
+        {
+          "type": "choice",
+          "question": "Koja životinja živi u rijeci?",
+          "options": ["pastrmka", "srna", "vjeverica", "djetlić"],
+          "answer": "pastrmka",
+          "picture": "🐟"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je prvo u lancu ishrane?",
+          "options": ["biljka", "lisica", "zec", "ptica"],
+          "answer": "biljka"
+        },
+        {
+          "type": "choice",
+          "question": "Šta jede zec u lancu: trava → zec → lisica?",
+          "options": ["travu", "lisicu", "ribe", "insekte"],
+          "answer": "travu",
+          "picture": "🐇"
+        },
+        {
+          "type": "order",
+          "question": "Poredaj lanac ishrane.",
+          "items": ["list", "gusjenica", "ptica"]
+        },
+        {
+          "type": "truefalse",
+          "statement": "Biljke i životinje u šumi zavise jedne od drugih.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Gljive žive u šumi.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "unutarnji-organi",
+      "title": "Unutarnji organi i zdrava ishrana",
+      "description": "Mozak, srce, pluća, želudac, jetra, bubrezi, crijeva",
+      "lesson": [
+        {
+          "type": "list",
+          "items": [
+            "🧠 **mozak** upravlja cijelim tijelom",
+            "❤️ **srce** pumpa krv",
+            "🫁 **pluća** služe za disanje",
+            "**želudac** i **crijeva** vare hranu",
+            "**jetra** čisti krv od štetnih tvari",
+            "**bubrezi** čiste krv i stvaraju mokraću"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Organe čuvamo zdravom ishranom, kretanjem, odmorom i dovoljno vode. Glavu štitimo **kacigom** kad vozimo bicikl ili rolere."
+        },
+        {
+          "type": "remember",
+          "text": "**Piramida ishrane**: najviše jedemo žitarice, voće i povrće, manje mlijeko, meso, ribu i jaja, a **najmanje** slatkiše, masno i slano."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koji organ pumpa krv?",
+          "options": ["srce", "pluća", "želudac", "mozak"],
+          "answer": "srce",
+          "picture": "❤️"
+        },
+        {
+          "type": "choice",
+          "question": "Koji organ služi za disanje?",
+          "options": ["pluća", "jetra", "bubrezi", "srce"],
+          "answer": "pluća",
+          "picture": "🫁"
+        },
+        {
+          "type": "choice",
+          "question": "Koji organ upravlja tijelom?",
+          "options": ["mozak", "želudac", "crijeva", "bubrezi"],
+          "answer": "mozak",
+          "picture": "🧠"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje se vari hrana?",
+          "options": ["u želucu i crijevima", "u plućima", "u mozgu", "u srcu"],
+          "answer": "u želucu i crijevima"
+        },
+        {
+          "type": "choice",
+          "question": "Šta jedemo najmanje?",
+          "options": ["slatkiše", "povrće", "voće", "žitarice"],
+          "answer": "slatkiše"
+        },
+        {
+          "type": "choice",
+          "question": "Šta štiti glavu kad vozimo bicikl?",
+          "options": ["kaciga", "kapa", "šal", "rukavice"],
+          "answer": "kaciga",
+          "picture": "⛑️"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Bubrezi čiste krv.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Pušenje šteti plućima.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "covjek-i-okolina",
+      "title": "Čovjek i okolina",
+      "description": "Zagađenje vode, zraka i tla; čisti izvori energije",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Čovjek može **zagaditi** vodu, zrak i tlo: smećem u rijeci, dimom iz dimnjaka i auta, divljim **deponijama** smeća."
+        },
+        {
+          "type": "text",
+          "text": "Zimi je zrak u kotlinama, kao u Sarajevu, često **zagađen**. Tada je dobro manje boraviti napolju i više koristiti javni prijevoz."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Čuvamo okolinu: ne bacamo smeće u prirodu, sadimo drveće, štedimo vodu i struju, razvrstavamo otpad.",
+            "**Čisti izvori energije** ne zagađuju zrak: **solarni paneli** (Sunce), **vjetroelektrane** (vjetar) i **hidroelektrane** (voda)."
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Prirodu nismo naslijedili od roditelja, nego smo je **posudili od svoje djece**. Čuvajmo je!"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta zagađuje zrak?",
+          "options": ["dim iz dimnjaka i auta", "sadnja drveća", "vožnja bicikla", "hodanje"],
+          "answer": "dim iz dimnjaka i auta",
+          "picture": "🏭"
+        },
+        {
+          "type": "choice",
+          "question": "Šta zagađuje rijeke?",
+          "options": ["smeće bačeno u vodu", "ribe", "kamenje", "kiša"],
+          "answer": "smeće bačeno u vodu"
+        },
+        {
+          "type": "choice",
+          "question": "Koji izvor energije je čist?",
+          "options": ["solarni panel", "ugalj", "benzin", "nafta"],
+          "answer": "solarni panel",
+          "picture": "☀️"
+        },
+        {
+          "type": "choice",
+          "question": "Šta koristi vjetroelektrana?",
+          "options": ["vjetar", "ugalj", "benzin", "drvo"],
+          "answer": "vjetar"
+        },
+        {
+          "type": "choice",
+          "question": "Kako čuvamo okolinu?",
+          "options": ["sadimo drveće", "palimo gume", "bacamo smeće u šumu", "ostavljamo vodu da teče"],
+          "answer": "sadimo drveće",
+          "picture": "🌱"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Divlja deponija smeća zagađuje tlo i vodu.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Vožnja biciklom zagađuje zrak više od vožnje automobilom.",
+          "answer": false,
+          "explanation": "Bicikl ne ispušta dim. Zato je dobar za okolinu."
+        }
+      ]
+    },
+    {
+      "id": "voda-i-zrak",
+      "title": "Voda i zrak",
+      "description": "Osobine vode i zraka, stanja vode, kruženje vode",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Voda** je tečnost bez boje, okusa i mirisa. U vodi se mnoge tvari **rastvaraju**, npr. šećer i so."
+        },
+        {
+          "type": "list",
+          "items": [
+            "🧊 **čvrsto** stanje: led i snijeg",
+            "💧 **tečno** stanje: voda",
+            "♨️ **gasovito** stanje: vodena para"
+          ]
+        },
+        {
+          "type": "example",
+          "text": "Sunce grije vodu → voda isparava → para se hladi i stvara oblake →\nkiša ili snijeg padaju na zemlju → voda teče u rijeke i mora",
+          "title": "Kruženje vode u prirodi"
+        },
+        {
+          "type": "text",
+          "text": "**Zrak** je svuda oko nas. Nema boje, okusa ni mirisa, ali zauzima prostor: zato se balon napuše. Zrak koji se kreće je **vjetar**."
+        },
+        {
+          "type": "remember",
+          "text": "Voda u prirodi stalno **kruži**: isparava, stvara oblake i pada kao kiša ili snijeg."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kako se zove voda u čvrstom stanju?",
+          "options": ["led", "para", "rosa", "kiša"],
+          "answer": "led",
+          "picture": "🧊"
+        },
+        {
+          "type": "choice",
+          "question": "Šta se dešava s vodom kad je jako zagrijemo?",
+          "options": ["isparava", "smrzne se", "postane tvrda", "nestane boja"],
+          "answer": "isparava"
+        },
+        {
+          "type": "choice",
+          "question": "Šta se rastvara u vodi?",
+          "options": ["šećer", "pijesak", "kamenčić", "ekser"],
+          "answer": "šećer"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je vjetar?",
+          "options": ["zrak koji se kreće", "para iz lonca", "oblak", "snijeg"],
+          "answer": "zrak koji se kreće"
+        },
+        {
+          "type": "order",
+          "question": "Poredaj kruženje vode.",
+          "items": ["voda isparava", "nastaju oblaci", "pada kiša", "voda teče u rijeke"]
+        },
+        {
+          "type": "truefalse",
+          "statement": "Čista voda nema mirisa.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Zrak ne zauzima prostor.",
+          "answer": false,
+          "explanation": "Zrak zauzima prostor. Zato se balon napuše."
+        }
+      ]
+    },
+    {
+      "id": "materijali-i-toplota",
+      "title": "Materijali i toplota",
+      "description": "Topljenje, gorenje, sječenje; dobri i loši provodnici toplote",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Materijali se mijenjaju. **Sječenje** i **topljenje** mijenjaju oblik i stanje, ali materijal ostaje isti: led se otopi u vodu. **Gorenjem** nastaju nove tvari: drvo izgori u pepeo i dim."
+        },
+        {
+          "type": "text",
+          "text": "Kad se zagriju, materijali se **šire**, a kad se ohlade, **skupljaju**."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**dobri provodnici toplote**: metali (lonac, kašika) brzo se zagriju",
+            "**loši provodnici toplote**: drvo, plastika, vuna i zrak sporo provode toplotu"
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Zato lonac ima **dršku od drveta ili plastike**, a zimi nosimo **vunenu** odjeću."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koji materijal brzo provodi toplotu?",
+          "options": ["metal", "drvo", "vuna", "plastika"],
+          "answer": "metal",
+          "picture": "🍳"
+        },
+        {
+          "type": "choice",
+          "question": "Zašto lonac ima dršku od plastike?",
+          "options": [
+            "plastika slabo provodi toplotu",
+            "plastika je teška",
+            "plastika je providna",
+            "plastika se brzo grije"
+          ],
+          "answer": "plastika slabo provodi toplotu"
+        },
+        {
+          "type": "choice",
+          "question": "Šta nastaje kad drvo izgori?",
+          "options": ["pepeo i dim", "novo drvo", "led", "voda"],
+          "answer": "pepeo i dim",
+          "picture": "🔥"
+        },
+        {
+          "type": "choice",
+          "question": "Šta se dešava s ledom na suncu?",
+          "options": ["topi se", "gori", "raste", "postaje tvrđi"],
+          "answer": "topi se",
+          "picture": "🧊"
+        },
+        {
+          "type": "choice",
+          "question": "Šta grije zimi najbolje?",
+          "options": ["vunena kapa", "metalna kapa", "staklena kapa", "papirna kapa"],
+          "answer": "vunena kapa"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Otopljeni led je i dalje voda.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Izgorjelo drvo možemo vratiti u drvo.",
+          "answer": false,
+          "explanation": "Gorenjem nastaju nove tvari i promjena se ne može vratiti."
+        }
+      ]
+    },
+    {
+      "id": "energija",
+      "title": "Energija oko nas",
+      "description": "Pretvaranje i štednja energije",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Energija se **pretvara** iz jednog oblika u drugi."
+        },
+        {
+          "type": "list",
+          "items": [
+            "🍎 Energija iz **hrane** pretvara se u **toplotu** tijela i **kretanje**.",
+            "💡 Sijalica pretvara **električnu** energiju u **svjetlost** i toplotu.",
+            "♨️ Grijalica i šporet pretvaraju **električnu** energiju u **toplotu**."
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Energiju štedimo: gasimo svjetla, isključujemo uređaje, ne grijemo uz otvoren prozor, koristimo štedne sijalice."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "U šta sijalica pretvara električnu energiju?",
+          "options": ["u svjetlost i toplotu", "u hranu", "u vodu", "u zrak"],
+          "answer": "u svjetlost i toplotu",
+          "picture": "💡"
+        },
+        {
+          "type": "choice",
+          "question": "U šta grijalica pretvara električnu energiju?",
+          "options": ["u toplotu", "u zvuk", "u hranu", "u led"],
+          "answer": "u toplotu"
+        },
+        {
+          "type": "choice",
+          "question": "Odakle tijelo dobija energiju za kretanje?",
+          "options": ["iz hrane", "iz kamena", "iz televizora", "iz sna"],
+          "answer": "iz hrane"
+        },
+        {
+          "type": "choice",
+          "question": "Kako štedimo energiju?",
+          "options": [
+            "isključimo uređaje kad ih ne koristimo",
+            "ostavimo svjetla upaljena",
+            "grijemo uz otvoren prozor",
+            "otvaramo frižider bez potrebe"
+          ],
+          "answer": "isključimo uređaje kad ih ne koristimo"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Kad trčimo, tijelo se zagrije.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Bez energije ne bismo imali svjetlo ni grijanje.",
+          "answer": true
+        }
+      ]
+    }
+  ]
+}

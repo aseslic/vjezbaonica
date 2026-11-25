@@ -6,13 +6,15 @@ Za dodavanje gradiva ne treba programirati, dovoljno je urediti ili dodati datot
 ```
 src/content/
 ├── 1-razred/
-│   └── matematika.json
+│   ├── matematika.json
+│   └── moja-okolina.json
 ├── 2-razred/
 │   ├── matematika.json
 │   ├── bhs-jezik.json
 │   └── moja-okolina.json
 ├── 3-razred/
-│   └── matematika.json
+│   ├── matematika.json
+│   └── moja-okolina.json
 └── 4-razred/
     ├── matematika.json
     ├── bhs-jezik.json

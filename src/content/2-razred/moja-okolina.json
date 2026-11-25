@@ -8,20 +8,464 @@
   "paper": "lines",
   "topics": [
     {
+      "id": "porodica-skola-i-dom",
+      "title": "Porodica, škola i dom",
+      "description": "Prava i dužnosti, kućni red, opasnosti",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Svako od nas ima **osjećanja**: radost, tugu, strah, ljutnju. O osjećanjima možemo razgovarati."
+        },
+        {
+          "type": "text",
+          "text": "U porodici i u školi imamo **prava** (da učimo, da se igramo, da budemo zaštićeni) i **dužnosti** (da učimo, da pomažemo, da poštujemo druge)."
+        },
+        {
+          "type": "text",
+          "text": "**Kućni red** su pravila kojih se svi pridržavamo u školi i u zgradi: ne bacamo smeće, ne pravimo buku kad se odmara, čuvamo zajedničke stvari."
+        },
+        {
+          "type": "list",
+          "items": ["🚓 **Policija**: 122", "🚒 **Vatrogasci**: 123", "🚑 **Hitna pomoć**: 124"]
+        },
+        {
+          "type": "remember",
+          "text": "Kad osjetiš **dim** ili vidiš **vatru**, odmah obavijesti odrasle i izađi napolje. U školi slušamo upute učiteljice ili učitelja i izlazimo mirno, jedno za drugim."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koji broj zovemo kad vidimo požar?",
+          "options": ["123", "122", "124", "100"],
+          "answer": "123",
+          "picture": "🚒"
+        },
+        {
+          "type": "choice",
+          "question": "Koji broj zovemo za hitnu pomoć?",
+          "options": ["124", "123", "122", "111"],
+          "answer": "124",
+          "picture": "🚑"
+        },
+        {
+          "type": "choice",
+          "question": "Koji broj zovemo za policiju?",
+          "options": ["122", "124", "123", "200"],
+          "answer": "122",
+          "picture": "🚓"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je naše pravo?",
+          "options": ["da se igramo i učimo", "da vičemo na druge", "da kvarimo stvari", "da ne slušamo nikog"],
+          "answer": "da se igramo i učimo"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je naša dužnost u školi?",
+          "options": ["da redovno učimo", "da kasnimo", "da šaramo po zidu", "da galamimo"],
+          "answer": "da redovno učimo"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Kad u školi zvoni uzbuna, izlazimo mirno, jedno za drugim.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Šibice i upaljač su igračke.",
+          "answer": false,
+          "explanation": "Šibice i upaljač nisu igračke. Vatra je vrlo opasna."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Kućni red vrijedi za sve stanare i sve učenike.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "praznici",
+      "title": "Praznici",
+      "description": "Školski, vjerski i praznici domovine",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Praznici** su važni dani koje obilježavamo. Neki su **porodični** (rođendan), neki **školski** (Dan škole), neki **vjerski**, a neki su **praznici domovine**."
+        },
+        {
+          "type": "list",
+          "items": [
+            "🎆 **Nova godina**: 1. januar",
+            "🇧🇦 **Dan nezavisnosti Bosne i Hercegovine**: 1. mart",
+            "🛠️ **Međunarodni praznik rada**: 1. maj",
+            "🇧🇦 **Dan državnosti Bosne i Hercegovine**: 25. novembar"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "**Vjerski praznici** su npr. Ramazanski i Kurban-bajram, Božić i Uskrs. Ljudi tada posjećuju rodbinu, daruju se i pripremaju posebna jela."
+        },
+        {
+          "type": "remember",
+          "text": "Praznike drugih ljudi poštujemo i čestitamo im: „Bajram šerif mubarek olsun!“, „Sretan Božić!“, „Sretan Uskrs!“"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kada je Dan nezavisnosti Bosne i Hercegovine?",
+          "options": ["1. marta", "25. novembra", "1. januara", "1. maja"],
+          "answer": "1. marta"
+        },
+        {
+          "type": "choice",
+          "question": "Kada je Dan državnosti Bosne i Hercegovine?",
+          "options": ["25. novembra", "1. marta", "1. maja", "31. decembra"],
+          "answer": "25. novembra"
+        },
+        {
+          "type": "choice",
+          "question": "Kada je Međunarodni praznik rada?",
+          "options": ["1. maja", "1. marta", "25. novembra", "1. januara"],
+          "answer": "1. maja"
+        },
+        {
+          "type": "choice",
+          "question": "Koji praznik je porodični?",
+          "options": ["rođendan", "Dan državnosti", "Nova godina", "Dan nezavisnosti"],
+          "answer": "rođendan",
+          "picture": "🎂"
+        },
+        {
+          "type": "choice",
+          "question": "Koji praznik je vjerski?",
+          "options": ["Bajram", "Dan škole", "Dan nezavisnosti", "Nova godina"],
+          "answer": "Bajram"
+        },
+        {
+          "type": "choice",
+          "question": "Koji praznik je vjerski?",
+          "options": ["Božić", "Dan državnosti", "Praznik rada", "Dan škole"],
+          "answer": "Božić"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Dan škole je školski praznik.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Praznike drugih ljudi ne trebamo poštovati.",
+          "answer": false,
+          "explanation": "Poštujemo praznike i običaje svih ljudi."
+        }
+      ]
+    },
+    {
+      "id": "moje-naselje",
+      "title": "Mjesto u kojem živim",
+      "description": "Izgled zemljišta, prirodni i vještački objekti, zanimanja",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Zemljište može biti **ravno** ili **brdovito**. Kroz mnoga mjesta teče **potok** ili **rijeka**."
+        },
+        {
+          "type": "text",
+          "text": "Potok, rijeka, brdo i šuma su **prirodni objekti**: nastali su sami u prirodi. Ulicu, cestu, most, zgradu i školu napravio je čovjek: to su **vještački objekti**."
+        },
+        {
+          "type": "list",
+          "items": [
+            "💊 **apoteka**: kupujemo lijekove",
+            "🏥 **dom zdravlja** ili **ambulanta**: liječimo se",
+            "🏪 **prodavnica**: kupujemo namirnice",
+            "📮 **pošta**: šaljemo pisma i pakete",
+            "🔧 **zanatska radionica**: majstor popravlja ili pravi stvari (obućar, krojač, stolar)"
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Ljudi rade u različitim **zanimanjima**. Za svaki posao trebaju **sredstva za rad**: doktor stetoskop, frizer makaze, zidar mistriju."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta je od ovoga prirodni objekat?",
+          "options": ["rijeka", "most", "zgrada", "cesta"],
+          "answer": "rijeka"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je od ovoga vještački objekat?",
+          "options": ["most", "potok", "brdo", "šuma"],
+          "answer": "most",
+          "picture": "🌉"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje se liječimo?",
+          "options": ["u domu zdravlja", "u pošti", "u prodavnici", "u radionici"],
+          "answer": "u domu zdravlja"
+        },
+        {
+          "type": "choice",
+          "question": "Ko popravlja obuću?",
+          "options": ["obućar", "krojač", "pekar", "poštar"],
+          "answer": "obućar",
+          "picture": "👞"
+        },
+        {
+          "type": "choice",
+          "question": "Ko šije odjeću?",
+          "options": ["krojač", "obućar", "zidar", "vozač"],
+          "answer": "krojač",
+          "picture": "🧵"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je sredstvo za rad frizera?",
+          "options": ["makaze", "mistrija", "stetoskop", "čekić"],
+          "answer": "makaze",
+          "picture": "✂️"
+        },
+        {
+          "type": "choice",
+          "question": "Kakvo je zemljište sa mnogo brda?",
+          "options": ["brdovito", "ravno", "vodeno", "pjeskovito"],
+          "answer": "brdovito"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Most je napravio čovjek.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Potok je vještački objekat.",
+          "answer": false,
+          "explanation": "Potok je nastao sam u prirodi. To je prirodni objekat."
+        }
+      ]
+    },
+    {
+      "id": "cisto-okruzenje",
+      "title": "Čista okolina",
+      "description": "Čist i prljav prostor, ekološka akcija",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "U **čistom** prostoru se osjećamo ugodno i zdravo. **Prljav** prostor privlači muhe, miševe i bolesti."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Smeće bacamo u kante i kontejnere.",
+            "Pospremamo učionicu i svoju sobu.",
+            "Čuvamo travu, cvijeće i drveće u parku."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "**Ekološka akcija** je kad zajedno čistimo školsko dvorište, igralište ili park. Tako svi doprinosimo čistoj okolini."
+        },
+        {
+          "type": "remember",
+          "text": "Čistu okolinu čuvamo **svi zajedno**, svaki dan."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta je ekološka akcija?",
+          "options": ["zajedničko čišćenje dvorišta ili parka", "igra lopte", "ljetni raspust", "školska priredba"],
+          "answer": "zajedničko čišćenje dvorišta ili parka"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje bacamo bocu od soka u parku?",
+          "options": ["u kantu ili kontejner", "u travu", "u rijeku", "pod klupu"],
+          "answer": "u kantu ili kontejner"
+        },
+        {
+          "type": "choice",
+          "question": "Šta privlači prljav prostor?",
+          "options": ["muhe i miševe", "leptire", "duge", "zvijezde"],
+          "answer": "muhe i miševe"
+        },
+        {
+          "type": "truefalse",
+          "statement": "U čistom prostoru se osjećamo ugodno.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Čistoću okoline trebaju čuvati samo čistači.",
+          "answer": false,
+          "explanation": "Čistu okolinu čuvamo svi zajedno."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Na ekološku akciju ponesemo rukavice i vreće za smeće.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "saobracaj",
+      "title": "Saobraćaj",
+      "description": "Pješak, semafor, raskrsnica, staze i javni prijevoz",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Na ulici smo **pješaci**. Hodamo po **trotoaru**, a ulicu prelazimo na **pješačkom prelazu** (zebri)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Crveno** svjetlo za pješake: stani i čekaj.",
+            "**Zeleno** svjetlo za pješake: pažljivo pređi ulicu."
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Prije prelaska pogledaj **lijevo, desno, pa opet lijevo**. Ulicu prelazi hodajući, nikad trčeći."
+        },
+        {
+          "type": "text",
+          "text": "Mjesto gdje se ulice sijeku je **raskrsnica**. Tu je najčešće semafor, a nekad saobraćaj vodi **policajac saobraćajac**."
+        },
+        {
+          "type": "text",
+          "text": "**Pješačka staza** je samo za pješake, a **biciklistička staza** za bicikliste."
+        },
+        {
+          "type": "text",
+          "text": "**Javni prijevoz** su autobus, tramvaj, trolejbus i minibus. Čekamo ih na **stajalištu**, ulazimo tek kad se vozilo zaustavi, a u vozilu se držimo i ne guramo."
+        },
+        {
+          "type": "text",
+          "text": "Ako nema trotoara, hodamo **lijevom stranom** puta, tako da vidimo vozila koja nam dolaze u susret."
+        },
+        {
+          "type": "text",
+          "text": "U autu se uvijek **vežemo sigurnosnim pojasom**, a mala djeca sjede u autosjedalici."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta znači crveno svjetlo na semaforu za pješake?",
+          "options": ["Stani i čekaj.", "Pređi brzo.", "Trči preko ulice."],
+          "answer": "Stani i čekaj."
+        },
+        {
+          "type": "choice",
+          "question": "Gdje prelazimo ulicu?",
+          "options": ["na pješačkom prelazu", "između parkiranih automobila", "bilo gdje", "na krivini"],
+          "answer": "na pješačkom prelazu"
+        },
+        {
+          "type": "choice",
+          "question": "Kojom stranom puta hodamo kad nema trotoara?",
+          "options": ["lijevom stranom", "desnom stranom", "sredinom puta"],
+          "answer": "lijevom stranom",
+          "explanation": "Hodamo lijevom stranom da vidimo vozila koja nam dolaze u susret."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Ulicu smijemo prelaziti trčeći između parkiranih automobila.",
+          "answer": false
+        },
+        {
+          "type": "truefalse",
+          "statement": "U autu se uvijek vežemo sigurnosnim pojasom.",
+          "answer": true
+        },
+        {
+          "type": "order",
+          "question": "Kako gledamo prije prelaska ulice? Poredaj.",
+          "items": ["lijevo", "desno", "opet lijevo"]
+        },
+        {
+          "type": "choice",
+          "question": "Kako se zove dio ulice po kojem hodaju pješaci?",
+          "options": ["trotoar", "kolovoz", "parking", "raskrsnica"],
+          "answer": "trotoar"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Na zeleno svjetlo za pješake ulicu prelazimo pažljivo.",
+          "answer": true
+        },
+        {
+          "type": "choice",
+          "question": "Kako se zove mjesto gdje se ulice sijeku?",
+          "options": ["raskrsnica", "trotoar", "stajalište", "most"],
+          "answer": "raskrsnica"
+        },
+        {
+          "type": "choice",
+          "question": "Za koga je biciklistička staza?",
+          "options": ["za bicikliste", "za automobile", "za kamione", "za tramvaje"],
+          "answer": "za bicikliste",
+          "picture": "🚲"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je od ovoga javni prijevoz?",
+          "options": ["tramvaj", "bicikl", "romobil", "kolica"],
+          "answer": "tramvaj",
+          "picture": "🚋"
+        },
+        {
+          "type": "truefalse",
+          "statement": "U autobus ulazimo tek kad se potpuno zaustavi.",
+          "answer": true
+        }
+      ]
+    },
+    {
       "id": "dani-u-sedmici",
       "title": "Dani u sedmici",
-      "description": "Radni dani i vikend, jučer, danas, sutra",
+      "description": "Radni dani i vikend; prekjuče, jučer, danas, sutra, prekosutra",
       "lesson": [
-        { "type": "text", "text": "Sedmica ima **7 dana**." },
-        { "type": "example", "title": "Dani u sedmici", "text": "ponedjeljak, utorak, srijeda, četvrtak,\npetak, subota, nedjelja" },
+        {
+          "type": "text",
+          "text": "Sedmica ima **7 dana**."
+        },
+        {
+          "type": "example",
+          "title": "Dani u sedmici",
+          "text": "ponedjeljak, utorak, srijeda, četvrtak,\npetak, subota, nedjelja"
+        },
         {
           "type": "text",
           "text": "Od ponedjeljka do petka su **radni dani**. Tada idemo u školu. Subota i nedjelja su **vikend**."
         },
-        { "type": "remember", "text": "Ako je danas utorak, jučer je bio ponedjeljak, a sutra je srijeda." }
+        {
+          "type": "remember",
+          "text": "Ako je danas utorak, jučer je bio ponedjeljak, a sutra je srijeda."
+        },
+        {
+          "type": "example",
+          "text": "prekjuče → jučer → danas → sutra → prekosutra",
+          "title": "Redom kroz dane"
+        },
+        {
+          "type": "remember",
+          "text": "Ako je danas srijeda, **prekjuče** je bio ponedjeljak, a **prekosutra** će biti petak."
+        }
       ],
       "exercises": [
-        { "type": "input", "question": "Koliko dana ima sedmica?", "answer": "7" },
+        {
+          "type": "input",
+          "question": "Koliko dana ima sedmica?",
+          "answer": "7"
+        },
         {
           "type": "choice",
           "question": "Koji dan dolazi poslije utorka?",
@@ -51,14 +495,39 @@
           "question": "Poredaj radne dane redom.",
           "items": ["ponedjeljak", "utorak", "srijeda", "četvrtak", "petak"]
         },
-        { "type": "truefalse", "statement": "Subota i nedjelja su dani vikenda.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Subota i nedjelja su dani vikenda.",
+          "answer": true
+        },
         {
           "type": "truefalse",
           "statement": "Srijeda je prvi dan u sedmici.",
           "answer": false,
           "explanation": "Prvi dan u sedmici je ponedjeljak."
         },
-        { "type": "input", "question": "Koji dan dolazi poslije nedjelje?", "answer": "ponedjeljak" }
+        {
+          "type": "input",
+          "question": "Koji dan dolazi poslije nedjelje?",
+          "answer": "ponedjeljak"
+        },
+        {
+          "type": "choice",
+          "question": "Ako je danas četvrtak, koji je dan bio prekjuče?",
+          "options": ["utorak", "srijeda", "petak", "subota"],
+          "answer": "utorak"
+        },
+        {
+          "type": "choice",
+          "question": "Ako je danas petak, koji će dan biti prekosutra?",
+          "options": ["nedjelja", "subota", "ponedjeljak", "četvrtak"],
+          "answer": "nedjelja"
+        },
+        {
+          "type": "order",
+          "question": "Poredaj redom.",
+          "items": ["prekjuče", "jučer", "danas", "sutra", "prekosutra"]
+        }
       ]
     },
     {
@@ -66,7 +535,10 @@
       "title": "Mjeseci i godišnja doba",
       "description": "12 mjeseci, proljeće, ljeto, jesen i zima",
       "lesson": [
-        { "type": "text", "text": "Godina ima **12 mjeseci** i **4 godišnja doba**." },
+        {
+          "type": "text",
+          "text": "Godina ima **12 mjeseci** i **4 godišnja doba**."
+        },
         {
           "type": "example",
           "title": "Mjeseci",
@@ -81,17 +553,29 @@
             "**Zima**: najhladnije je, pada snijeg."
           ]
         },
-        { "type": "remember", "text": "Proljeće počinje u martu, ljeto u junu, jesen u septembru, a zima u decembru." }
+        {
+          "type": "remember",
+          "text": "Proljeće počinje u martu, ljeto u junu, jesen u septembru, a zima u decembru."
+        }
       ],
       "exercises": [
-        { "type": "input", "question": "Koliko mjeseci ima godina?", "answer": "12" },
+        {
+          "type": "input",
+          "question": "Koliko mjeseci ima godina?",
+          "answer": "12"
+        },
         {
           "type": "choice",
           "question": "Koji je prvi mjesec u godini?",
           "options": ["januar", "mart", "septembar", "decembar"],
           "answer": "januar"
         },
-        { "type": "choice", "question": "Koji mjesec dolazi poslije juna?", "options": ["maj", "juli", "august", "april"], "answer": "juli" },
+        {
+          "type": "choice",
+          "question": "Koji mjesec dolazi poslije juna?",
+          "options": ["maj", "juli", "august", "april"],
+          "answer": "juli"
+        },
         {
           "type": "choice",
           "question": "U kojem godišnjem dobu lišće žuti i opada?",
@@ -111,7 +595,11 @@
           "question": "Poredaj godišnja doba. Počni od proljeća.",
           "items": ["proljeće", "ljeto", "jesen", "zima"]
         },
-        { "type": "truefalse", "statement": "Nova godina se slavi 1. januara.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Nova godina se slavi 1. januara.",
+          "answer": true
+        },
         {
           "type": "truefalse",
           "statement": "Ljetni raspust je u decembru.",
@@ -127,68 +615,152 @@
       ]
     },
     {
-      "id": "saobracaj",
-      "title": "Saobraćaj",
-      "description": "Pješak, semafor, pješački prelaz",
+      "id": "vrijeme-i-prirodne-pojave",
+      "title": "Vrijeme i prirodne pojave",
+      "description": "Kiša, rosa, magla, snijeg, mraz, inje, grad, vjetar",
       "lesson": [
         {
           "type": "text",
-          "text": "Na ulici smo **pješaci**. Hodamo po **trotoaru**, a ulicu prelazimo na **pješačkom prelazu** (zebri)."
+          "text": "Vrijeme može biti **sunčano, oblačno, promjenljivo, kišovito, vjetrovito, maglovito** ili **snjegovito**."
         },
         {
           "type": "list",
-          "items": ["**Crveno** svjetlo za pješake: stani i čekaj.", "**Zeleno** svjetlo za pješake: pažljivo pređi ulicu."]
+          "items": [
+            "🌧️ **kiša**: kapi vode padaju iz oblaka",
+            "💧 **rosa**: kapljice vode na travi u rano jutro",
+            "🌫️ **magla**: oblak pri zemlji, slabo se vidi",
+            "❄️ **snijeg**: pahulje padaju zimi",
+            "🧊 **mraz** i **inje**: kad je jako hladno, voda se zaledi na travi i granama",
+            "🌨️ **grad** (tuča): zrna leda padaju iz oblaka",
+            "💨 **vjetar**: zrak koji se kreće"
+          ]
         },
         {
           "type": "remember",
-          "text": "Prije prelaska pogledaj **lijevo, desno, pa opet lijevo**. Ulicu prelazi hodajući, nikad trčeći."
-        },
-        {
-          "type": "text",
-          "text": "Ako nema trotoara, hodamo **lijevom stranom** puta, tako da vidimo vozila koja nam dolaze u susret."
-        },
-        { "type": "text", "text": "U autu se uvijek **vežemo sigurnosnim pojasom**, a mala djeca sjede u autosjedalici." }
+          "text": "Vrijeme utječe na biljke, životinje i ljude. Zato vodimo **kalendar prirode**."
+        }
       ],
       "exercises": [
         {
           "type": "choice",
-          "question": "Šta znači crveno svjetlo na semaforu za pješake?",
-          "options": ["Stani i čekaj.", "Pređi brzo.", "Trči preko ulice."],
-          "answer": "Stani i čekaj."
+          "question": "Kako se zovu kapljice vode na travi u rano jutro?",
+          "options": ["rosa", "grad", "snijeg", "inje"],
+          "answer": "rosa",
+          "picture": "💧"
         },
         {
           "type": "choice",
-          "question": "Gdje prelazimo ulicu?",
-          "options": ["na pješačkom prelazu", "između parkiranih automobila", "bilo gdje", "na krivini"],
-          "answer": "na pješačkom prelazu"
+          "question": "Kako zovemo zrna leda koja padaju iz oblaka?",
+          "options": ["grad", "rosa", "magla", "kiša"],
+          "answer": "grad"
         },
         {
           "type": "choice",
-          "question": "Kojom stranom puta hodamo kad nema trotoara?",
-          "options": ["lijevom stranom", "desnom stranom", "sredinom puta"],
-          "answer": "lijevom stranom",
-          "explanation": "Hodamo lijevom stranom da vidimo vozila koja nam dolaze u susret."
-        },
-        { "type": "truefalse", "statement": "Ulicu smijemo prelaziti trčeći između parkiranih automobila.", "answer": false },
-        { "type": "truefalse", "statement": "U autu se uvijek vežemo sigurnosnim pojasom.", "answer": true },
-        {
-          "type": "order",
-          "question": "Kako gledamo prije prelaska ulice? Poredaj.",
-          "items": ["lijevo", "desno", "opet lijevo"]
+          "question": "Kada se slabo vidi jer je oblak pri zemlji?",
+          "options": ["kad je magla", "kad je sunčano", "kad je rosa", "kad je vjetrovito"],
+          "answer": "kad je magla",
+          "picture": "🌫️"
         },
         {
           "type": "choice",
-          "question": "Kako se zove dio ulice po kojem hodaju pješaci?",
-          "options": ["trotoar", "kolovoz", "parking", "raskrsnica"],
-          "answer": "trotoar"
+          "question": "Šta je vjetar?",
+          "options": ["zrak koji se kreće", "voda koja pada", "led na travi", "oblak pri zemlji"],
+          "answer": "zrak koji se kreće",
+          "picture": "💨"
         },
-        { "type": "truefalse", "statement": "Na zeleno svjetlo za pješake ulicu prelazimo pažljivo.", "answer": true }
+        {
+          "type": "choice",
+          "question": "Šta se vidi na granama kad je jako hladno?",
+          "options": ["inje", "rosa", "duga", "plodovi"],
+          "answer": "inje"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Grad može oštetiti voće i povrće.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Snijeg pada najčešće ljeti.",
+          "answer": false,
+          "explanation": "Snijeg pada zimi, kad je hladno."
+        },
+        {
+          "type": "choice",
+          "question": "Kakvo je vrijeme kad se sunce i kiša često smjenjuju?",
+          "options": ["promjenljivo", "snjegovito", "maglovito", "sunčano"],
+          "answer": "promjenljivo"
+        }
+      ]
+    },
+    {
+      "id": "ziva-i-neziva-priroda",
+      "title": "Živa i neživa priroda",
+      "description": "Šta je živo, a šta neživo i kako su povezani",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Živa priroda** su biljke, životinje i ljudi. Oni se rađaju, hrane, dišu, rastu i razmnožavaju."
+        },
+        {
+          "type": "text",
+          "text": "**Neživa priroda** su Sunce, voda, zrak, zemlja i kamen. Oni ne rastu i ne hrane se."
+        },
+        {
+          "type": "remember",
+          "text": "Živa priroda ne može bez nežive: biljkama trebaju **Sunce, voda, zrak i zemlja**, a životinjama i ljudima voda, zrak i hrana."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta je dio žive prirode?",
+          "options": ["drvo", "kamen", "voda", "zrak"],
+          "answer": "drvo",
+          "picture": "🌳"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je dio nežive prirode?",
+          "options": ["kamen", "ptica", "cvijet", "riba"],
+          "answer": "kamen",
+          "picture": "🪨"
+        },
+        {
+          "type": "choice",
+          "question": "Šta živa bića rade, a kamen ne?",
+          "options": ["rastu", "leže", "imaju boju", "imaju oblik"],
+          "answer": "rastu"
+        },
+        {
+          "type": "choice",
+          "question": "Šta biljci daje Sunce?",
+          "options": ["svjetlost i toplotu", "kišu", "zemlju", "kamenje"],
+          "answer": "svjetlost i toplotu",
+          "picture": "🌞"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Voda je dio nežive prirode.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Životinje mogu živjeti bez vode.",
+          "answer": false,
+          "explanation": "Sva živa bića trebaju vodu."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Zrak je potreban i biljkama i životinjama.",
+          "answer": true
+        }
       ]
     },
     {
       "id": "biljke-i-zivotinje",
       "title": "Biljke i životinje",
-      "description": "Dijelovi biljke, domaće i divlje životinje, mladunci",
+      "description": "Dijelovi biljke, uslovi za život, domaće i divlje životinje, mladunci",
       "lesson": [
         {
           "type": "text",
@@ -215,24 +787,295 @@
           "options": ["korijen", "list", "cvijet", "plod"],
           "answer": "korijen"
         },
-        { "type": "choice", "question": "Kako se zove mladunče krave?", "options": ["tele", "jare", "janje", "mače"], "answer": "tele" },
-        { "type": "choice", "question": "Koja životinja je divlja?", "options": ["krava", "vuk", "ovca", "kokoš"], "answer": "vuk" },
+        {
+          "type": "choice",
+          "question": "Kako se zove mladunče krave?",
+          "options": ["tele", "jare", "janje", "mače"],
+          "answer": "tele"
+        },
+        {
+          "type": "choice",
+          "question": "Koja životinja je divlja?",
+          "options": ["krava", "vuk", "ovca", "kokoš"],
+          "answer": "vuk"
+        },
         {
           "type": "truefalse",
           "statement": "Medvjed je domaća životinja.",
           "answer": false,
           "explanation": "Medvjed je divlja životinja, živi u šumi."
         },
-        { "type": "truefalse", "statement": "Mladunče ovce je janje.", "answer": true },
-        { "type": "input", "question": "Kako se zove mladunče psa?", "answer": ["štene", "kuče", "psić"] },
-        { "type": "choice", "question": "Koji dio biljke je jabuka?", "options": ["plod", "korijen", "list", "stablo"], "answer": "plod" },
-        { "type": "choice", "question": "Kako se zove mladunče kokoši?", "options": ["pile", "tele", "mače", "jare"], "answer": "pile" }
+        {
+          "type": "truefalse",
+          "statement": "Mladunče ovce je janje.",
+          "answer": true
+        },
+        {
+          "type": "input",
+          "question": "Kako se zove mladunče psa?",
+          "answer": ["štene", "kuče", "psić"]
+        },
+        {
+          "type": "choice",
+          "question": "Koji dio biljke je jabuka?",
+          "options": ["plod", "korijen", "list", "stablo"],
+          "answer": "plod"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se zove mladunče kokoši?",
+          "options": ["pile", "tele", "mače", "jare"],
+          "answer": "pile"
+        },
+        {
+          "type": "choice",
+          "question": "Koji dio biljke nosi listove i provodi vodu od korijena?",
+          "options": ["stabljika", "cvijet", "plod", "sjemenka"],
+          "answer": "stabljika"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Biljka može rasti u potpunom mraku, bez svjetlosti.",
+          "answer": false,
+          "explanation": "Biljkama trebaju svjetlost, voda, zrak i toplota."
+        }
+      ]
+    },
+    {
+      "id": "zivotinje-u-okruzenju",
+      "title": "Životinje livade, šume i rijeke",
+      "description": "Insekti, ptice, ribe i kornjače; dijelovi tijela",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Na **livadi** žive insekti: **leptir**, **pčela**, **mrav**, **skakavac**. Insekti imaju **6 nogu**."
+        },
+        {
+          "type": "text",
+          "text": "U **šumi** žive srna, zec, lisica, vjeverica, medvjed i mnoge ptice."
+        },
+        {
+          "type": "text",
+          "text": "Ptice imaju **perje**, **kljun** i **krila**. Neke dobro **lete** (lastavica), neke **plivaju** (patka, labud), a neke brzo **trče** (noj)."
+        },
+        {
+          "type": "text",
+          "text": "U **rijeci** žive **ribe**. Riba pliva pomoću **peraja** i diše **škrgama**. **Kornjača** ima **oklop** koji je štiti."
+        },
+        {
+          "type": "remember",
+          "text": "Dijelovi tijela služe životinji za život: **noge** za kretanje, **krila** za letenje, **peraja** za plivanje, **kljun** i **zubi** za hranjenje."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koliko nogu ima insekt?",
+          "options": ["6", "4", "8", "2"],
+          "answer": "6",
+          "picture": "🦋"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je od ovoga insekt?",
+          "options": ["mrav", "zec", "patka", "riba"],
+          "answer": "mrav",
+          "picture": "🐜"
+        },
+        {
+          "type": "choice",
+          "question": "Koja ptica dobro pliva?",
+          "options": ["patka", "lastavica", "sova", "vrabac"],
+          "answer": "patka",
+          "picture": "🦆"
+        },
+        {
+          "type": "choice",
+          "question": "Koja ptica ne leti, ali brzo trči?",
+          "options": ["noj", "golub", "orao", "lastavica"],
+          "answer": "noj"
+        },
+        {
+          "type": "choice",
+          "question": "Čime pliva riba?",
+          "options": ["perajama", "nogama", "krilima", "kljunom"],
+          "answer": "perajama",
+          "picture": "🐟"
+        },
+        {
+          "type": "choice",
+          "question": "Šta štiti kornjaču?",
+          "options": ["oklop", "perje", "krzno", "krila"],
+          "answer": "oklop",
+          "picture": "🐢"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje živi vjeverica?",
+          "options": ["u šumi", "u rijeci", "na livadi pod zemljom", "u moru"],
+          "answer": "u šumi",
+          "picture": "🐿️"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Pčela pravi med.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Ribe dišu plućima kao ljudi.",
+          "answer": false,
+          "explanation": "Ribe dišu škrgama."
+        }
+      ]
+    },
+    {
+      "id": "prilagodavanje",
+      "title": "Kako se biljke i životinje prilagođavaju",
+      "description": "Potrebe živih bića i život u različitim uslovima",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Živa bića su se **prilagodila** mjestu gdje žive. Tako mogu preživjeti."
+        },
+        {
+          "type": "list",
+          "items": [
+            "🌵 **Kaktus** raste u pustinji. Čuva vodu u debelom stablu, a umjesto listova ima bodlje.",
+            "🐻‍❄️ **Bijeli medvjed** živi na snijegu i ledu. Ima debelo krzno i debelo sala koje ga grije.",
+            "🐇 **Bijeli zec** i **bijela lisica** zimi imaju bijelo krzno, pa se ne vide na snijegu.",
+            "🦎 **Kameleon** mijenja boju i tako se skriva.",
+            "🐙 **Hobotnica** pušta tamnu tekućinu i pobjegne."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "**Breza** i **bukva** na jesen odbace lišće, pa zimi lakše prežive hladnoću."
+        },
+        {
+          "type": "remember",
+          "text": "Svim živim bićima trebaju **hrana, voda, zrak** i mjesto za život."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Gdje čuva vodu kaktus?",
+          "options": ["u debelom stablu", "u cvijetu", "u bodljama", "u korijenu na površini"],
+          "answer": "u debelom stablu",
+          "picture": "🌵"
+        },
+        {
+          "type": "choice",
+          "question": "Šta grije bijelog medvjeda?",
+          "options": ["debelo krzno i salo", "sunce", "perje", "oklop"],
+          "answer": "debelo krzno i salo"
+        },
+        {
+          "type": "choice",
+          "question": "Zašto bijeli zec zimi ima bijelo krzno?",
+          "options": ["da se ne vidi na snijegu", "da bude lijep", "da brže trči", "da bolje vidi"],
+          "answer": "da se ne vidi na snijegu"
+        },
+        {
+          "type": "choice",
+          "question": "Koja životinja mijenja boju da se sakrije?",
+          "options": ["kameleon", "krava", "pas", "golub"],
+          "answer": "kameleon",
+          "picture": "🦎"
+        },
+        {
+          "type": "choice",
+          "question": "Šta bukva uradi na jesen?",
+          "options": ["odbaci lišće", "procvjeta", "donese plodove zimi", "ništa"],
+          "answer": "odbaci lišće"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Svim živim bićima treba voda.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Kaktus treba mnogo vode svaki dan.",
+          "answer": false,
+          "explanation": "Kaktus čuva vodu u stablu i može dugo bez kiše."
+        }
+      ]
+    },
+    {
+      "id": "cula",
+      "title": "Čula i njihova zaštita",
+      "description": "Vid, sluh, miris, okus i dodir",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Pomoću **čula** primamo informacije iz okoline. Čovjek ima **pet čula**."
+        },
+        {
+          "type": "list",
+          "items": [
+            "👀 **vid**: oči",
+            "👂 **sluh**: uši",
+            "👃 **miris**: nos",
+            "👅 **okus**: jezik",
+            "✋ **dodir**: koža"
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Čula čuvamo: ne gledamo direktno u Sunce, ne slušamo preglasnu muziku, ne stavljamo predmete u uho i nos, a kožu štitimo od sunca kremom i kapom."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "question": "Koliko čula ima čovjek?",
+          "answer": "5"
+        },
+        {
+          "type": "choice",
+          "question": "Kojim čulom osjetimo da je limun kiseo?",
+          "options": ["okusom", "sluhom", "vidom", "mirisom"],
+          "answer": "okusom",
+          "picture": "🍋"
+        },
+        {
+          "type": "choice",
+          "question": "Kojim čulom čujemo zvono?",
+          "options": ["sluhom", "vidom", "okusom", "dodirom"],
+          "answer": "sluhom",
+          "picture": "🔔"
+        },
+        {
+          "type": "choice",
+          "question": "Kojim čulom osjetimo da su vrata hladna?",
+          "options": ["dodirom", "sluhom", "mirisom", "vidom"],
+          "answer": "dodirom"
+        },
+        {
+          "type": "choice",
+          "question": "Kako čuvamo oči?",
+          "options": ["ne gledamo direktno u Sunce", "gledamo u Sunce", "trljamo ih prljavim rukama", "čitamo u mraku"],
+          "answer": "ne gledamo direktno u Sunce"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Preglasna muzika može oštetiti sluh.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "U uho smijemo staviti olovku da ga očistimo.",
+          "answer": false,
+          "explanation": "U uho i nos ne stavljamo nikakve predmete."
+        }
       ]
     },
     {
       "id": "zdrav-zivot",
       "title": "Zdrav život",
-      "description": "Higijena, zdrava hrana, kretanje i san",
+      "description": "Higijena, zdrava hrana, odmor i kretanje",
       "lesson": [
         {
           "type": "text",
@@ -248,7 +1091,10 @@
             "Djeca trebaju spavati **oko 10 sati** svake noći."
           ]
         },
-        { "type": "remember", "text": "Slatkiše i gazirane sokove jedemo i pijemo rijetko." }
+        {
+          "type": "remember",
+          "text": "Slatkiše i gazirane sokove jedemo i pijemo rijetko."
+        }
       ],
       "exercises": [
         {
@@ -263,7 +1109,11 @@
           "options": ["jabuka", "čips", "gazirani sok", "bombone"],
           "answer": "jabuka"
         },
-        { "type": "truefalse", "statement": "Ruke peremo prije jela i poslije toaleta.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Ruke peremo prije jela i poslije toaleta.",
+          "answer": true
+        },
         {
           "type": "truefalse",
           "statement": "Djeci je dovoljno da spavaju 5 sati.",
@@ -276,7 +1126,166 @@
           "options": ["vodu", "gazirani sok", "energetski napitak"],
           "answer": "vodu"
         },
-        { "type": "truefalse", "statement": "Kretanje i igra na svježem zraku dobri su za zdravlje.", "answer": true }
+        {
+          "type": "truefalse",
+          "statement": "Kretanje i igra na svježem zraku dobri su za zdravlje.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "materijali",
+      "title": "Materijali i njihove osobine",
+      "description": "Drvo, kamen, metal, guma, papir, plastika, staklo",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Predmeti su napravljeni od **materijala**: drvo, kamen, metal, guma, papir, plastelin, plastika i staklo."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**staklo** je providno i lomljivo (prozor, čaša)",
+            "**guma** je savitljiva i elastična (lopta, gume za auto)",
+            "**metal** je tvrd i čvrst (ključ, ekser)",
+            "**papir** se lako cijepa i gužva (sveska, kesa)",
+            "**plastelin** se lako gnječi i oblikuje"
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Materijal biramo prema **osobini**: prozor je od stakla jer kroz njega vidimo, a gume na autu su od gume jer je savitljiva."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koji materijal je providan?",
+          "options": ["staklo", "drvo", "kamen", "metal"],
+          "answer": "staklo"
+        },
+        {
+          "type": "choice",
+          "question": "Od čega je lopta koja odskače?",
+          "options": ["od gume", "od stakla", "od kamena", "od papira"],
+          "answer": "od gume",
+          "picture": "🏀"
+        },
+        {
+          "type": "choice",
+          "question": "Šta se lako cijepa i gužva?",
+          "options": ["papir", "kamen", "metal", "staklo"],
+          "answer": "papir",
+          "picture": "📄"
+        },
+        {
+          "type": "choice",
+          "question": "Koji materijal možemo gnječiti i oblikovati?",
+          "options": ["plastelin", "staklo", "kamen", "metal"],
+          "answer": "plastelin"
+        },
+        {
+          "type": "choice",
+          "question": "Zašto je prozor od stakla?",
+          "options": [
+            "jer kroz staklo vidimo",
+            "jer je staklo mekano",
+            "jer se staklo gužva",
+            "jer je staklo lagano kao papir"
+          ],
+          "answer": "jer kroz staklo vidimo"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Kamen je teži od papira iste veličine.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Kad prerežemo papir makazama, mijenja mu se oblik.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Staklo se ne može razbiti.",
+          "answer": false,
+          "explanation": "Staklo je lomljivo."
+        }
+      ]
+    },
+    {
+      "id": "energija",
+      "title": "Izvori energije",
+      "description": "Hrana, Sunce, voda, vjetar i goriva; svjetlost i toplota",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Energija** nam treba za kretanje, svjetlo, toplotu i rad mašina."
+        },
+        {
+          "type": "list",
+          "items": [
+            "🍞 **hrana** daje energiju našem tijelu",
+            "🌞 **Sunce** daje svjetlost i toplotu",
+            "💧 **voda** i 💨 **vjetar** pokreću mlinove i elektrane",
+            "🔥 **goriva**: drvo, ugalj i benzin. Drvo i ugalj grije peći, a benzin pokreće auto"
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "**Štedimo energiju**: gasimo svjetlo kad izlazimo iz sobe, ne ostavljamo otvoren frižider i zatvaramo prozor kad se grije."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta daje energiju našem tijelu?",
+          "options": ["hrana", "kamen", "igračka", "papir"],
+          "answer": "hrana",
+          "picture": "🍞"
+        },
+        {
+          "type": "choice",
+          "question": "Šta nam daje Sunce?",
+          "options": ["svjetlost i toplotu", "hranu u kesi", "struju u utičnici", "snijeg"],
+          "answer": "svjetlost i toplotu",
+          "picture": "🌞"
+        },
+        {
+          "type": "choice",
+          "question": "Šta pokreće automobil?",
+          "options": ["benzin", "voda iz česme", "mlijeko", "pijesak"],
+          "answer": "benzin",
+          "picture": "🚗"
+        },
+        {
+          "type": "choice",
+          "question": "Čime ložimo peć?",
+          "options": ["drvom ili ugljem", "kamenom", "staklom", "vodom"],
+          "answer": "drvom ili ugljem"
+        },
+        {
+          "type": "choice",
+          "question": "Kako štedimo energiju?",
+          "options": [
+            "gasimo svjetlo kad izlazimo",
+            "ostavljamo otvoren frižider",
+            "grijemo uz otvoren prozor",
+            "ostavljamo TV upaljen"
+          ],
+          "answer": "gasimo svjetlo kad izlazimo",
+          "picture": "💡"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Vjetar može pokretati vjetrenjače.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Sijalica daje svjetlost i malo toplote.",
+          "answer": true
+        }
       ]
     }
   ]
