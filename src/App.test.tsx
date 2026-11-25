@@ -38,7 +38,7 @@ describe('aplikacija', () => {
   it('otvara temu s lekcijom i dugmetom za vježbu', async () => {
     render(<App />)
     await go('/razred/2/matematika/sabiranje-i-oduzimanje-do-100')
-    expect(screen.getByRole('heading', { name: 'Sabiranje i oduzimanje do 100' })).toBeTruthy()
+    expect(screen.getByRole('heading', { name: 'Sabiranje i oduzimanje do 100 bez prelaza' })).toBeTruthy()
     expect(screen.getByText('Zapamti!')).toBeTruthy()
     expect(screen.getByRole('link', { name: /Vježbaj/ })).toBeTruthy()
   })

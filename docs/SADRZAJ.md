@@ -7,6 +7,7 @@ Za dodavanje gradiva ne treba programirati, dovoljno je urediti ili dodati datot
 src/content/
 ├── 1-razred/
 │   ├── matematika.json
+│   ├── bhs-jezik.json
 │   └── moja-okolina.json
 ├── 2-razred/
 │   ├── matematika.json
@@ -14,6 +15,7 @@ src/content/
 │   └── moja-okolina.json
 ├── 3-razred/
 │   ├── matematika.json
+│   ├── bhs-jezik.json
 │   └── moja-okolina.json
 └── 4-razred/
     ├── matematika.json
@@ -195,6 +197,11 @@ Generator svaki put napravi nove zadatke, pa dijete može vježbati unedogled.
 | `long-division`  | 856 : 4 = ?                             | `max`: najveći djeljenik; `digits` (neobavezno): djelioci od 2 do 9 |
 | `division-remainder` | 17 : 5 = ? (odaberi „3, ostatak 2“) | `max`: najveći djeljenik; `digits` (neobavezno) |
 | `unit-conversion` | 3 m = ? cm, 4000 g = ? kg              | `units`: lista od `"length"` (dužina), `"mass"` (masa), `"volume"` (zapremina tečnosti) |
+| `roman`          | XIV = ? i 14 = ? (rimskim ciframa)      | `max`: najveći broj (do 3999) |
+| `equation`       | x + 25 = 60, 7 · x = 42, x : 6 = 45     | `max`: najveći broj; `ops`: lista znakova od `"+"`, `"−"`, `"·"`, `":"` |
+
+Za `addition` i `subtraction` dodaj `"carry": false` kad zadaci trebaju biti **bez prelaza** preko desetice
+(npr. 34 + 25, a ne 38 + 25).
 
 `count` je broj zadataka koje generator ubaci u temu (zadano: 20). Iz svih zadataka teme
 aplikacija nasumično bira onoliko koliko je podešeno u postavkama (5, 10 ili 15).

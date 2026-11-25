@@ -8,7 +8,7 @@ pročita kratku lekciju i riješi zadatke. Za svaku temu dobija zvjezdice, a na 
 ## Šta aplikacija radi
 
 - **Lekcije i vježbe** po razredima, predmetima i temama. Za početak:
-  Matematika i Moja okolina za 1. do 4. razred te Bosanski, hrvatski i srpski jezik i književnost za 2. i 4. razred.
+  Matematika, Bosanski, hrvatski i srpski jezik i književnost te Moja okolina za 1. do 4. razred.
 - **Četiri vrste zadataka:** izbor ponuđenog odgovora, upis, tačno/netačno i slaganje pravilnim redom.
 - **Matematički zadaci se generišu sami**, pa je svaka vježba drugačija. Uz svaki zadatak ide objašnjenje,
   npr. *„Saberi desetice pa jedinice: 30 + 20 = 50, 4 + 5 = 9, pa je 50 + 9 = 59.”*
@@ -49,8 +49,8 @@ Nova datoteka se automatski pojavi u aplikaciji. Sve vrste zadataka, lekcija i g
 
 Poslije izmjene pokreni `npm run provjeri`. Provjera javlja tačno šta i gdje ne valja.
 
-> Sadržaj je napisan prema nastavnom planu i programu Kantona Sarajevo. Moja okolina (1–4. razred) prati
-> „Nastavni plan i program sa definisanim ishodima učenja“ koji važi od školske 2024/2025. godine.
+> Sadržaj prati „Nastavni plan i program sa definisanim ishodima učenja“ Kantona Sarajevo, koji važi od školske
+> 2024/2025. godine, za sva tri predmeta od 1. do 4. razreda.
 > Prije šire upotrebe dobro je da ga pregleda učiteljica ili učitelj.
 
 ## Objavljivanje na internetu

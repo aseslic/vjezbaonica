@@ -13,13 +13,30 @@
       "title": "Abeceda",
       "description": "Redoslijed slova, samoglasnici i suglasnici",
       "lesson": [
-        { "type": "text", "text": "Abeceda ima **30 slova**. Svako slovo ima svoje mjesto u abecedi." },
-        { "type": "example", "title": "Abeceda", "text": "A B C Č Ć D Dž Đ E F\nG H I J K L Lj M N Nj\nO P R S Š T U V Z Ž" },
-        { "type": "remember", "text": "**Dž**, **Lj** i **Nj** pišemo s dva znaka, ali je svako od njih jedno slovo." },
-        { "type": "text", "text": "Samoglasnici su **a, e, i, o, u**. Sva ostala slova su suglasnici." }
+        {
+          "type": "text",
+          "text": "Abeceda ima **30 slova**. Svako slovo ima svoje mjesto u abecedi."
+        },
+        {
+          "type": "example",
+          "title": "Abeceda",
+          "text": "A B C Č Ć D Dž Đ E F\nG H I J K L Lj M N Nj\nO P R S Š T U V Z Ž"
+        },
+        {
+          "type": "remember",
+          "text": "**Dž**, **Lj** i **Nj** pišemo s dva znaka, ali je svako od njih jedno slovo."
+        },
+        {
+          "type": "text",
+          "text": "Samoglasnici su **a, e, i, o, u**. Sva ostala slova su suglasnici."
+        }
       ],
       "exercises": [
-        { "type": "input", "question": "Koliko slova ima abeceda?", "answer": "30" },
+        {
+          "type": "input",
+          "question": "Koliko slova ima abeceda?",
+          "answer": "30"
+        },
         {
           "type": "choice",
           "question": "Koje slovo dolazi poslije slova M?",
@@ -41,18 +58,43 @@
           "answer": "Đ",
           "explanation": "… D, Dž, Đ, E …"
         },
-        { "type": "order", "question": "Poredaj slova po abecedi.", "items": ["A", "B", "C", "Č", "Ć"] },
-        { "type": "order", "question": "Poredaj slova po abecedi.", "items": ["D", "Dž", "Đ", "E"] },
+        {
+          "type": "order",
+          "question": "Poredaj slova po abecedi.",
+          "items": ["A", "B", "C", "Č", "Ć"]
+        },
+        {
+          "type": "order",
+          "question": "Poredaj slova po abecedi.",
+          "items": ["D", "Dž", "Đ", "E"]
+        },
         {
           "type": "order",
           "question": "Poredaj riječi po abecedi.",
           "items": ["auto", "čaša", "kuća", "sunce"],
           "explanation": "Gledamo prvo slovo svake riječi: a, č, k, s."
         },
-        { "type": "choice", "question": "Koje slovo je samoglasnik?", "options": ["k", "o", "m", "s"], "answer": "o" },
-        { "type": "truefalse", "statement": "Lj je jedno slovo.", "answer": true },
-        { "type": "input", "question": "Koje je prvo slovo abecede?", "answer": "A" },
-        { "type": "input", "question": "Koje je posljednje slovo abecede?", "answer": "Ž" }
+        {
+          "type": "choice",
+          "question": "Koje slovo je samoglasnik?",
+          "options": ["k", "o", "m", "s"],
+          "answer": "o"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Lj je jedno slovo.",
+          "answer": true
+        },
+        {
+          "type": "input",
+          "question": "Koje je prvo slovo abecede?",
+          "answer": "A"
+        },
+        {
+          "type": "input",
+          "question": "Koje je posljednje slovo abecede?",
+          "answer": "Ž"
+        }
       ]
     },
     {
@@ -60,7 +102,10 @@
       "title": "Veliko početno slovo",
       "description": "Početak rečenice, imena ljudi, životinja, gradova, rijeka i planina",
       "lesson": [
-        { "type": "text", "text": "Velikim početnim slovom pišemo:" },
+        {
+          "type": "text",
+          "text": "Velikim početnim slovom pišemo:"
+        },
         {
           "type": "list",
           "items": [
@@ -78,7 +123,12 @@
         }
       ],
       "exercises": [
-        { "type": "choice", "question": "Koja riječ je pravilno napisana?", "options": ["sarajevo", "Sarajevo"], "answer": "Sarajevo" },
+        {
+          "type": "choice",
+          "question": "Koja riječ je pravilno napisana?",
+          "options": ["sarajevo", "Sarajevo"],
+          "answer": "Sarajevo"
+        },
         {
           "type": "choice",
           "question": "U kojoj rečenici je sve napisano pravilno?",
@@ -121,7 +171,11 @@
           "answer": false,
           "explanation": "Riječ grad pišemo malim slovom, a ime grada velikim: grad Zenica."
         },
-        { "type": "truefalse", "statement": "Imena rijeka pišemo velikim početnim slovom.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "Imena rijeka pišemo velikim početnim slovom.",
+          "answer": true
+        },
         {
           "type": "choice",
           "question": "Koju riječ pišemo velikim početnim slovom?",
@@ -135,6 +189,21 @@
           "options": ["grad", "zenica", "ulica", "škola"],
           "answer": "zenica",
           "explanation": "Zenica je ime grada, pa je pišemo: Zenica."
+        },
+        {
+          "type": "choice",
+          "question": "Kako pravilno pišemo naziv praznika?",
+          "options": ["Nova godina", "nova godina", "Nova Godina"],
+          "answer": "Nova godina",
+          "shuffle": false,
+          "explanation": "U nazivu praznika velikim slovom pišemo prvu riječ."
+        },
+        {
+          "type": "choice",
+          "question": "Kako pravilno pišemo ime sela?",
+          "options": ["Butmir", "butmir", "BUTMIR"],
+          "answer": "Butmir",
+          "shuffle": false
         }
       ]
     },
@@ -143,7 +212,10 @@
       "title": "Izjavna, upitna i uzvična rečenica",
       "description": "Tačka, upitnik i uzvičnik",
       "lesson": [
-        { "type": "text", "text": "Rečenica počinje velikim slovom, a na kraju ima znak: tačku, upitnik ili uzvičnik." },
+        {
+          "type": "text",
+          "text": "Rečenica počinje velikim slovom, a na kraju ima znak: tačku, upitnik ili uzvičnik."
+        },
         {
           "type": "list",
           "items": [
@@ -206,9 +278,21 @@
           "answer": "uzvična",
           "shuffle": false
         },
-        { "type": "order", "question": "Poredaj riječi da dobiješ rečenicu.", "items": ["Danas", "idemo", "u", "školu."] },
-        { "type": "order", "question": "Poredaj riječi da dobiješ rečenicu.", "items": ["Lejla", "čita", "zanimljivu", "knjigu."] },
-        { "type": "order", "question": "Poredaj riječi da dobiješ rečenicu.", "items": ["Gdje", "je", "moja", "lopta?"] },
+        {
+          "type": "order",
+          "question": "Poredaj riječi da dobiješ rečenicu.",
+          "items": ["Danas", "idemo", "u", "školu."]
+        },
+        {
+          "type": "order",
+          "question": "Poredaj riječi da dobiješ rečenicu.",
+          "items": ["Lejla", "čita", "zanimljivu", "knjigu."]
+        },
+        {
+          "type": "order",
+          "question": "Poredaj riječi da dobiješ rečenicu.",
+          "items": ["Gdje", "je", "moja", "lopta?"]
+        },
         {
           "type": "truefalse",
           "statement": "Upitna rečenica završava tačkom.",
@@ -218,30 +302,291 @@
       ]
     },
     {
+      "id": "potvrdne-i-odricne",
+      "title": "Potvrdne i odrične rečenice",
+      "description": "Volim – ne volim",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Potvrdna** rečenica kazuje da nešto jeste: Ja volim čitati. **Odrična** kazuje da nešto nije: Ja ne volim čitati."
+        },
+        {
+          "type": "remember",
+          "text": "Odričnu rečenicu najčešće pravimo riječju **ne**, koju pišemo **odvojeno**: ne znam, ne vidim. Ali: **nemam**, **neću**, **nisam** i **nemoj** pišemo zajedno."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koja rečenica je odrična?",
+          "options": ["Danas ne pada kiša.", "Danas pada kiša.", "Pada li kiša?"],
+          "answer": "Danas ne pada kiša.",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Koja rečenica je potvrdna?",
+          "options": ["Amar ima psa.", "Amar nema psa.", "Amar nije kod kuće."],
+          "answer": "Amar ima psa.",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["Ne znam.", "Neznam."],
+          "answer": "Ne znam.",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["Nemam vremena.", "Ne mam vremena."],
+          "answer": "Nemam vremena.",
+          "shuffle": false
+        },
+        {
+          "type": "input",
+          "question": "Napiši odrično: Ja volim mlijeko.",
+          "answer": ["Ja ne volim mlijeko.", "Ja ne volim mlijeko"],
+          "instruction": "Promijeni rečenicu"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Rečenica „Mi nismo umorni.“ je odrična.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "dvotacka-i-zarez",
+      "title": "Dvotačka i zarez u nabrajanju",
+      "description": "U korpi su: jabuke, kruške i šljive.",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Kad nešto **nabrajamo**, između riječi stavljamo **zarez**. Ispred posljednje riječi umjesto zareza pišemo **i**."
+        },
+        {
+          "type": "example",
+          "text": "U korpi su: jabuke, kruške i šljive.\nNa stolu su: knjiga, sveska, olovka i gumica."
+        },
+        {
+          "type": "remember",
+          "text": "Ispred nabrajanja često stavljamo **dvotačku** (:)."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koja rečenica je pravilno napisana?",
+          "options": [
+            "Volim: jabuke, kruške i trešnje.",
+            "Volim jabuke kruške trešnje.",
+            "Volim, jabuke, kruške, i trešnje."
+          ],
+          "answer": "Volim: jabuke, kruške i trešnje.",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Koji znak stavljamo između riječi koje nabrajamo?",
+          "options": ["zarez", "tačku", "upitnik", "uzvičnik"],
+          "answer": "zarez"
+        },
+        {
+          "type": "choice",
+          "question": "Koji znak često stoji ispred nabrajanja?",
+          "options": ["dvotačka", "upitnik", "tačka", "navodnici"],
+          "answer": "dvotačka"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Ispred riječi „i“ u nabrajanju ne pišemo zarez.",
+          "answer": true
+        },
+        {
+          "type": "choice",
+          "question": "Gdje nedostaje zarez: „U bašti rastu mrkva luk i paprika.“",
+          "options": ["iza riječi mrkva", "iza riječi luk", "iza riječi bašti", "nigdje"],
+          "answer": "iza riječi mrkva"
+        }
+      ]
+    },
+    {
+      "id": "je-ili-ije",
+      "title": "Je ili ije",
+      "description": "Dugi i kratki slog: lijep, mjesto, dijete, djeca",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "U nekim riječima pišemo **ije** (kad se slog izgovara dugo), a u nekim **je** (kad je kratko)."
+        },
+        {
+          "type": "example",
+          "text": "ije: lijep, mlijeko, rijeka, snijeg, dijete, cvijet, svijet, bijel\nje: mjesto, vjetar, djeca, sjever, mjesec, cvjetovi, svjetlo, pjesma"
+        },
+        {
+          "type": "remember",
+          "text": "Ista riječ može imati i **ije** i **je**: dijete – djeca, cvijet – cvjetovi, rijeka – rječica."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["mlijeko", "mljeko", "mlijejko"],
+          "answer": "mlijeko",
+          "picture": "🥛"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["snijeg", "snjeg", "sniijeg"],
+          "answer": "snijeg",
+          "picture": "❄️"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["vjetar", "vijetar", "vjeetar"],
+          "answer": "vjetar",
+          "picture": "💨"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["djeca", "dijeca", "djieca"],
+          "answer": "djeca"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["rijeka", "rjeka", "rijeeka"],
+          "answer": "rijeka"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["pjesma", "pijesma", "pjeesma"],
+          "answer": "pjesma",
+          "picture": "🎵"
+        },
+        {
+          "type": "input",
+          "question": "Dopuni: l_ _ep (lijep ili ljep)?",
+          "answer": "lijep",
+          "instruction": "Napiši riječ pravilno"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Pravilno je napisano: cvijet.",
+          "answer": true,
+          "picture": "🌸"
+        }
+      ]
+    },
+    {
       "id": "c-ili-c",
       "title": "Č ili Ć",
       "description": "Pravilno pisanje riječi sa č i ć",
       "lesson": [
-        { "type": "text", "text": "Glasovi **č** i **ć** zvuče slično, ali nisu isti. **Č** izgovaramo tvrđe, a **ć** mekše." },
-        { "type": "example", "title": "Riječi sa Č", "text": "čaša, čokolada, ključ, mačka, pčela, učiteljica" },
-        { "type": "example", "title": "Riječi sa Ć", "text": "kuća, noć, voće, sreća, ćup, ćevapi" },
+        {
+          "type": "text",
+          "text": "Glasovi **č** i **ć** zvuče slično, ali nisu isti. **Č** izgovaramo tvrđe, a **ć** mekše."
+        },
+        {
+          "type": "example",
+          "title": "Riječi sa Č",
+          "text": "čaša, čokolada, ključ, mačka, pčela, učiteljica"
+        },
+        {
+          "type": "example",
+          "title": "Riječi sa Ć",
+          "text": "kuća, noć, voće, sreća, ćup, ćevapi"
+        },
         {
           "type": "remember",
           "text": "Kad nisi siguran, izgovori riječ glasno i pažljivo slušaj. Pomaže i čitanje: što više čitaš, manje griješiš."
         }
       ],
       "exercises": [
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Gdje stanujemo?", "options": ["kuća", "kuča"], "answer": "kuća" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Slatkiš od kakaa", "options": ["čokolada", "ćokolada"], "answer": "čokolada" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Suprotno od dana", "options": ["noć", "noč"], "answer": "noć" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Životinja koja mijauče", "options": ["mačka", "maćka"], "answer": "mačka" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Njime otključavamo vrata", "options": ["ključ", "kljuć"], "answer": "ključ" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Pravi med", "options": ["pčela", "pćela"], "answer": "pčela" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Jabuke, kruške, šljive…", "options": ["voće", "voče"], "answer": "voće" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Iz nje pijemo vodu", "options": ["čaša", "ćaša"], "answer": "čaša" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Jelo s roštilja", "options": ["ćevapi", "čevapi"], "answer": "ćevapi" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Ona nas uči u školi", "options": ["učiteljica", "ućiteljica"], "answer": "učiteljica" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Mrkva, paprika, krompir…", "options": ["povrće", "povrče"], "answer": "povrće" },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Gdje stanujemo?",
+          "options": ["kuća", "kuča"],
+          "answer": "kuća"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Slatkiš od kakaa",
+          "options": ["čokolada", "ćokolada"],
+          "answer": "čokolada"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Suprotno od dana",
+          "options": ["noć", "noč"],
+          "answer": "noć"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Životinja koja mijauče",
+          "options": ["mačka", "maćka"],
+          "answer": "mačka"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Njime otključavamo vrata",
+          "options": ["ključ", "kljuć"],
+          "answer": "ključ"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Pravi med",
+          "options": ["pčela", "pćela"],
+          "answer": "pčela"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Jabuke, kruške, šljive…",
+          "options": ["voće", "voče"],
+          "answer": "voće"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Iz nje pijemo vodu",
+          "options": ["čaša", "ćaša"],
+          "answer": "čaša"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Jelo s roštilja",
+          "options": ["ćevapi", "čevapi"],
+          "answer": "ćevapi"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Ona nas uči u školi",
+          "options": ["učiteljica", "ućiteljica"],
+          "answer": "učiteljica"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Mrkva, paprika, krompir…",
+          "options": ["povrće", "povrče"],
+          "answer": "povrće"
+        },
         {
           "type": "input",
           "instruction": "Upiši slovo koje nedostaje (č ili ć)",
@@ -263,21 +608,89 @@
       "title": "Dž ili Đ",
       "description": "Pravilno pisanje riječi sa dž i đ",
       "lesson": [
-        { "type": "text", "text": "Glasovi **dž** i **đ** također zvuče slično. **Dž** izgovaramo tvrđe, a **đ** mekše." },
-        { "type": "remember", "text": "**Dž** je jedno slovo, iako ga pišemo s dva znaka: d i ž." },
-        { "type": "example", "title": "Riječi sa Dž", "text": "džep, džemper, džamija, patlidžan, džezva" },
-        { "type": "example", "title": "Riječi sa Đ", "text": "anđeo, lađa, rođendan, smeđ, žeđ" }
+        {
+          "type": "text",
+          "text": "Glasovi **dž** i **đ** također zvuče slično. **Dž** izgovaramo tvrđe, a **đ** mekše."
+        },
+        {
+          "type": "remember",
+          "text": "**Dž** je jedno slovo, iako ga pišemo s dva znaka: d i ž."
+        },
+        {
+          "type": "example",
+          "title": "Riječi sa Dž",
+          "text": "džep, džemper, džamija, patlidžan, džezva"
+        },
+        {
+          "type": "example",
+          "title": "Riječi sa Đ",
+          "text": "anđeo, lađa, rođendan, smeđ, žeđ"
+        }
       ],
       "exercises": [
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Na jakni ili pantalonama", "options": ["džep", "đep"], "answer": "džep" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Biće s krilima iz priča", "options": ["anđeo", "andžeo"], "answer": "anđeo" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Slavimo ga jednom godišnje", "options": ["rođendan", "rodžendan"], "answer": "rođendan" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Topao, nosimo ga zimi", "options": ["džemper", "đemper"], "answer": "džemper" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Plovi po vodi", "options": ["lađa", "ladža"], "answer": "lađa" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Ljubičasto povrće", "options": ["patlidžan", "patliđan"], "answer": "patlidžan" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "U njoj se kuha kahva", "options": ["džezva", "đezva"], "answer": "džezva" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Kad smo žedni, osjećamo…", "options": ["žeđ", "žedž"], "answer": "žeđ" },
-        { "type": "choice", "instruction": "Kako se pravilno piše?", "question": "Boja čokolade", "options": ["smeđa", "smedža"], "answer": "smeđa" },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Na jakni ili pantalonama",
+          "options": ["džep", "đep"],
+          "answer": "džep"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Biće s krilima iz priča",
+          "options": ["anđeo", "andžeo"],
+          "answer": "anđeo"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Slavimo ga jednom godišnje",
+          "options": ["rođendan", "rodžendan"],
+          "answer": "rođendan"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Topao, nosimo ga zimi",
+          "options": ["džemper", "đemper"],
+          "answer": "džemper"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Plovi po vodi",
+          "options": ["lađa", "ladža"],
+          "answer": "lađa"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Ljubičasto povrće",
+          "options": ["patlidžan", "patliđan"],
+          "answer": "patlidžan"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "U njoj se kuha kahva",
+          "options": ["džezva", "đezva"],
+          "answer": "džezva"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Kad smo žedni, osjećamo…",
+          "options": ["žeđ", "žedž"],
+          "answer": "žeđ"
+        },
+        {
+          "type": "choice",
+          "instruction": "Kako se pravilno piše?",
+          "question": "Boja čokolade",
+          "options": ["smeđa", "smedža"],
+          "answer": "smeđa"
+        },
         {
           "type": "input",
           "instruction": "Upiši slovo koje nedostaje (dž ili đ)",
@@ -285,48 +698,185 @@
           "answer": ["đ", "rođendan"],
           "explanation": "rođendan"
         },
-        { "type": "truefalse", "statement": "Dž je jedno slovo.", "answer": true }
+        {
+          "type": "truefalse",
+          "statement": "Dž je jedno slovo.",
+          "answer": true
+        }
       ]
     },
     {
-      "id": "imenice",
-      "title": "Imenice",
-      "description": "Bića, stvari i pojave; vlastite i opće imenice",
+      "id": "slovo-h",
+      "title": "Glas i slovo H",
+      "description": "Hljeb, hrana, hvala, orah, uho",
       "lesson": [
-        { "type": "text", "text": "**Imenice** su riječi kojima imenujemo bića, stvari i pojave." },
-        {
-          "type": "list",
-          "items": [
-            "bića: dijete, mama, mačka, ptica",
-            "stvari: sto, olovka, knjiga, lopta",
-            "pojave: kiša, snijeg, vjetar, duga"
-          ]
-        },
         {
           "type": "text",
-          "text": "**Vlastite** imenice su imena: Amra, Sarajevo, Una, Igman. Pišemo ih velikim početnim slovom. Ostale imenice su **opće**: djevojčica, grad, rijeka, planina."
+          "text": "Glas **h** ponekad slabo čujemo, ali ga moramo **napisati**."
+        },
+        {
+          "type": "example",
+          "text": "na početku: hljeb, hrana, hvala, hrast, hrabar\nu sredini: uho, muha, mahati\nna kraju: orah, grah, duh, smijeh"
+        },
+        {
+          "type": "remember",
+          "text": "Pazi da ne izostaviš **h**: pišemo **hvala**, a ne „fala“; **orah**, a ne „ora“."
         }
       ],
       "exercises": [
-        { "type": "choice", "question": "Koja riječ je imenica?", "options": ["trčati", "lopta", "brzo", "lijep"], "answer": "lopta" },
-        { "type": "choice", "question": "Koja riječ je imenica?", "options": ["pjeva", "zelen", "snijeg", "veselo"], "answer": "snijeg" },
         {
           "type": "choice",
-          "question": "Koja imenica je vlastita?",
-          "options": ["rijeka", "Una", "grad", "planina"],
-          "answer": "Una",
-          "explanation": "Una je ime rijeke, zato je vlastita imenica."
+          "question": "Kako se pravilno piše?",
+          "options": ["hvala", "fala", "vala"],
+          "answer": "hvala"
         },
-        { "type": "truefalse", "statement": "Riječ „kiša“ je imenica.", "answer": true, "explanation": "Kiša je pojava." },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["hljeb", "ljeb", "hlijeb"],
+          "answer": "hljeb",
+          "picture": "🍞"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["orah", "ora", "oraf"],
+          "answer": "orah",
+          "picture": "🌰"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["muha", "mua", "mufa"],
+          "answer": "muha",
+          "picture": "🪰"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["uho", "uo", "ufo"],
+          "answer": "uho",
+          "picture": "👂"
+        },
+        {
+          "type": "input",
+          "question": "Dopuni slovo: _rast",
+          "answer": "hrast",
+          "instruction": "Napiši cijelu riječ",
+          "picture": "🌳"
+        }
+      ]
+    },
+    {
+      "id": "pricanje-i-razgovor",
+      "title": "Pričanje, opisivanje i razgovor",
+      "description": "Telefonski razgovor, opis i redoslijed događaja",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Kad pričamo o događaju, pričamo **redom**: šta je bilo prvo, šta zatim, a šta na kraju."
+        },
+        {
+          "type": "text",
+          "text": "Kad **opisujemo**, kažemo kakvo je nešto: veličina, boja, oblik, za šta služi."
+        },
+        {
+          "type": "example",
+          "text": "– Halo, dobar dan. Ovdje Lejla. Može li Amar na telefon?\n– Može, sačekaj malo.\n– Hvala. Prijatno!",
+          "title": "Telefonski razgovor"
+        },
+        {
+          "type": "remember",
+          "text": "U razgovoru se **predstavimo**, **pozdravimo**, slušamo drugog i ne prekidamo ga."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta kažemo prvo kad nekog nazovemo?",
+          "options": ["Pozdravimo i predstavimo se.", "Odmah spustimo slušalicu.", "Šutimo.", "Vičemo."],
+          "answer": "Pozdravimo i predstavimo se."
+        },
+        {
+          "type": "order",
+          "question": "Poredaj događaje.",
+          "items": ["Ustao sam.", "Doručkovao sam.", "Otišao sam u školu."]
+        },
+        {
+          "type": "order",
+          "question": "Poredaj događaje.",
+          "items": ["Posadili smo sjeme.", "Zalijevali smo ga.", "Izrasla je biljka."]
+        },
+        {
+          "type": "choice",
+          "question": "Šta je opis jabuke?",
+          "options": ["crvena je, okrugla i slatka", "pala je sa stola", "kupila sam je juče", "Ena je voli"],
+          "answer": "crvena je, okrugla i slatka"
+        },
         {
           "type": "truefalse",
-          "statement": "Riječ „pjevati“ je imenica.",
-          "answer": false,
-          "explanation": "Pjevati je radnja, a ne ime bića, stvari ili pojave."
+          "statement": "Dok drugi govori, ne prekidamo ga.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "knjizevnost",
+      "title": "Bajka, basna, igrokaz i film",
+      "description": "Likovi, poruka i naslov",
+      "lesson": [
+        {
+          "type": "list",
+          "items": [
+            "**Bajka** ima čudesne događaje i najčešće sretan kraj.",
+            "**Basna** je kratka priča o životinjama koje govore. Ima **pouku**.",
+            "**Igrokaz** je tekst koji se igra na sceni: likovi razgovaraju.",
+            "**Crtani** i **lutkarski film** pričaju priču slikom i zvukom.",
+            "**Informativni tekst** nas obavještava, npr. o životinjama ili gradu."
+          ]
         },
-        { "type": "choice", "question": "Koja imenica označava pojavu?", "options": ["kiša", "sto", "mačka", "olovka"], "answer": "kiša" },
-        { "type": "choice", "question": "Koja imenica označava biće?", "options": ["knjiga", "ptica", "vjetar", "lopta"], "answer": "ptica" },
-        { "type": "choice", "question": "Koja imenica označava stvar?", "options": ["olovka", "pas", "duga", "dječak"], "answer": "olovka" }
+        {
+          "type": "remember",
+          "text": "Svaki tekst ima **naslov** i **pisca**. Likovi mogu biti dobri i loši, hrabri, lijeni, vrijedni..."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "U kojem tekstu likovi razgovaraju i igraju na sceni?",
+          "options": ["u igrokazu", "u zagonetki", "u pjesmi", "u rječniku"],
+          "answer": "u igrokazu"
+        },
+        {
+          "type": "choice",
+          "question": "Šta basna ima na kraju?",
+          "options": ["pouku", "rimu", "recept", "kartu"],
+          "answer": "pouku"
+        },
+        {
+          "type": "choice",
+          "question": "Kakav je mrav u basni o mravu i zrikavcu?",
+          "options": ["vrijedan", "lijen", "zločest", "tužan"],
+          "answer": "vrijedan",
+          "explanation": "Mrav ljeti skuplja hranu, pa zimi ne gladuje."
+        },
+        {
+          "type": "choice",
+          "question": "Koji tekst nas obavještava o tome kako živi medvjed?",
+          "options": ["informativni tekst", "bajka", "zagonetka", "igrokaz"],
+          "answer": "informativni tekst"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Bajka često ima sretan kraj.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "U basni nikad nema životinja.",
+          "answer": false,
+          "explanation": "U basni najčešće govore životinje."
+        }
       ]
     }
   ]

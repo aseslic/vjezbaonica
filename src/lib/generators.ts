@@ -7,7 +7,7 @@
  */
 import { plural } from './plural'
 import { pick, randInt, type Rng } from './random'
-import type { ChoiceExercise, Exercise, Generator, InputExercise, UnitGroup } from './types'
+import type { ChoiceExercise, EquationOp, Exercise, Generator, InputExercise, UnitGroup } from './types'
 
 export const DEFAULT_GENERATED_COUNT = 20
 
@@ -94,18 +94,26 @@ const ROUNDING_NAMES: Record<number, string> = { 10: 'desetice', 100: 'stotice',
 export const UNIT_PAIRS: Record<UnitGroup, Array<[string, string, number]>> = {
   length: [
     ['km', 'm', 1000],
+    ['hm', 'm', 100],
+    ['dam', 'm', 10],
     ['m', 'dm', 10],
     ['m', 'cm', 100],
     ['dm', 'cm', 10],
     ['cm', 'mm', 10],
   ],
   mass: [
+    ['t', 'kg', 1000],
     ['kg', 'dag', 100],
     ['kg', 'g', 1000],
     ['dag', 'g', 10],
+    ['g', 'dg', 10],
+    ['g', 'cg', 100],
+    ['g', 'mg', 1000],
   ],
   volume: [
+    ['kl', 'l', 1000],
     ['hl', 'l', 100],
+    ['dal', 'l', 10],
     ['l', 'dl', 10],
     ['l', 'cl', 100],
     ['l', 'ml', 1000],
@@ -115,14 +123,22 @@ export const UNIT_PAIRS: Record<UnitGroup, Array<[string, string, number]>> = {
 /** Nazivi jedinica: [1 metar, 2 metra, 5 metara]. */
 const UNIT_NAMES: Record<string, [string, string, string]> = {
   km: ['kilometar', 'kilometra', 'kilometara'],
+  hm: ['hektometar', 'hektometra', 'hektometara'],
+  dam: ['dekametar', 'dekametra', 'dekametara'],
   m: ['metar', 'metra', 'metara'],
   dm: ['decimetar', 'decimetra', 'decimetara'],
   cm: ['centimetar', 'centimetra', 'centimetara'],
   mm: ['milimetar', 'milimetra', 'milimetara'],
+  t: ['tona', 'tone', 'tona'],
   kg: ['kilogram', 'kilograma', 'kilograma'],
   dag: ['dekagram', 'dekagrama', 'dekagrama'],
   g: ['gram', 'grama', 'grama'],
+  dg: ['decigram', 'decigrama', 'decigrama'],
+  cg: ['centigram', 'centigrama', 'centigrama'],
+  mg: ['miligram', 'miligrama', 'miligrama'],
+  kl: ['kilolitar', 'kilolitra', 'kilolitara'],
   hl: ['hektolitar', 'hektolitra', 'hektolitara'],
+  dal: ['dekalitar', 'dekalitra', 'dekalitara'],
   l: ['litar', 'litra', 'litara'],
   dl: ['decilitar', 'decilitra', 'decilitara'],
   cl: ['centilitar', 'centilitra', 'centilitara'],
@@ -131,17 +147,110 @@ const UNIT_NAMES: Record<string, [string, string, string]> = {
 
 const unitName = (n: number, unit: string) => `${n} ${plural(n, ...UNIT_NAMES[unit])}`
 
+const ROMAN: Array<[number, string]> = [
+  [1000, 'M'],
+  [900, 'CM'],
+  [500, 'D'],
+  [400, 'CD'],
+  [100, 'C'],
+  [90, 'XC'],
+  [50, 'L'],
+  [40, 'XL'],
+  [10, 'X'],
+  [9, 'IX'],
+  [5, 'V'],
+  [4, 'IV'],
+  [1, 'I'],
+]
+
+/** Rastav broja na dijelove za rimske cifre: 94 → [[90, 'XC'], [4, 'IV']]. */
+function romanParts(n: number): Array<[number, string]> {
+  const parts: Array<[number, string]> = []
+  let rest = n
+  for (const [value, letters] of ROMAN) {
+    while (rest >= value) {
+      parts.push([value, letters])
+      rest -= value
+    }
+  }
+  return parts
+}
+
+/** 14 → "XIV" */
+export function toRoman(n: number): string {
+  return romanParts(n)
+    .map(([, letters]) => letters)
+    .join('')
+}
+
+/** Ima li sabiranje prelaz preko desetice (jedinice daju 10 ili više)? */
+const additionCarries = (a: number, b: number) => (a % 10) + (b % 10) >= 10
+/** Ima li oduzimanje prelaz (jedinica umanjenika manje nego umanjioca)? */
+const subtractionBorrows = (a: number, b: number) => a % 10 < b % 10
+
+/** Jednačina s nepoznatim brojem x. Rezultat: [zapis, rješenje, objašnjenje]. */
+function equation(op: EquationOp, max: number, rng: Rng): [string, number, string] {
+  const small = max <= 100
+  switch (op) {
+    case '+': {
+      const b = randInt(rng, 3, max)
+      const x = randInt(rng, 1, b - 1)
+      const a = b - x
+      return rng() < 0.5
+        ? [`${a} + x = ${b}`, x, `x = ${b} ${MINUS} ${a} = ${x}. Provjera: ${a} + ${x} = ${b}.`]
+        : [`x + ${a} = ${b}`, x, `x = ${b} ${MINUS} ${a} = ${x}. Provjera: ${x} + ${a} = ${b}.`]
+    }
+    case '−': {
+      if (rng() < 0.5) {
+        const a = randInt(rng, 3, max)
+        const x = randInt(rng, 1, a - 1)
+        const b = a - x
+        return [`${a} ${MINUS} x = ${b}`, x, `x = ${a} ${MINUS} ${b} = ${x}. Provjera: ${a} ${MINUS} ${x} = ${b}.`]
+      }
+      const x = randInt(rng, 3, max)
+      const a = randInt(rng, 1, x - 1)
+      const b = x - a
+      return [`x ${MINUS} ${a} = ${b}`, x, `x = ${b} + ${a} = ${x}. Provjera: ${x} ${MINUS} ${a} = ${b}.`]
+    }
+    case '·': {
+      const a = randInt(rng, 2, small ? 10 : 9)
+      const x = randInt(rng, 2, small ? 10 : Math.max(2, Math.floor(max / a)))
+      const b = a * x
+      return rng() < 0.5
+        ? [`${a} ${TIMES} x = ${b}`, x, `x = ${b} ${DIVIDE} ${a} = ${x}. Provjera: ${a} ${TIMES} ${x} = ${b}.`]
+        : [`x ${TIMES} ${a} = ${b}`, x, `x = ${b} ${DIVIDE} ${a} = ${x}. Provjera: ${x} ${TIMES} ${a} = ${b}.`]
+    }
+    case ':': {
+      const q = randInt(rng, 2, small ? 10 : 9)
+      const d = randInt(rng, 2, small ? 10 : Math.max(2, Math.floor(max / q)))
+      const n = q * d
+      return rng() < 0.5
+        ? [`${n} ${DIVIDE} x = ${q}`, d, `x = ${n} ${DIVIDE} ${q} = ${d}. Provjera: ${n} ${DIVIDE} ${d} = ${q}.`]
+        : [`x ${DIVIDE} ${d} = ${q}`, n, `x = ${q} ${TIMES} ${d} = ${n}. Provjera: ${n} ${DIVIDE} ${d} = ${q}.`]
+    }
+  }
+}
+
 function generateOne(gen: Generator, rng: Rng): Exercise {
   switch (gen.type) {
     case 'addition': {
-      const sum = randInt(rng, 2, gen.max)
-      const a = randInt(rng, 1, sum - 1)
+      let sum = randInt(rng, 2, gen.max)
+      let a = randInt(rng, 1, sum - 1)
+      // Bez prelaza: biramo dok jedinice ne daju manje od 10.
+      for (let i = 0; gen.carry === false && additionCarries(a, sum - a) && i < 100; i++) {
+        sum = randInt(rng, 2, gen.max)
+        a = randInt(rng, 1, sum - 1)
+      }
       const b = sum - a
       return numberTask(`${a} + ${b} = ?`, sum, `Koliko je ${a} plus ${b}?`, additionExplanation(a, b))
     }
     case 'subtraction': {
-      const a = randInt(rng, 2, gen.max)
-      const b = randInt(rng, 1, a - 1)
+      let a = randInt(rng, 2, gen.max)
+      let b = randInt(rng, 1, a - 1)
+      for (let i = 0; gen.carry === false && subtractionBorrows(a, b) && i < 100; i++) {
+        a = randInt(rng, 2, gen.max)
+        b = randInt(rng, 1, a - 1)
+      }
       return numberTask(
         `${a} ${MINUS} ${b} = ?`,
         a - b,
@@ -298,6 +407,30 @@ function generateOne(gen: Generator, rng: Rng): Exercise {
         explanation: `${q} ${TIMES} ${d} = ${q * d}, a ${n} ${MINUS} ${q * d} = ${r}. Ostatak je uvijek manji od djelioca.`,
       }
       return task
+    }
+    case 'roman': {
+      const n = randInt(rng, 1, gen.max)
+      const roman = toRoman(n)
+      const parts = romanParts(n)
+      const explanation =
+        parts.length > 1
+          ? `${parts.map(([, l]) => l).join(' + ')} = ${parts.map(([v]) => v).join(' + ')} = ${n}, pa je ${n} = ${roman}.`
+          : `${roman} = ${n}.`
+      if (rng() < 0.5) {
+        return numberTask(roman, n, `Koji broj je napisan rimskim ciframa ${roman}?`, explanation, 'Napiši arapskim ciframa')
+      }
+      return {
+        type: 'input',
+        instruction: 'Napiši rimskim ciframa',
+        question: String(n),
+        answer: roman,
+        speak: `Napiši broj ${n} rimskim ciframa.`,
+        explanation,
+      }
+    }
+    case 'equation': {
+      const [question, x, explanation] = equation(pick(gen.ops, rng), gen.max, rng)
+      return numberTask(question, x, `Riješi jednačinu: ${question}`, explanation, 'Izračunaj nepoznati broj x')
     }
     case 'unit-conversion': {
       const [big, small, factor] = pick(UNIT_PAIRS[pick(gen.units, rng)], rng)

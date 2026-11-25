@@ -1,0 +1,616 @@
+{
+  "grade": 3,
+  "id": "bhs-jezik",
+  "name": "Bosanski, hrvatski i srpski jezik i književnost",
+  "shortName": "BHS jezik",
+  "order": 2,
+  "icon": "📖",
+  "color": "#E04A5A",
+  "paper": "lines",
+  "topics": [
+    {
+      "id": "samoglasnici-i-suglasnici",
+      "title": "Samoglasnici i suglasnici",
+      "description": "A, E, I, O, U i ostali glasovi",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Glasovi su **samoglasnici** i **suglasnici**. Samoglasnici su **a, e, i, o, u**. Ostalih 25 glasova su suglasnici."
+        },
+        {
+          "type": "remember",
+          "text": "Samoglasnike možemo izgovarati dugo i pjevati: aaa, ooo. Svaki slog ima samoglasnik."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koji glas je samoglasnik?",
+          "options": ["o", "m", "k", "š"],
+          "answer": "o"
+        },
+        {
+          "type": "choice",
+          "question": "Koji glas je suglasnik?",
+          "options": ["t", "a", "e", "u"],
+          "answer": "t"
+        },
+        {
+          "type": "input",
+          "question": "Koliko samoglasnika ima riječ „lopata“?",
+          "answer": "3"
+        },
+        {
+          "type": "input",
+          "question": "Koliko ima samoglasnika?",
+          "answer": "5"
+        },
+        {
+          "type": "truefalse",
+          "statement": "„Nj“ je suglasnik.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "imenice",
+      "title": "Imenice",
+      "description": "Bića, stvari i pojave; vlastite i zajedničke imenice",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Imenice** su riječi kojima imenujemo bića, stvari i pojave."
+        },
+        {
+          "type": "list",
+          "items": [
+            "bića: dijete, mama, mačka, ptica",
+            "stvari: sto, olovka, knjiga, lopta",
+            "pojave: kiša, snijeg, vjetar, duga"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "**Vlastite** imenice su imena: Amra, Sarajevo, Una, Igman. Pišemo ih velikim početnim slovom. Ostale imenice su **zajedničke** (opće): djevojčica, grad, rijeka, planina."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koja riječ je imenica?",
+          "options": ["trčati", "lopta", "brzo", "lijep"],
+          "answer": "lopta"
+        },
+        {
+          "type": "choice",
+          "question": "Koja riječ je imenica?",
+          "options": ["pjeva", "zelen", "snijeg", "veselo"],
+          "answer": "snijeg"
+        },
+        {
+          "type": "choice",
+          "question": "Koja imenica je vlastita?",
+          "options": ["rijeka", "Una", "grad", "planina"],
+          "answer": "Una",
+          "explanation": "Una je ime rijeke, zato je vlastita imenica."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Riječ „kiša“ je imenica.",
+          "answer": true,
+          "explanation": "Kiša je pojava."
+        },
+        {
+          "type": "truefalse",
+          "statement": "Riječ „pjevati“ je imenica.",
+          "answer": false,
+          "explanation": "Pjevati je radnja, a ne ime bića, stvari ili pojave."
+        },
+        {
+          "type": "choice",
+          "question": "Koja imenica označava pojavu?",
+          "options": ["kiša", "sto", "mačka", "olovka"],
+          "answer": "kiša"
+        },
+        {
+          "type": "choice",
+          "question": "Koja imenica označava biće?",
+          "options": ["knjiga", "ptica", "vjetar", "lopta"],
+          "answer": "ptica"
+        },
+        {
+          "type": "choice",
+          "question": "Koja imenica označava stvar?",
+          "options": ["olovka", "pas", "duga", "dječak"],
+          "answer": "olovka"
+        },
+        {
+          "type": "choice",
+          "question": "Koja imenica je zajednička?",
+          "options": ["grad", "Mostar", "Neretva", "Lejla"],
+          "answer": "grad"
+        }
+      ]
+    },
+    {
+      "id": "umanjenice-i-uvecanice",
+      "title": "Umanjenice i uvećanice",
+      "description": "Kućica i kućerina",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Umanjenice** kazuju da je nešto malo ili drago: kuća → kućica, pas → psić, ruka → ručica, nos → nosić."
+        },
+        {
+          "type": "text",
+          "text": "**Uvećanice** kazuju da je nešto veliko: kuća → kućerina, pas → psina, ruka → ručerda, nos → nosina."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koja riječ je umanjenica od „kuća“?",
+          "options": ["kućica", "kućerina", "kuće", "kućni"],
+          "answer": "kućica"
+        },
+        {
+          "type": "choice",
+          "question": "Koja riječ je uvećanica od „nos“?",
+          "options": ["nosina", "nosić", "nosevi", "nosni"],
+          "answer": "nosina"
+        },
+        {
+          "type": "choice",
+          "question": "Koja riječ je umanjenica od „pas“?",
+          "options": ["psić", "psina", "psi", "pseći"],
+          "answer": "psić"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je „ručerda“?",
+          "options": ["uvećanica", "umanjenica", "glagol", "zamjenica"],
+          "answer": "uvećanica"
+        },
+        {
+          "type": "input",
+          "question": "Napiši umanjenicu od riječi „sto“ (stolić ili stolina)?",
+          "answer": "stolić"
+        },
+        {
+          "type": "truefalse",
+          "statement": "„Cvjetić“ je umanjenica od „cvijet“.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "glagoli",
+      "title": "Glagoli i glagolska vremena",
+      "description": "Prošlo, sadašnje i buduće vrijeme",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Glagoli** su riječi koje kazuju **radnju** (trčati, pisati), **stanje** (spavati, sjediti) ili **zbivanje** (kiša pada, cvijet raste)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**prošlo** vrijeme: Jučer sam **pjevao/pjevala**.",
+            "**sadašnje** vrijeme: Sada **pjevam**.",
+            "**buduće** vrijeme: Sutra **ću pjevati** (pjevat ću)."
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Pitanje za glagol je **Šta radi?** Riječce **ne** i **li** uz glagol pišemo **odvojeno**: ne čitam, Čitaš li?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koja riječ je glagol?",
+          "options": ["skakati", "skakavac", "skok", "brz"],
+          "answer": "skakati"
+        },
+        {
+          "type": "choice",
+          "question": "Koja riječ je glagol?",
+          "options": ["spava", "krevet", "jastuk", "mekan"],
+          "answer": "spava"
+        },
+        {
+          "type": "choice",
+          "question": "U kojem je vremenu: „Sutra ću ići u kino.“?",
+          "options": ["buduće", "prošlo", "sadašnje"],
+          "answer": "buduće",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "U kojem je vremenu: „Jučer smo igrali fudbal.“?",
+          "options": ["prošlo", "sadašnje", "buduće"],
+          "answer": "prošlo",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "U kojem je vremenu: „Sada čitam knjigu.“?",
+          "options": ["sadašnje", "prošlo", "buduće"],
+          "answer": "sadašnje",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["ne vidim", "nevidim"],
+          "answer": "ne vidim",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["Ideš li u školu?", "Idešli u školu?"],
+          "answer": "Ideš li u školu?",
+          "shuffle": false
+        }
+      ]
+    },
+    {
+      "id": "licne-zamjenice",
+      "title": "Lične zamjenice",
+      "description": "Ja, ti, on, ona, ono, mi, vi, oni",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Lične zamjenice** zamjenjuju imena osoba, životinja i stvari: umjesto „Amra čita“ kažemo „**Ona** čita“."
+        },
+        {
+          "type": "example",
+          "text": "jednina: ja, ti, on, ona, ono\nmnožina: mi, vi, oni, one, ona"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koja riječ je lična zamjenica?",
+          "options": ["mi", "mama", "mali", "miš"],
+          "answer": "mi"
+        },
+        {
+          "type": "choice",
+          "question": "Kojom zamjenicom zamijeniš „Tarik i Haris“?",
+          "options": ["oni", "ona", "mi", "ono"],
+          "answer": "oni"
+        },
+        {
+          "type": "choice",
+          "question": "Kojom zamjenicom zamijeniš „Lejla“?",
+          "options": ["ona", "on", "ono", "oni"],
+          "answer": "ona"
+        },
+        {
+          "type": "choice",
+          "question": "Kojom zamjenicom zamijeniš „dijete“?",
+          "options": ["ono", "on", "ona", "one"],
+          "answer": "ono"
+        },
+        {
+          "type": "input",
+          "question": "Dopuni: _ idem u školu. (zamjenica za sebe)",
+          "answer": ["Ja", "ja"]
+        },
+        {
+          "type": "truefalse",
+          "statement": "„Vi“ je lična zamjenica.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "veliko-slovo-u-imenima",
+      "title": "Veliko slovo: planine, polja i rijeke",
+      "description": "Igman, Sarajevsko polje, rijeka Bosna",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Imena **planina**, **rijeka**, **jezera** i **polja** pišemo velikim početnim slovom: Igman, Bjelašnica, Miljacka, Una, Boračko jezero."
+        },
+        {
+          "type": "remember",
+          "text": "Ako ime ima više riječi, velikim slovom pišemo **prvu** riječ: **Sarajevsko polje**, **Livanjsko polje**. Riječi rijeka i planina ispred imena pišemo malim slovom: rijeka Bosna, planina Treskavica."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["Sarajevsko polje", "Sarajevsko Polje", "sarajevsko polje"],
+          "answer": "Sarajevsko polje",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["rijeka Miljacka", "Rijeka Miljacka", "rijeka miljacka"],
+          "answer": "rijeka Miljacka",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["Trebević", "trebević", "TREBEVIĆ"],
+          "answer": "Trebević",
+          "shuffle": false
+        },
+        {
+          "type": "input",
+          "question": "Napiši pravilno: boračko jezero",
+          "answer": "Boračko jezero",
+          "caseSensitive": true,
+          "instruction": "Pazi na veliko slovo"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Ime planine pišemo velikim početnim slovom.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "c-c-dz-d-h-je-ije",
+      "title": "Č, ć, dž, đ, h i je/ije",
+      "description": "Zanimanja na -ač i ponavljanje pravopisa",
+      "lesson": [
+        {
+          "type": "remember",
+          "text": "Imenice koje označavaju **zanimanje** ili onog ko nešto radi često završavaju na **-ač**: vozač, igrač, pjevač, plivač, prodavač, kovač."
+        },
+        {
+          "type": "example",
+          "text": "č: čaša, čovjek, učiteljica\nć: kuća, ćuprija, noć\ndž: džep, džamija, narandža\nđ: đak, rođendan, lađa"
+        },
+        {
+          "type": "text",
+          "text": "Ne zaboravi: **h** pišemo u riječima hljeb, hvala, orah; **ije** u dugom slogu (snijeg), a **je** u kratkom (snjegović)."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["vozač", "vozać"],
+          "answer": "vozač",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["pjevač", "pjevać"],
+          "answer": "pjevač",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["igrač", "igrać"],
+          "answer": "igrač",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["džamija", "đamija"],
+          "answer": "džamija",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["rođendan", "rodžendan"],
+          "answer": "rođendan",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["snjegović", "snijegović"],
+          "answer": "snjegović",
+          "shuffle": false
+        },
+        {
+          "type": "input",
+          "question": "Kako zovemo onog ko pliva?",
+          "answer": "plivač"
+        }
+      ]
+    },
+    {
+      "id": "pismo-i-obavijest",
+      "title": "Pismo, obavijest i informativni tekst",
+      "description": "Kako pišemo pismo i obavijest",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Pismo** ima: mjesto i datum, pozdrav na početku, glavni dio, pozdrav na kraju i potpis."
+        },
+        {
+          "type": "example",
+          "text": "Sarajevo, 10. 3. 2026.\nDraga nano,\npišem ti da sam dobila peticu iz matematike...\nPuno te voli tvoja Ena",
+          "title": "Pismo"
+        },
+        {
+          "type": "text",
+          "text": "**Obavijest** je kratka: kaže **šta**, **gdje** i **kada** će se nešto desiti."
+        },
+        {
+          "type": "example",
+          "text": "OBAVIJEST\nU petak, 14. marta, u 10 sati, u školskoj sali bit će priredba.\nSvi ste pozvani!",
+          "title": "Obavijest"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta pišemo na početku pisma?",
+          "options": ["mjesto i datum", "potpis", "naslov knjige", "adresu škole"],
+          "answer": "mjesto i datum"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je na kraju pisma?",
+          "options": ["pozdrav i potpis", "datum", "naslov", "pitanje"],
+          "answer": "pozdrav i potpis"
+        },
+        {
+          "type": "choice",
+          "question": "Kada je priredba iz obavijesti?",
+          "options": ["u petak, 14. marta, u 10 sati", "u ponedjeljak", "sutra uveče", "nije rečeno"],
+          "answer": "u petak, 14. marta, u 10 sati"
+        },
+        {
+          "type": "choice",
+          "question": "Šta obavijest mora reći?",
+          "options": ["šta, gdje i kada", "samo ko je pisao", "kakvo je vrijeme", "koliko je sati sada"],
+          "answer": "šta, gdje i kada"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Informativni tekst nas o nečemu obavještava.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "knjizevnost",
+      "title": "Proza, poezija, igrokaz i strip",
+      "description": "Lektira, stih, strofa, dijalog",
+      "lesson": [
+        {
+          "type": "list",
+          "items": [
+            "**proza**: priče i bajke, pišu se u redovima i pasusima",
+            "**poezija**: pjesme, pišu se u **stihovima** i **strofama**",
+            "**igrokaz**: tekst za izvođenje, likovi razgovaraju (**dijalog**)",
+            "**strip**: priča u nizu slika, a riječi su u **oblačićima**"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "**Lektira** su knjige koje čitamo tokom školske godine."
+        },
+        {
+          "type": "remember",
+          "text": "O tekstu pitamo: Ko su likovi? Gdje i kada se radnja dešava? Šta je glavni događaj? Šta nam poručuje?"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kako se zove jedan red u pjesmi?",
+          "options": ["stih", "strofa", "pasus", "naslov"],
+          "answer": "stih"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje su riječi u stripu?",
+          "options": ["u oblačićima", "u fusnotama", "u naslovu", "nigdje"],
+          "answer": "u oblačićima"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se zove razgovor likova?",
+          "options": ["dijalog", "stih", "opis", "rima"],
+          "answer": "dijalog"
+        },
+        {
+          "type": "choice",
+          "question": "Knjige koje čitamo tokom školske godine zovemo:",
+          "options": ["lektira", "rječnik", "enciklopedija", "kalendar"],
+          "answer": "lektira"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Pjesma je poezija.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Bajka je pjesma u strofama.",
+          "answer": false,
+          "explanation": "Bajka je proza."
+        }
+      ]
+    },
+    {
+      "id": "stampana-cirilica",
+      "title": "Štampana slova ćirilice",
+      "description": "Čitanje ćirilice: А, Б, В, Г…",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Pored latinice, u našoj zemlji koristimo i **ćirilicu**. Ćirilica ima **30 slova**, kao i latinica."
+        },
+        {
+          "type": "example",
+          "text": "А Б В Г Д Ђ Е Ж З И Ј К Л Љ М\nН Њ О П Р С Т Ћ У Ф Х Ц Ч Џ Ш",
+          "title": "Azbuka"
+        },
+        {
+          "type": "example",
+          "text": "Б = B, В = V, Г = G, Д = D, Ж = Ž\nИ = I, Ј = J, Л = L, Љ = Lj, Њ = Nj\nП = P, Р = R, С = S, У = U, Ц = C\nЧ = Č, Ћ = Ć, Џ = Dž, Ђ = Đ, Ш = Š, Х = H"
+        },
+        {
+          "type": "remember",
+          "text": "Neka slova izgledaju isto, a čitaju se drugačije: **Р** je R, **С** je S, **В** je V, **Н** je N, **Х** je H."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koje latinično slovo je Ш?",
+          "options": ["Š", "Č", "Ž", "C"],
+          "answer": "Š"
+        },
+        {
+          "type": "choice",
+          "question": "Koje latinično slovo je Ж?",
+          "options": ["Ž", "Š", "Dž", "Z"],
+          "answer": "Ž"
+        },
+        {
+          "type": "choice",
+          "question": "Koje latinično slovo je Р?",
+          "options": ["R", "P", "B", "F"],
+          "answer": "R"
+        },
+        {
+          "type": "choice",
+          "question": "Koje latinično slovo je С?",
+          "options": ["S", "C", "Č", "Z"],
+          "answer": "S"
+        },
+        {
+          "type": "choice",
+          "question": "Koje latinično slovo je Љ?",
+          "options": ["Lj", "Nj", "L", "J"],
+          "answer": "Lj"
+        },
+        {
+          "type": "input",
+          "question": "Pročitaj i napiši latinicom: МАМА",
+          "answer": "mama"
+        },
+        {
+          "type": "input",
+          "question": "Pročitaj i napiši latinicom: СУНЦЕ",
+          "answer": "sunce"
+        },
+        {
+          "type": "input",
+          "question": "Pročitaj i napiši latinicom: ЖАБА",
+          "answer": "žaba"
+        }
+      ]
+    }
+  ]
+}

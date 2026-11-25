@@ -66,8 +66,8 @@ export type ExerciseType = Exercise['type']
 
 /** Automatski generisani matematički zadaci (svaki put drugačiji). */
 export type Generator =
-  | { type: 'addition'; max: number; count?: number }
-  | { type: 'subtraction'; max: number; count?: number }
+  | { type: 'addition'; max: number; carry?: boolean; count?: number }
+  | { type: 'subtraction'; max: number; carry?: boolean; count?: number }
   | { type: 'missing-addend'; max: number; count?: number }
   | { type: 'multiplication'; tables: number[]; count?: number }
   | { type: 'division'; tables: number[]; count?: number }
@@ -79,9 +79,14 @@ export type Generator =
   | { type: 'long-division'; max: number; digits?: number[]; count?: number }
   | { type: 'division-remainder'; max: number; digits?: number[]; count?: number }
   | { type: 'unit-conversion'; units: UnitGroup[]; count?: number }
+  | { type: 'roman'; max: number; count?: number }
+  | { type: 'equation'; max: number; ops: EquationOp[]; count?: number }
 
 /** Grupe mjernih jedinica: dužina, masa i zapremina tečnosti. */
 export type UnitGroup = 'length' | 'mass' | 'volume'
+
+/** Računske operacije u jednačinama. */
+export type EquationOp = '+' | '−' | '·' | ':'
 
 export type GeneratorType = Generator['type']
 

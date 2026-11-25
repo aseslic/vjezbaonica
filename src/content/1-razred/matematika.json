@@ -10,24 +10,185 @@
     {
       "id": "brojevi-do-10",
       "title": "Brojevi do 10",
-      "description": "Brojanje i poređenje",
+      "description": "Skupovi, brojanje, brojevna linija i poređenje",
       "lesson": [
-        { "type": "text", "text": "Brojimo redom: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10." },
-        { "type": "example", "text": "🍎🍎🍎 = 3\n🍎🍎🍎🍎🍎 = 5" },
-        { "type": "remember", "text": "Znak **<** znači manje od, znak **>** veće od, a znak **=** jednako. Otvoreni dio znaka uvijek gleda prema većem broju." }
+        {
+          "type": "text",
+          "text": "**Skup** čine predmeti koje posmatramo zajedno. Koliko je elemenata u skupu, kažemo brojem."
+        },
+        {
+          "type": "text",
+          "text": "Brojimo redom: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10."
+        },
+        {
+          "type": "example",
+          "text": "🍎🍎🍎 = 3\n🍎🍎🍎🍎🍎 = 5"
+        },
+        {
+          "type": "remember",
+          "text": "Znak **<** znači manje od, znak **>** veće od, a znak **=** jednako. Otvoreni dio znaka uvijek gleda prema većem broju."
+        },
+        {
+          "type": "example",
+          "text": "0 — 1 — 2 — 3 — 4 — 5 — 6 — 7 — 8 — 9 — 10",
+          "title": "Brojevna linija"
+        },
+        {
+          "type": "text",
+          "text": "Prazan skup nema nijedan element. Broj elemenata praznog skupa je **0** (nula)."
+        },
+        {
+          "type": "text",
+          "text": "Znak **≠** znači „nije jednako“: 3 ≠ 5."
+        }
       ],
       "exercises": [
-        { "type": "input", "picture": "🐞🐞🐞🐞🐞", "question": "Koliko je bubamara?", "answer": "5" },
-        { "type": "input", "picture": "🍎🍎🍎🍎🍎🍎🍎", "question": "Koliko je jabuka?", "answer": "7" },
-        { "type": "input", "picture": "⭐⭐⭐⭐", "question": "Koliko je zvijezda?", "answer": "4" },
-        { "type": "input", "picture": "🎈🎈🎈🎈🎈🎈", "question": "Koliko je balona?", "answer": "6" },
-        { "type": "input", "picture": "🐟🐟🐟", "question": "Koliko je riba?", "answer": "3" },
-        { "type": "input", "picture": "🌼🌼🌼🌼🌼🌼🌼🌼🌼", "question": "Koliko je cvjetova?", "answer": "9" },
-        { "type": "order", "question": "Poredaj brojeve od najmanjeg do najvećeg.", "items": ["2", "4", "5", "8", "10"] }
+        {
+          "type": "input",
+          "picture": "🐞🐞🐞🐞🐞",
+          "question": "Koliko je bubamara?",
+          "answer": "5"
+        },
+        {
+          "type": "input",
+          "picture": "🍎🍎🍎🍎🍎🍎🍎",
+          "question": "Koliko je jabuka?",
+          "answer": "7"
+        },
+        {
+          "type": "input",
+          "picture": "⭐⭐⭐⭐",
+          "question": "Koliko je zvijezda?",
+          "answer": "4"
+        },
+        {
+          "type": "input",
+          "picture": "🎈🎈🎈🎈🎈🎈",
+          "question": "Koliko je balona?",
+          "answer": "6"
+        },
+        {
+          "type": "input",
+          "picture": "🐟🐟🐟",
+          "question": "Koliko je riba?",
+          "answer": "3"
+        },
+        {
+          "type": "input",
+          "picture": "🌼🌼🌼🌼🌼🌼🌼🌼🌼",
+          "question": "Koliko je cvjetova?",
+          "answer": "9"
+        },
+        {
+          "type": "order",
+          "question": "Poredaj brojeve od najmanjeg do najvećeg.",
+          "items": ["2", "4", "5", "8", "10"]
+        },
+        {
+          "type": "choice",
+          "question": "Koji znak ide između 4 i 7?",
+          "options": ["<", "=", ">"],
+          "answer": "<",
+          "shuffle": false,
+          "instruction": "Koji znak nedostaje?"
+        },
+        {
+          "type": "choice",
+          "question": "Koliko je jabuka u praznoj korpi?",
+          "options": ["0", "1", "10", "5"],
+          "answer": "0",
+          "picture": "🧺"
+        },
+        {
+          "type": "truefalse",
+          "statement": "3 ≠ 5",
+          "answer": true,
+          "explanation": "3 i 5 nisu jednaki, pa je tačno 3 ≠ 5."
+        },
+        {
+          "type": "choice",
+          "question": "U kojem skupu ima više elemenata?",
+          "options": ["🐟🐟🐟🐟🐟🐟", "🐟🐟🐟🐟"],
+          "answer": "🐟🐟🐟🐟🐟🐟",
+          "shuffle": false
+        }
       ],
       "generators": [
-        { "type": "compare", "max": 10, "count": 10 },
-        { "type": "neighbors", "max": 10, "count": 8 }
+        {
+          "type": "compare",
+          "max": 10,
+          "count": 10
+        },
+        {
+          "type": "neighbors",
+          "max": 10,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": "redni-brojevi",
+      "title": "Redni brojevi",
+      "description": "Prvi, drugi, treći… deseti",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Redni brojevi kažu **koji je ko po redu**: prvi, drugi, treći, četvrti, peti, šesti, sedmi, osmi, deveti, deseti."
+        },
+        {
+          "type": "example",
+          "text": "1. prvi, 2. drugi, 3. treći\n4. četvrti, 5. peti",
+          "title": "Pišemo ih s tačkom"
+        },
+        {
+          "type": "remember",
+          "text": "Kad pišemo redni broj ciframa, iza njega stavimo **tačku**: 3. razred, 1. mjesto."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Ko je prvi u redu?",
+          "options": ["🐱", "🐶", "🐰", "🐻"],
+          "answer": "🐱",
+          "shuffle": false,
+          "instruction": "Životinje stoje u redu s lijeva",
+          "picture": "🐱🐶🐰🐻"
+        },
+        {
+          "type": "choice",
+          "question": "Ko je treći u redu?",
+          "options": ["🐱", "🐶", "🐰", "🐻"],
+          "answer": "🐰",
+          "shuffle": false,
+          "instruction": "Životinje stoje u redu s lijeva",
+          "picture": "🐱🐶🐰🐻"
+        },
+        {
+          "type": "choice",
+          "question": "Koji je po redu 🐻?",
+          "options": ["prvi", "drugi", "treći", "četvrti"],
+          "answer": "četvrti",
+          "shuffle": false,
+          "picture": "🐱🐶🐰🐻"
+        },
+        {
+          "type": "choice",
+          "question": "Kako pišemo „peti“ ciframa?",
+          "options": ["5.", "5", "V5", "05"],
+          "answer": "5."
+        },
+        {
+          "type": "order",
+          "question": "Poredaj redom.",
+          "items": ["prvi", "drugi", "treći", "četvrti", "peti"]
+        },
+        {
+          "type": "choice",
+          "question": "Koji je dan u sedmici utorak?",
+          "options": ["drugi", "prvi", "treći", "peti"],
+          "answer": "drugi"
+        }
       ]
     },
     {
@@ -35,36 +196,394 @@
       "title": "Sabiranje do 10",
       "description": "Dodajemo i brojimo",
       "lesson": [
-        { "type": "text", "text": "Kad sabiramo, dodajemo. Znak za sabiranje je **+** (plus)." },
-        { "type": "example", "text": "🍎🍎 + 🍎🍎🍎 = 🍎🍎🍎🍎🍎\n2 + 3 = 5" }
+        {
+          "type": "text",
+          "text": "Kad sabiramo, dodajemo. Znak za sabiranje je **+** (plus)."
+        },
+        {
+          "type": "example",
+          "text": "🍎🍎 + 🍎🍎🍎 = 🍎🍎🍎🍎🍎\n2 + 3 = 5"
+        },
+        {
+          "type": "remember",
+          "text": "Brojeve koje sabiramo zovemo **sabirci**, a rezultat je **zbir**. Sabirci mogu zamijeniti mjesta: 2 + 3 = 3 + 2."
+        }
       ],
       "exercises": [
-        { "type": "input", "picture": "🍐🍐 + 🍐🍐", "question": "2 + 2 = ?", "answer": "4" },
-        { "type": "input", "picture": "🚗🚗🚗 + 🚗", "question": "3 + 1 = ?", "answer": "4" }
+        {
+          "type": "input",
+          "picture": "🍐🍐 + 🍐🍐",
+          "question": "2 + 2 = ?",
+          "answer": "4"
+        },
+        {
+          "type": "input",
+          "picture": "🚗🚗🚗 + 🚗",
+          "question": "3 + 1 = ?",
+          "answer": "4"
+        },
+        {
+          "type": "input",
+          "question": "4 + 3 = ?",
+          "answer": "7",
+          "picture": "🐥🐥🐥🐥 + 🐥🐥🐥"
+        },
+        {
+          "type": "input",
+          "question": "5 + 5 = ?",
+          "answer": "10",
+          "picture": "✋ + ✋"
+        },
+        {
+          "type": "input",
+          "question": "1 + 6 = ?",
+          "answer": "7",
+          "picture": "🎈 + 🎈🎈🎈🎈🎈🎈"
+        },
+        {
+          "type": "truefalse",
+          "statement": "2 + 5 = 5 + 2",
+          "answer": true,
+          "explanation": "Sabirci mogu zamijeniti mjesta, a zbir ostaje isti."
+        }
       ],
-      "generators": [{ "type": "addition", "max": 10, "count": 20 }]
+      "generators": [
+        {
+          "type": "addition",
+          "max": 10,
+          "count": 20
+        }
+      ]
     },
     {
       "id": "oduzimanje-do-10",
       "title": "Oduzimanje do 10",
       "description": "Oduzimamo i brojimo šta je ostalo",
       "lesson": [
-        { "type": "text", "text": "Kad oduzimamo, nešto uzimamo. Znak za oduzimanje je **−** (minus)." },
-        { "type": "example", "text": "Imali smo 5 bombona i pojeli 2.\n5 − 2 = 3" }
-      ],
-      "generators": [{ "type": "subtraction", "max": 10, "count": 20 }]
-    },
-    {
-      "id": "sabiranje-i-oduzimanje-do-20",
-      "title": "Sabiranje i oduzimanje do 20",
-      "description": "Računanje s prelazom preko desetice",
-      "lesson": [
-        { "type": "text", "text": "Kad prelazimo preko desetice, prvo dopunimo do 10, pa dodamo ostatak." },
-        { "type": "example", "text": "8 + 5 = ?\n8 + 2 = 10\n10 + 3 = 13" }
+        {
+          "type": "text",
+          "text": "Kad oduzimamo, nešto uzimamo. Znak za oduzimanje je **−** (minus)."
+        },
+        {
+          "type": "example",
+          "text": "Imali smo 5 bombona i pojeli 2.\n5 − 2 = 3"
+        },
+        {
+          "type": "remember",
+          "text": "Oduzimanje i sabiranje su povezani: ako je 3 + 2 = 5, onda je 5 − 2 = 3 i 5 − 3 = 2."
+        }
       ],
       "generators": [
-        { "type": "addition", "max": 20, "count": 15 },
-        { "type": "subtraction", "max": 20, "count": 15 }
+        {
+          "type": "subtraction",
+          "max": 10,
+          "count": 20
+        }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "question": "6 − 2 = ?",
+          "answer": "4",
+          "picture": "🍪🍪🍪🍪🍪🍪",
+          "explanation": "Od 6 kolačića pojedemo 2, ostanu 4."
+        },
+        {
+          "type": "input",
+          "question": "9 − 4 = ?",
+          "answer": "5"
+        },
+        {
+          "type": "input",
+          "question": "10 − 10 = ?",
+          "answer": "0",
+          "explanation": "Kad oduzmemo sve, ne ostane ništa."
+        },
+        {
+          "type": "choice",
+          "question": "Ako je 4 + 3 = 7, koliko je 7 − 3?",
+          "options": ["4", "3", "7", "10"],
+          "answer": "4"
+        },
+        {
+          "type": "truefalse",
+          "statement": "8 − 0 = 8",
+          "answer": true,
+          "explanation": "Kad oduzmemo nulu, broj se ne mijenja."
+        }
+      ]
+    },
+    {
+      "id": "vece-manje-duze",
+      "title": "Veće, manje, duže, kraće",
+      "description": "Poređenje po veličini, dužini, visini; boje",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Predmete poredimo: **veći – manji**, **duži – kraći**, **viši – niži**, **širi – uži**, **deblji – tanji**."
+        },
+        {
+          "type": "example",
+          "text": "🐘 je veći od 🐭.\n🦒 je viša od 🐕.",
+          "title": "Primjer"
+        },
+        {
+          "type": "text",
+          "text": "Kad poredimo više predmeta, kažemo i **najveći**, **najmanji**, **najduži**, **najkraći**."
+        },
+        {
+          "type": "remember",
+          "text": "Boje: crvena, plava, žuta, zelena, narandžasta, smeđa, ljubičasta, bijela, crna i roza."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koja životinja je veća?",
+          "options": ["slon", "miš"],
+          "answer": "slon",
+          "shuffle": false,
+          "picture": "🐘 🐭"
+        },
+        {
+          "type": "choice",
+          "question": "Ko je najviši?",
+          "options": ["žirafa", "pas", "mačka", "zec"],
+          "answer": "žirafa",
+          "picture": "🦒"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je duže?",
+          "options": ["voz", "olovka"],
+          "answer": "voz",
+          "shuffle": false,
+          "picture": "🚆 ✏️"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je od ovoga najmanje?",
+          "options": ["mrav", "pas", "konj", "slon"],
+          "answer": "mrav"
+        },
+        {
+          "type": "choice",
+          "question": "Koje je boje limun?",
+          "options": ["žute", "plave", "crne", "ljubičaste"],
+          "answer": "žute",
+          "picture": "🍋"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je suprotno od „široko“?",
+          "options": ["usko", "dugo", "visoko", "debelo"],
+          "answer": "usko"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Miš je veći od slona.",
+          "answer": false,
+          "explanation": "Miš je manji od slona."
+        }
+      ]
+    },
+    {
+      "id": "polozaj-i-linije",
+      "title": "Položaj, linije i tačka",
+      "description": "Iznad, ispod, između; ravne i krive, otvorene i zatvorene linije",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Položaj kažemo riječima: **iznad**, **ispod**, **na**, **ispred**, **iza**, **između**, **pored**, **lijevo**, **desno**."
+        },
+        {
+          "type": "text",
+          "text": "Linije mogu biti **ravne** (prave) i **krive** (zakrivljene). Mogu biti **otvorene** ili **zatvorene**."
+        },
+        {
+          "type": "text",
+          "text": "Zatvorena linija dijeli ravan na dio **unutar** linije i dio **izvan** linije."
+        },
+        {
+          "type": "remember",
+          "text": "Linija može biti **uspravna** │, **vodoravna** ─ ili **kosa** ╱. **Tačku** označavamo velikim slovom."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Gdje je ptica?",
+          "options": ["iznad drveta", "ispod drveta", "u drvetu", "iza drveta"],
+          "answer": "iznad drveta",
+          "picture": "🐦\n🌳"
+        },
+        {
+          "type": "choice",
+          "question": "Kakva je ova linija: ─?",
+          "options": ["vodoravna", "uspravna", "kosa", "kriva"],
+          "answer": "vodoravna"
+        },
+        {
+          "type": "choice",
+          "question": "Kakva je ova linija: │?",
+          "options": ["uspravna", "vodoravna", "kosa", "zatvorena"],
+          "answer": "uspravna"
+        },
+        {
+          "type": "choice",
+          "question": "Kakva je linija kruga?",
+          "options": ["zatvorena kriva", "otvorena ravna", "otvorena kriva", "kosa ravna"],
+          "answer": "zatvorena kriva",
+          "picture": "⭕"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je između 🍎 i 🍌?",
+          "options": ["🍐", "🍎", "🍌"],
+          "answer": "🍐",
+          "shuffle": false,
+          "picture": "🍎🍐🍌"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Zatvorena linija ima dio unutar i dio izvan.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "mjerenje",
+      "title": "Mjerenje i novac",
+      "description": "Metar, kilogram, litar, sat i konvertibilna marka",
+      "lesson": [
+        {
+          "type": "list",
+          "items": [
+            "📏 Dužinu mjerimo **metrom (m)**.",
+            "⚖️ Masu (koliko je nešto teško) mjerimo **vagom**, u **kilogramima (kg)**.",
+            "🥛 Tečnost mjerimo u **litrima (l)**.",
+            "⏰ Vrijeme mjerimo **satom**.",
+            "💰 Naš novac je **konvertibilna marka (KM)**."
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "Za mjerenje koristimo **mjerila**: krojački i zidarski metar, vagu, posude za tečnost i sat."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Čime mjerimo koliko je nešto teško?",
+          "options": ["vagom", "satom", "metrom", "loncem"],
+          "answer": "vagom",
+          "picture": "⚖️"
+        },
+        {
+          "type": "choice",
+          "question": "Čime mjerimo vrijeme?",
+          "options": ["satom", "vagom", "metrom", "flašom"],
+          "answer": "satom",
+          "picture": "⏰"
+        },
+        {
+          "type": "choice",
+          "question": "U čemu mjerimo mlijeko u flaši?",
+          "options": ["u litrima", "u kilogramima", "u metrima", "u satima"],
+          "answer": "u litrima",
+          "picture": "🥛"
+        },
+        {
+          "type": "choice",
+          "question": "Čime mjerimo dužinu stola?",
+          "options": ["metrom", "vagom", "satom", "čašom"],
+          "answer": "metrom",
+          "picture": "📏"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se zove naš novac?",
+          "options": ["konvertibilna marka", "litar", "metar", "kilogram"],
+          "answer": "konvertibilna marka",
+          "picture": "💰"
+        },
+        {
+          "type": "input",
+          "question": "Imaš 2 KM i dobiješ još 3 KM. Koliko KM imaš?",
+          "answer": "5"
+        }
+      ]
+    },
+    {
+      "id": "tijela-i-likovi",
+      "title": "Tijela i likovi",
+      "description": "Lopta, kocka, kvadar, valjak, piramida; krug, kvadrat, trougao",
+      "lesson": [
+        {
+          "type": "list",
+          "items": [
+            "⚽ **lopta**",
+            "🎲 **kocka**",
+            "📦 **kvadar** (kutija)",
+            "🥫 **valjak** (konzerva)",
+            "🔺 **piramida**"
+          ]
+        },
+        {
+          "type": "list",
+          "items": ["⚪ **krug**", "🟥 **kvadrat**", "▬ **pravougaonik**", "🔺 **trougao**"]
+        },
+        {
+          "type": "remember",
+          "text": "Tijela možemo uzeti u ruke. Likove crtamo na papiru: krug, kvadrat, pravougaonik i trougao."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kakvog je oblika lopta?",
+          "options": ["lopta", "kocka", "valjak", "piramida"],
+          "answer": "lopta",
+          "picture": "⚽"
+        },
+        {
+          "type": "choice",
+          "question": "Kakvog je oblika kockica za igru?",
+          "options": ["kocka", "lopta", "valjak", "kvadar"],
+          "answer": "kocka",
+          "picture": "🎲"
+        },
+        {
+          "type": "choice",
+          "question": "Kakvog je oblika konzerva?",
+          "options": ["valjak", "kocka", "lopta", "piramida"],
+          "answer": "valjak",
+          "picture": "🥫"
+        },
+        {
+          "type": "choice",
+          "question": "Kakvog je oblika kutija za cipele?",
+          "options": ["kvadar", "lopta", "valjak", "piramida"],
+          "answer": "kvadar",
+          "picture": "📦"
+        },
+        {
+          "type": "choice",
+          "question": "Koji lik ima 3 stranice?",
+          "options": ["trougao", "krug", "kvadrat", "pravougaonik"],
+          "answer": "trougao"
+        },
+        {
+          "type": "choice",
+          "question": "Koji lik nema uglova?",
+          "options": ["krug", "kvadrat", "trougao", "pravougaonik"],
+          "answer": "krug"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Kotrlja se lopta, a kocka ne.",
+          "answer": true
+        }
       ]
     }
   ]

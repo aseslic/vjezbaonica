@@ -89,18 +89,31 @@
     {
       "id": "imenice-rod-i-broj",
       "title": "Imenice: rod i broj",
-      "description": "Muški, ženski i srednji rod; jednina i množina",
+      "description": "Muški, ženski i srednji rod; jednina i množina; zbirne i gradivne imenice",
       "lesson": [
         {
           "type": "text",
           "text": "Imenice mogu biti **muškog**, **ženskog** ili **srednjeg** roda. Pomaže kad ispred imenice stavimo riječ **ovaj**, **ova** ili **ovo**."
         },
-        { "type": "example", "text": "ovaj prozor (muški rod)\nova stolica (ženski rod)\novo sunce (srednji rod)" },
-        { "type": "text", "text": "Imenice imaju **jedninu** (jedno) i **množinu** (više)." },
-        { "type": "example", "text": "knjiga – knjige\nprozor – prozori\nselo – sela" },
+        {
+          "type": "example",
+          "text": "ovaj prozor (muški rod)\nova stolica (ženski rod)\novo sunce (srednji rod)"
+        },
+        {
+          "type": "text",
+          "text": "Imenice imaju **jedninu** (jedno) i **množinu** (više)."
+        },
+        {
+          "type": "example",
+          "text": "knjiga – knjige\nprozor – prozori\nselo – sela"
+        },
         {
           "type": "remember",
           "text": "Neke imenice imaju neobičnu množinu: dijete – djeca, čovjek – ljudi, oko – oči, uho – uši."
+        },
+        {
+          "type": "text",
+          "text": "**Zbirne** imenice označavaju više istih stvari kao cjelinu: lišće, cvijeće, granje, kamenje, perje. **Gradivne** imenice označavaju materijal: voda, brašno, mlijeko, drvo, zlato, pijesak."
         }
       ],
       "exercises": [
@@ -140,10 +153,47 @@
           "shuffle": false,
           "explanation": "Kažemo „ova noć“."
         },
-        { "type": "input", "instruction": "Napiši množinu", "question": "dijete", "answer": "djeca" },
-        { "type": "input", "instruction": "Napiši množinu", "question": "čovjek", "answer": "ljudi" },
-        { "type": "input", "instruction": "Napiši množinu", "question": "oko", "answer": "oči" },
-        { "type": "truefalse", "statement": "Imenica „sela“ je u množini.", "answer": true }
+        {
+          "type": "input",
+          "instruction": "Napiši množinu",
+          "question": "dijete",
+          "answer": "djeca"
+        },
+        {
+          "type": "input",
+          "instruction": "Napiši množinu",
+          "question": "čovjek",
+          "answer": "ljudi"
+        },
+        {
+          "type": "input",
+          "instruction": "Napiši množinu",
+          "question": "oko",
+          "answer": "oči"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Imenica „sela“ je u množini.",
+          "answer": true
+        },
+        {
+          "type": "choice",
+          "question": "Koja imenica je zbirna?",
+          "options": ["lišće", "list", "drvo", "grana"],
+          "answer": "lišće"
+        },
+        {
+          "type": "choice",
+          "question": "Koja imenica je gradivna?",
+          "options": ["brašno", "pekar", "pekara", "kifla"],
+          "answer": "brašno"
+        },
+        {
+          "type": "choice",
+          "question": "Koja imenica je zbirna?",
+          "options": ["cvijeće", "cvijet", "cvjećar", "vaza"],
+          "answer": "cvijeće"
+        }
       ]
     },
     {
@@ -151,9 +201,20 @@
       "title": "Zamjenice",
       "description": "Lične i prisvojne zamjenice",
       "lesson": [
-        { "type": "text", "text": "**Zamjenice** zamjenjuju imenice, da ih ne bismo stalno ponavljali." },
-        { "type": "example", "title": "Lične zamjenice", "text": "ja, ti, on, ona, ono\nmi, vi, oni, one, ona" },
-        { "type": "example", "title": "Prisvojne zamjenice", "text": "moj, tvoj, njegov, njen\nnaš, vaš, njihov" },
+        {
+          "type": "text",
+          "text": "**Zamjenice** zamjenjuju imenice, da ih ne bismo stalno ponavljali."
+        },
+        {
+          "type": "example",
+          "title": "Lične zamjenice",
+          "text": "ja, ti, on, ona, ono\nmi, vi, oni, one, ona"
+        },
+        {
+          "type": "example",
+          "title": "Prisvojne zamjenice",
+          "text": "moj, tvoj, njegov, njen\nnaš, vaš, njihov"
+        },
         {
           "type": "remember",
           "text": "Prisvojne zamjenice odgovaraju na pitanje **čiji?**: moja knjiga, tvoj pas, naša škola."
@@ -192,7 +253,12 @@
           "answer": "ono",
           "shuffle": false
         },
-        { "type": "choice", "question": "Koja zamjenica je prisvojna?", "options": ["moj", "ja", "ti", "on"], "answer": "moj" },
+        {
+          "type": "choice",
+          "question": "Koja zamjenica je prisvojna?",
+          "options": ["moj", "ja", "ti", "on"],
+          "answer": "moj"
+        },
         {
           "type": "choice",
           "question": "Ova knjiga pripada meni. To je ___ knjiga.",
@@ -212,7 +278,10 @@
       "title": "Pridjevi",
       "description": "Opisni, prisvojni i gradivni pridjevi",
       "lesson": [
-        { "type": "text", "text": "**Pridjevi** su riječi koje kazuju kakvo je nešto, čije je ili od čega je napravljeno." },
+        {
+          "type": "text",
+          "text": "**Pridjevi** su riječi koje kazuju kakvo je nešto, čije je ili od čega je napravljeno."
+        },
         {
           "type": "list",
           "items": [
@@ -284,7 +353,12 @@
           "question": "Sto napravljen od drveta je ___ sto.",
           "answer": "drveni"
         },
-        { "type": "choice", "question": "Koja riječ je pridjev?", "options": ["hladan", "hladnoća", "hladiti"], "answer": "hladan" }
+        {
+          "type": "choice",
+          "question": "Koja riječ je pridjev?",
+          "options": ["hladan", "hladnoća", "hladiti"],
+          "answer": "hladan"
+        }
       ]
     },
     {
@@ -292,8 +366,14 @@
       "title": "Glavni i redni brojevi",
       "description": "Koliko? i Koji po redu?",
       "lesson": [
-        { "type": "text", "text": "**Glavni** brojevi kazuju koliko čega ima: jedan, pet, dvadeset." },
-        { "type": "text", "text": "**Redni** brojevi kazuju ko je ili šta je po redu: prvi, peti, dvadeseti." },
+        {
+          "type": "text",
+          "text": "**Glavni** brojevi kazuju koliko čega ima: jedan, pet, dvadeset."
+        },
+        {
+          "type": "text",
+          "text": "**Redni** brojevi kazuju ko je ili šta je po redu: prvi, peti, dvadeseti."
+        },
         {
           "type": "remember",
           "text": "Kad redni broj pišemo ciframa, iza njega stavljamo **tačku**: 4. razred (četvrti razred), 1. mjesto."
@@ -339,8 +419,16 @@
           "answer": ["4. razred", "4.razred"],
           "explanation": "Iza rednog broja napisanog ciframa ide tačka: 4. razred."
         },
-        { "type": "truefalse", "statement": "U rečenici „Ena je bila prva u trci.“ riječ „prva“ je redni broj.", "answer": true },
-        { "type": "input", "question": "Kako glasi redni broj od broja pet?", "answer": "peti" }
+        {
+          "type": "truefalse",
+          "statement": "U rečenici „Ena je bila prva u trci.“ riječ „prva“ je redni broj.",
+          "answer": true
+        },
+        {
+          "type": "input",
+          "question": "Kako glasi redni broj od broja pet?",
+          "answer": "peti"
+        }
       ]
     },
     {
@@ -352,8 +440,14 @@
           "type": "text",
           "text": "**Predikat** kazuje šta neko radi ili šta se s nekim događa. Pronalazimo ga pitanjem **šta radi?**"
         },
-        { "type": "text", "text": "**Subjekat** je onaj ko vrši radnju. Pronalazimo ga pitanjem **ko?** ili **šta?**" },
-        { "type": "example", "text": "Ptica pjeva.\nŠta radi? Pjeva. To je predikat.\nKo pjeva? Ptica. To je subjekat." },
+        {
+          "type": "text",
+          "text": "**Subjekat** je onaj ko vrši radnju. Pronalazimo ga pitanjem **ko?** ili **šta?**"
+        },
+        {
+          "type": "example",
+          "text": "Ptica pjeva.\nŠta radi? Pjeva. To je predikat.\nKo pjeva? Ptica. To je subjekat."
+        },
         {
           "type": "remember",
           "text": "Rečenica koja ima samo subjekat i predikat je **prosta rečenica**. Kad joj dodamo još riječi, dobijemo **proširenu rečenicu**: Mala ptica veselo pjeva."
@@ -402,7 +496,11 @@
           "shuffle": false,
           "explanation": "Ko živi u šumi? Medvjed."
         },
-        { "type": "truefalse", "statement": "U rečenici „Sunce sija.“ riječ „sunce“ je subjekat.", "answer": true },
+        {
+          "type": "truefalse",
+          "statement": "U rečenici „Sunce sija.“ riječ „sunce“ je subjekat.",
+          "answer": true
+        },
         {
           "type": "truefalse",
           "statement": "Predikat pronalazimo pitanjem „ko?“.",
@@ -414,18 +512,32 @@
     {
       "id": "veliko-slovo-u-naslovima",
       "title": "Veliko slovo u naslovima i nazivima",
-      "description": "Naslovi knjiga, nazivi škola i imena životinja",
+      "description": "Ulice, trgovi, škole, knjige, listovi i pripadnici naroda",
       "lesson": [
         {
           "type": "text",
           "text": "U naslovima knjiga, pjesama i časopisa velikim slovom pišemo samo **prvu riječ**, a ostale riječi samo ako su vlastita imena."
         },
-        { "type": "example", "text": "Plavi vjetar\nKraljica iz dvorišta\nPatuljak vam priča" },
+        {
+          "type": "example",
+          "text": "Plavi vjetar\nKraljica iz dvorišta\nPatuljak vam priča"
+        },
+        {
+          "type": "text",
+          "text": "U nazivima **ulica** i **trgova** velikim slovom pišemo prvu riječ i vlastita imena: Ulica Ferhadija, Trg oslobođenja, Bulevar Meše Selimovića."
+        },
+        {
+          "type": "text",
+          "text": "**Pripadnike naroda** i stanovnike gradova pišemo velikim slovom: Bošnjak, Hrvat, Srbin, Sarajlija, Mostarka."
+        },
         {
           "type": "text",
           "text": "U nazivima škola i ustanova velikim slovom pišemo prvu riječ i vlastita imena: Osnovna škola „Mehmedalija Mak Dizdar“, Narodno pozorište Sarajevo."
         },
-        { "type": "remember", "text": "Imena životinja pišemo velikim slovom: pas Žućko, mačka Maza, konj Zekan." }
+        {
+          "type": "remember",
+          "text": "Imena životinja pišemo velikim slovom: pas Žućko, mačka Maza, konj Zekan."
+        }
       ],
       "exercises": [
         {
@@ -463,7 +575,93 @@
           "answer": false,
           "explanation": "Velikim slovom pišemo samo prvu riječ: Plavi vjetar."
         },
-        { "type": "truefalse", "statement": "Ime psa pišemo velikim početnim slovom: Žućko.", "answer": true }
+        {
+          "type": "truefalse",
+          "statement": "Ime psa pišemo velikim početnim slovom: Žućko.",
+          "answer": true
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["Trg oslobođenja", "trg oslobođenja", "Trg Oslobođenja"],
+          "answer": "Trg oslobođenja",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše?",
+          "options": ["Sarajlija", "sarajlija"],
+          "answer": "Sarajlija",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Kako se pravilno piše naslov lista?",
+          "options": ["Male novine", "Male Novine", "male novine"],
+          "answer": "Male novine",
+          "shuffle": false
+        }
+      ]
+    },
+    {
+      "id": "vijest-i-poruka",
+      "title": "Vijest i poruka",
+      "description": "Ko? Šta? Gdje? Kada? Kako? Zašto?",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "**Vijest** je informativni tekst koji ukratko kaže šta se desilo. Odgovara na pitanja: **Ko? Šta? Gdje? Kada? Kako? Zašto?**"
+        },
+        {
+          "type": "example",
+          "text": "Učenici četvrtog razreda posadili su u petak 20 sadnica u školskom dvorištu, kako bi škola imala više hlada.",
+          "title": "Vijest"
+        },
+        {
+          "type": "text",
+          "text": "**Poruka** je kratka i jasna: kome je, šta treba znati i ko je piše."
+        },
+        {
+          "type": "example",
+          "text": "Mama, otišla sam kod Amre. Vraćam se u 6 sati. Lejla",
+          "title": "Poruka"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Ko je posadio sadnice?",
+          "options": ["učenici četvrtog razreda", "nastavnici", "roditelji", "domar"],
+          "answer": "učenici četvrtog razreda",
+          "instruction": "Pročitaj vijest iz lekcije"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje su posađene sadnice?",
+          "options": ["u školskom dvorištu", "u parku", "u šumi", "na Trebeviću"],
+          "answer": "u školskom dvorištu",
+          "instruction": "Pročitaj vijest iz lekcije"
+        },
+        {
+          "type": "choice",
+          "question": "Zašto su posadili sadnice?",
+          "options": ["da škola ima više hlada", "za takmičenje", "za prodaju", "nije rečeno"],
+          "answer": "da škola ima više hlada",
+          "instruction": "Pročitaj vijest iz lekcije"
+        },
+        {
+          "type": "choice",
+          "question": "Kada se vraća Lejla?",
+          "options": ["u 6 sati", "u podne", "sutra", "nije rečeno"],
+          "answer": "u 6 sati",
+          "instruction": "Pročitaj poruku iz lekcije"
+        },
+        {
+          "type": "choice",
+          "question": "Šta poruka treba biti?",
+          "options": ["kratka i jasna", "duga i zamršena", "u stihovima", "bez potpisa"],
+          "answer": "kratka i jasna"
+        }
       ]
     },
     {
@@ -492,11 +690,25 @@
           "type": "example",
           "title": "Lektira",
           "text": "„Plavi vjetar“, Ivica Vanja Rorić\n„Kraljica iz dvorišta“, Bisera Alikadić\n„Patuljak vam priča“, Ahmed Hromadžić\n„Pinokio“, Karlo Kolodi"
+        },
+        {
+          "type": "text",
+          "text": "U tekstu tražimo **riječi opisivače** (kakav je lik ili mjesto), **riječi informacije** (šta saznajemo) i **riječi pouke** (šta nam tekst poručuje)."
         }
       ],
       "exercises": [
-        { "type": "choice", "question": "Kako se zove jedan red pjesme?", "options": ["stih", "strofa", "rima", "naslov"], "answer": "stih" },
-        { "type": "choice", "question": "Kako se zove skup stihova?", "options": ["strofa", "stih", "rima", "naslov"], "answer": "strofa" },
+        {
+          "type": "choice",
+          "question": "Kako se zove jedan red pjesme?",
+          "options": ["stih", "strofa", "rima", "naslov"],
+          "answer": "stih"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se zove skup stihova?",
+          "options": ["strofa", "stih", "rima", "naslov"],
+          "answer": "strofa"
+        },
         {
           "type": "choice",
           "question": "Riječi „kuća“ i „sreća“ na kraju dva stiha čine…",
@@ -527,7 +739,79 @@
           "options": ["Ahmed Hromadžić", "Bisera Alikadić", "Karlo Kolodi", "Ivica Vanja Rorić"],
           "answer": "Ahmed Hromadžić"
         },
-        { "type": "truefalse", "statement": "Govor lika često pišemo pod navodnicima.", "answer": true }
+        {
+          "type": "truefalse",
+          "statement": "Govor lika često pišemo pod navodnicima.",
+          "answer": true
+        },
+        {
+          "type": "choice",
+          "question": "Koja riječ je opisivač u rečenici „Visoki jablan njiše se na vjetru.“?",
+          "options": ["visoki", "jablan", "njiše", "vjetru"],
+          "answer": "visoki"
+        }
+      ]
+    },
+    {
+      "id": "pisana-cirilica",
+      "title": "Ćirilica: čitanje tekstova",
+      "description": "Velika i mala slova, latinica i ćirilica",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Ćirilica ima **velika** i **mala** slova, kao i latinica: А а, Б б, В в, Г г..."
+        },
+        {
+          "type": "example",
+          "text": "Мој пас се зове Жућко.\nMoj pas se zove Žućko.",
+          "title": "Ista rečenica ćirilicom i latinicom"
+        },
+        {
+          "type": "remember",
+          "text": "Tekst napisan ćirilicom čitamo isto kao i latinicom. Svako ćirilično slovo ima svoj par u latinici."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "question": "Pročitaj i napiši latinicom: школа",
+          "answer": "škola"
+        },
+        {
+          "type": "input",
+          "question": "Pročitaj i napiši latinicom: љубав",
+          "answer": "ljubav"
+        },
+        {
+          "type": "input",
+          "question": "Pročitaj i napiši latinicom: џеп",
+          "answer": "džep"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se latinicom piše „ћуприја“?",
+          "options": ["ćuprija", "čuprija", "cuprija", "kuprija"],
+          "answer": "ćuprija"
+        },
+        {
+          "type": "choice",
+          "question": "Koje je malo slovo od Д?",
+          "options": ["д", "б", "л", "а"],
+          "answer": "д"
+        },
+        {
+          "type": "choice",
+          "question": "Koje je malo slovo od Ж?",
+          "options": ["ж", "ш", "х", "з"],
+          "answer": "ж"
+        },
+        {
+          "type": "choice",
+          "question": "Koja riječ je napisana ćirilicom?",
+          "options": ["кућа", "kuća"],
+          "answer": "кућа",
+          "shuffle": false
+        }
       ]
     }
   ]

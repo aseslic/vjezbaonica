@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { expandedForm, generate, UNIT_PAIRS } from './generators'
+import { expandedForm, generate, toRoman, UNIT_PAIRS } from './generators'
 import { createRng } from './random'
 import type { Exercise, Generator } from './types'
 
@@ -183,6 +183,48 @@ describe('generatori', () => {
         expect(answer).toBe(sum)
       } else {
         expect(ex.explanation).toBe(`${answer} = ${expandedForm(answer).join(' + ')}`)
+      }
+    }
+  })
+
+  it('bez prelaza: jedinice ne prelaze deseticu ni kod sabiranja ni kod oduzimanja', () => {
+    for (const ex of many({ type: 'addition', max: 100, carry: false })) {
+      if (ex.type !== 'input') throw new Error('očekivan upis')
+      const [a, b] = ex.question.replace(' = ?', '').split(' + ').map(Number)
+      expect((a % 10) + (b % 10)).toBeLessThan(10)
+      expect(solve(ex.question)).toBe(Number(answerOf(ex)))
+    }
+    for (const ex of many({ type: 'subtraction', max: 100, carry: false })) {
+      if (ex.type !== 'input') throw new Error('očekivan upis')
+      const [a, b] = ex.question.replace(' = ?', '').split(' − ').map(Number)
+      expect(a % 10).toBeGreaterThanOrEqual(b % 10)
+      expect(solve(ex.question)).toBe(Number(answerOf(ex)))
+    }
+  })
+
+  it('rimske cifre: tačan zapis u oba smjera', () => {
+    expect(toRoman(4)).toBe('IV')
+    expect(toRoman(14)).toBe('XIV')
+    expect(toRoman(49)).toBe('XLIX')
+    expect(toRoman(94)).toBe('XCIV')
+    expect(toRoman(999)).toBe('CMXCIX')
+    for (const ex of many({ type: 'roman', max: 1000 })) {
+      if (ex.type !== 'input') throw new Error('očekivan upis')
+      const answer = answerOf(ex)
+      if (/^\d+$/.test(ex.question)) expect(answer).toBe(toRoman(Number(ex.question)))
+      else expect(toRoman(Number(answer))).toBe(ex.question)
+      expect(Number(/^\d+$/.test(ex.question) ? ex.question : answer)).toBeLessThanOrEqual(1000)
+    }
+  })
+
+  it('jednačine: rješenje x zadovoljava jednačinu', () => {
+    for (const max of [100, 1000]) {
+      for (const ex of many({ type: 'equation', max, ops: ['+', '−', '·', ':'] })) {
+        if (ex.type !== 'input') throw new Error('očekivan upis')
+        const x = Number(answerOf(ex))
+        expect(Number.isInteger(x) && x > 0).toBe(true)
+        const [left, right] = ex.question.split(' = ')
+        expect(solve(`${left.replace('x', String(x))} = ?`)).toBe(Number(right))
       }
     }
   })

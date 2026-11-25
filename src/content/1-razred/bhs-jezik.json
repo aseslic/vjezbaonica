@@ -1,0 +1,412 @@
+{
+  "grade": 1,
+  "id": "bhs-jezik",
+  "name": "Bosanski, hrvatski i srpski jezik i književnost",
+  "shortName": "BHS jezik",
+  "order": 2,
+  "icon": "📖",
+  "color": "#E04A5A",
+  "paper": "lines",
+  "topics": [
+    {
+      "id": "glasovi-i-slova",
+      "title": "Glasovi i slova",
+      "description": "Prvi glas u riječi, slovo za glas",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Kad govorimo, izgovaramo **glasove**. Kad pišemo, glas zapisujemo **slovom**."
+        },
+        {
+          "type": "example",
+          "text": "🐝 **p**čela → prvi glas je P\n🦉 **s**ova → prvi glas je S\n🍎 **j**abuka → prvi glas je J"
+        },
+        {
+          "type": "remember",
+          "text": "Neke glasove pišemo sa dva znaka: **lj**, **nj** i **dž**. To je ipak jedno slovo."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kojim glasom počinje riječ?",
+          "options": ["M", "S", "K", "A"],
+          "answer": "M",
+          "picture": "🐭",
+          "explanation": "miš"
+        },
+        {
+          "type": "choice",
+          "question": "Kojim glasom počinje riječ?",
+          "options": ["K", "M", "L", "R"],
+          "answer": "K",
+          "picture": "🏠",
+          "explanation": "kuća"
+        },
+        {
+          "type": "choice",
+          "question": "Kojim glasom počinje riječ?",
+          "options": ["R", "P", "B", "D"],
+          "answer": "R",
+          "picture": "🐟",
+          "explanation": "riba"
+        },
+        {
+          "type": "choice",
+          "question": "Kojim glasom počinje riječ?",
+          "options": ["S", "Z", "C", "Š"],
+          "answer": "S",
+          "picture": "☀️",
+          "explanation": "sunce"
+        },
+        {
+          "type": "choice",
+          "question": "Kojim glasom počinje riječ?",
+          "options": ["L", "Lj", "N", "M"],
+          "answer": "L",
+          "picture": "🦁",
+          "explanation": "lav"
+        },
+        {
+          "type": "choice",
+          "question": "Kojim glasom počinje riječ?",
+          "options": ["Č", "Ć", "C", "Š"],
+          "answer": "Č",
+          "picture": "🍵",
+          "explanation": "čaj"
+        },
+        {
+          "type": "choice",
+          "question": "Kojim glasom završava riječ „nos“?",
+          "options": ["S", "N", "O", "Z"],
+          "answer": "S",
+          "picture": "👃"
+        },
+        {
+          "type": "choice",
+          "question": "Koje slovo nedostaje: _ABUKA",
+          "options": ["J", "L", "R", "T"],
+          "answer": "J",
+          "picture": "🍎"
+        }
+      ]
+    },
+    {
+      "id": "velika-i-mala-slova",
+      "title": "Velika i mala štampana slova",
+      "description": "A a, B b, C c…",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Svako slovo ima **veliko** i **malo** štampano slovo."
+        },
+        {
+          "type": "example",
+          "text": "A a, B b, C c, Č č, Ć ć, D d, Dž dž, Đ đ, E e, F f\nG g, H h, I i, J j, K k, L l, Lj lj, M m, N n, Nj nj\nO o, P p, R r, S s, Š š, T t, U u, V v, Z z, Ž ž"
+        },
+        {
+          "type": "remember",
+          "text": "Velikim slovom počinjemo **rečenicu** i pišemo **imena**: Amra, Tarik, Sarajevo."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koje je malo slovo od G?",
+          "options": ["g", "q", "j", "d"],
+          "answer": "g"
+        },
+        {
+          "type": "choice",
+          "question": "Koje je veliko slovo od e?",
+          "options": ["E", "F", "B", "A"],
+          "answer": "E"
+        },
+        {
+          "type": "choice",
+          "question": "Koje je malo slovo od Š?",
+          "options": ["š", "s", "ž", "č"],
+          "answer": "š"
+        },
+        {
+          "type": "choice",
+          "question": "Koje je veliko slovo od nj?",
+          "options": ["Nj", "N", "Lj", "M"],
+          "answer": "Nj"
+        },
+        {
+          "type": "choice",
+          "question": "Kako pravilno pišemo ime?",
+          "options": ["Lejla", "lejla", "lEJLA"],
+          "answer": "Lejla",
+          "shuffle": false
+        },
+        {
+          "type": "truefalse",
+          "statement": "Ime grada pišemo velikim početnim slovom: Sarajevo.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "slogovi",
+      "title": "Slogovi",
+      "description": "Rastavljanje riječi na slogove",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Riječi izgovaramo u dijelovima koje zovemo **slogovi**. Možemo ih otpljeskati: ma-ma, ku-ća, lo-pta."
+        },
+        {
+          "type": "example",
+          "text": "lav → 1 slog\nma-ma → 2 sloga\nja-bu-ka → 3 sloga\nle-pti-ri-ca → 4 sloga"
+        },
+        {
+          "type": "remember",
+          "text": "Svaki slog ima jedan **samoglasnik**: a, e, i, o ili u."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koliko slogova ima riječ „lopta“?",
+          "options": ["2", "1", "3", "4"],
+          "answer": "2",
+          "picture": "⚽",
+          "explanation": "lo-pta"
+        },
+        {
+          "type": "choice",
+          "question": "Koliko slogova ima riječ „jabuka“?",
+          "options": ["3", "2", "4", "1"],
+          "answer": "3",
+          "picture": "🍎",
+          "explanation": "ja-bu-ka"
+        },
+        {
+          "type": "choice",
+          "question": "Koliko slogova ima riječ „miš“?",
+          "options": ["1", "2", "3", "4"],
+          "answer": "1",
+          "picture": "🐭"
+        },
+        {
+          "type": "choice",
+          "question": "Koliko slogova ima riječ „kornjača“?",
+          "options": ["3", "2", "4", "5"],
+          "answer": "3",
+          "picture": "🐢",
+          "explanation": "kor-nja-ča"
+        },
+        {
+          "type": "choice",
+          "question": "Koji slog nedostaje: ku _ ?",
+          "options": ["ća", "ma", "pa", "la"],
+          "answer": "ća",
+          "picture": "🏠",
+          "explanation": "ku-ća"
+        },
+        {
+          "type": "order",
+          "question": "Složi riječ od slogova.",
+          "items": ["so", "va"],
+          "explanation": "so-va"
+        },
+        {
+          "type": "order",
+          "question": "Složi riječ od slogova.",
+          "items": ["ja", "bu", "ka"],
+          "explanation": "ja-bu-ka"
+        }
+      ]
+    },
+    {
+      "id": "rijec-i-recenica",
+      "title": "Riječ i rečenica",
+      "description": "Veliko slovo na početku i tačka na kraju",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Od slova pravimo **riječi**, a od riječi **rečenice**."
+        },
+        {
+          "type": "remember",
+          "text": "Rečenicu počinjemo **velikim slovom**, a završavamo **tačkom**: Mačka spava."
+        },
+        {
+          "type": "text",
+          "text": "Između riječi ostavljamo **razmak**."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "order",
+          "question": "Složi rečenicu.",
+          "items": ["Pas", "laje."]
+        },
+        {
+          "type": "order",
+          "question": "Složi rečenicu.",
+          "items": ["Mama", "kuha", "ručak."]
+        },
+        {
+          "type": "order",
+          "question": "Složi rečenicu.",
+          "items": ["Ptica", "pjeva", "na", "grani."]
+        },
+        {
+          "type": "choice",
+          "question": "Koja rečenica je pravilno napisana?",
+          "options": ["Sunce sija.", "sunce sija.", "Sunce sija", "sunce sija"],
+          "answer": "Sunce sija.",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Šta stavljamo na kraj rečenice?",
+          "options": ["tačku", "zarez", "ništa", "crticu"],
+          "answer": "tačku"
+        },
+        {
+          "type": "choice",
+          "question": "Koliko riječi ima rečenica „Ena crta kuću.“?",
+          "options": ["3", "2", "4", "5"],
+          "answer": "3"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Rečenicu počinjemo malim slovom.",
+          "answer": false,
+          "explanation": "Rečenicu počinjemo velikim slovom."
+        }
+      ]
+    },
+    {
+      "id": "rijeci-i-znacenja",
+      "title": "Riječi i njihova značenja",
+      "description": "Suprotne riječi i riječi u grupe",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Neke riječi imaju **suprotno značenje**: veliko – malo, dan – noć, toplo – hladno, gore – dolje."
+        },
+        {
+          "type": "text",
+          "text": "Riječi možemo složiti u **grupe**: voće (jabuka, kruška), životinje (pas, mačka), boje (crvena, plava)."
+        },
+        {
+          "type": "remember",
+          "text": "Kad ne znaš šta riječ znači, pitaj ili je potraži u **rječniku**."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta je suprotno od „veliko“?",
+          "options": ["malo", "dugo", "lijepo", "novo"],
+          "answer": "malo"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je suprotno od „dan“?",
+          "options": ["noć", "jutro", "podne", "sunce"],
+          "answer": "noć"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je suprotno od „toplo“?",
+          "options": ["hladno", "mokro", "tiho", "brzo"],
+          "answer": "hladno"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je suprotno od „brzo“?",
+          "options": ["sporo", "jako", "visoko", "lako"],
+          "answer": "sporo"
+        },
+        {
+          "type": "choice",
+          "question": "Koja riječ ne pripada grupi: jabuka, kruška, mrkva, šljiva?",
+          "options": ["mrkva", "jabuka", "kruška", "šljiva"],
+          "answer": "mrkva",
+          "explanation": "Mrkva je povrće, a ostalo je voće."
+        },
+        {
+          "type": "choice",
+          "question": "Koja riječ ne pripada grupi: pas, mačka, stolica, krava?",
+          "options": ["stolica", "pas", "mačka", "krava"],
+          "answer": "stolica"
+        },
+        {
+          "type": "choice",
+          "question": "Kojoj grupi pripadaju: crvena, plava, žuta?",
+          "options": ["boje", "voće", "životinje", "dani"],
+          "answer": "boje"
+        }
+      ]
+    },
+    {
+      "id": "price-i-pjesme",
+      "title": "Priča, pjesma, bajka, basna i zagonetka",
+      "description": "Likovi, mjesto i vrijeme radnje",
+      "lesson": [
+        {
+          "type": "list",
+          "items": [
+            "**priča** pripovijeda šta se desilo: ima početak, sredinu i kraj",
+            "**pjesma** ima stihove i **strofe**, često se riječi rimuju",
+            "**bajka** ima čudesne događaje i bića: vile, patuljke, zmajeve",
+            "**basna** je kratka priča u kojoj životinje govore i ima pouku",
+            "**zagonetka** opisuje nešto, a mi pogađamo šta je to"
+          ]
+        },
+        {
+          "type": "remember",
+          "text": "**Likovi** su oni o kojima priča govori. Pitamo se i **gdje** i **kada** se nešto desilo."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "U kojoj priči životinje govore i ima pouku?",
+          "options": ["u basni", "u zagonetki", "u vijesti", "u pismu"],
+          "answer": "u basni"
+        },
+        {
+          "type": "choice",
+          "question": "Gdje se pojavljuju vile i zmajevi?",
+          "options": ["u bajci", "u kalendaru", "u kuharici", "u rječniku"],
+          "answer": "u bajci"
+        },
+        {
+          "type": "choice",
+          "question": "Pogodi: „Bijelo polje, crno sjeme, ko ga sije, mudro zbori.“",
+          "options": ["knjiga i slova", "njiva", "snijeg", "mlijeko"],
+          "answer": "knjiga i slova"
+        },
+        {
+          "type": "choice",
+          "question": "Pogodi: „Ima zube, a ne jede.“",
+          "options": ["češalj", "pas", "vuk", "dijete"],
+          "answer": "češalj"
+        },
+        {
+          "type": "choice",
+          "question": "Kako zovemo one o kojima priča govori?",
+          "options": ["likovi", "slogovi", "strofe", "rime"],
+          "answer": "likovi"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Pjesma ima strofe.",
+          "answer": true
+        },
+        {
+          "type": "order",
+          "question": "Poredaj dijelove priče.",
+          "items": ["početak", "sredina", "kraj"]
+        }
+      ]
+    }
+  ]
+}

@@ -8,53 +8,345 @@
   "paper": "grid",
   "topics": [
     {
-      "id": "sabiranje-i-oduzimanje-do-1000",
-      "title": "Sabiranje i oduzimanje do 1000",
-      "description": "Stotice, desetice i jedinice",
+      "id": "sabiranje-i-oduzimanje-do-100",
+      "title": "Sabiranje i oduzimanje do 100",
+      "description": "S prelazom preko desetice",
       "lesson": [
-        { "type": "text", "text": "Trocifreni brojevi imaju **stotice**, **desetice** i **jedinice**. Broj 352 ima 3 stotice, 5 desetica i 2 jedinice." },
-        { "type": "example", "text": "352 = 300 + 50 + 2" },
-        { "type": "remember", "text": "Sabiramo i oduzimamo redom: stotice sa stoticama, desetice s deseticama, jedinice s jedinicama." },
-        { "type": "example", "text": "245 + 132 = ?\n200 + 100 = 300\n40 + 30 = 70\n5 + 2 = 7\n300 + 70 + 7 = 377" }
+        {
+          "type": "text",
+          "text": "Kad jedinice pređu deseticu, rastavimo broj: prvo dopunimo do pune desetice, pa dodamo ostatak."
+        },
+        {
+          "type": "example",
+          "text": "38 + 7 = ?\n38 + 2 = 40\n40 + 5 = 45",
+          "title": "Sabiranje s prelazom"
+        },
+        {
+          "type": "example",
+          "text": "52 − 8 = ?\n52 − 2 = 50\n50 − 6 = 44",
+          "title": "Oduzimanje s prelazom"
+        },
+        {
+          "type": "remember",
+          "text": "Rezultat oduzimanja provjeravamo sabiranjem: 44 + 8 = 52."
+        }
       ],
       "exercises": [
         {
           "type": "input",
           "instruction": "Tekstualni zadatak",
-          "question": "U školi je 245 dječaka i 238 djevojčica. Koliko je učenika u školi?",
-          "answer": "483",
-          "explanation": "245 + 238 = 483"
+          "question": "Haris je pročitao 18 stranica, a Lejla 7 stranica više. Koliko je stranica pročitala Lejla?",
+          "answer": "25",
+          "explanation": "„Više“ znači da sabiramo: 18 + 7 = 25."
         },
         {
           "type": "input",
           "instruction": "Tekstualni zadatak",
-          "question": "Knjiga ima 320 stranica. Mia je pročitala 145 stranica. Koliko joj je još stranica ostalo da pročita?",
-          "answer": "175",
-          "explanation": "320 − 145 = 175"
+          "question": "Na drvetu je bilo 50 jabuka. Tarik je ubrao 23 jabuke. Koliko je jabuka ostalo na drvetu?",
+          "answer": "27",
+          "explanation": "50 − 23 = 27"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Ena je imala 70 feninga. Kupila je bombonu za 45 feninga. Koliko joj je feninga ostalo?",
+          "answer": "25",
+          "explanation": "70 − 45 = 25"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Luka ima 9 godina. Njegov djed je 58 godina stariji. Koliko godina ima djed?",
+          "answer": "67",
+          "explanation": "„Stariji“ znači da sabiramo: 9 + 58 = 67."
+        },
+        {
+          "type": "choice",
+          "question": "Koji račun ima rezultat 50?",
+          "options": ["25 + 25", "30 + 30", "60 − 20", "45 + 15"],
+          "answer": "25 + 25"
+        },
+        {
+          "type": "input",
+          "question": "47 + 36 = ?",
+          "answer": "83",
+          "explanation": "40 + 30 = 70, 7 + 6 = 13, pa je 70 + 13 = 83."
+        },
+        {
+          "type": "input",
+          "question": "91 − 57 = ?",
+          "answer": "34",
+          "explanation": "91 − 50 = 41, pa je 41 − 7 = 34."
         }
       ],
       "generators": [
-        { "type": "addition", "max": 1000, "count": 15 },
-        { "type": "subtraction", "max": 1000, "count": 15 }
+        {
+          "type": "addition",
+          "max": 100
+        },
+        {
+          "type": "subtraction",
+          "max": 100
+        }
+      ]
+    },
+    {
+      "id": "mnozenje-2-3-4-5-10",
+      "title": "Množenje brojevima 2, 3, 4, 5 i 10",
+      "description": "Množenje kao sabiranje jednakih sabiraka",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Množenje je skraćeno sabiranje **jednakih sabiraka**."
+        },
+        {
+          "type": "example",
+          "text": "4 + 4 + 4 = 3 · 4 = 12\nČitamo: tri puta četiri jednako je dvanaest."
+        },
+        {
+          "type": "text",
+          "text": "Brojeve koje množimo zovemo **činioci**, a rezultat množenja zove se **proizvod**."
+        },
+        {
+          "type": "remember",
+          "text": "Činioci mogu zamijeniti mjesta, a proizvod ostaje isti: 3 · 4 = 4 · 3 = 12."
+        },
+        {
+          "type": "text",
+          "text": "Kad broj pomnožimo sa 1, dobijemo isti broj: 7 · 1 = 7. Kad ga pomnožimo sa 0, dobijemo 0: 7 · 0 = 0."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Kako se 5 + 5 + 5 zapisuje kao množenje?",
+          "options": ["3 · 5", "5 · 5", "3 + 5", "15 · 3"],
+          "answer": "3 · 5",
+          "explanation": "Broj 5 sabiramo 3 puta: 3 · 5 = 15."
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "U jednoj kutiji su 4 olovke. Koliko je olovaka u 5 kutija?",
+          "answer": "20",
+          "explanation": "5 · 4 = 20"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Bicikl ima 2 točka. Koliko točkova ima 6 bicikala?",
+          "answer": "12",
+          "explanation": "6 · 2 = 12"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Na jednoj ruci je 5 prstiju. Koliko je prstiju na 4 ruke?",
+          "answer": "20",
+          "explanation": "4 · 5 = 20"
+        },
+        {
+          "type": "truefalse",
+          "statement": "3 · 4 i 4 · 3 imaju isti proizvod.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Proizvod brojeva 10 i 6 je 16.",
+          "answer": false,
+          "explanation": "10 · 6 = 60. Broj 16 je zbir: 10 + 6 = 16."
+        },
+        {
+          "type": "input",
+          "question": "8 · 0 = ?",
+          "answer": "0",
+          "explanation": "Svaki broj pomnožen nulom daje 0."
+        },
+        {
+          "type": "input",
+          "question": "9 · 1 = ?",
+          "answer": "9",
+          "explanation": "Broj pomnožen jedinicom ostaje isti."
+        }
+      ],
+      "generators": [
+        {
+          "type": "multiplication",
+          "tables": [2, 3, 4, 5, 10],
+          "count": 25
+        }
+      ]
+    },
+    {
+      "id": "mnozenje-6-7-8-9",
+      "title": "Množenje brojevima 6, 7, 8 i 9",
+      "description": "Ostatak tablice množenja",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Kad znaš množiti brojevima 2, 3, 4, 5 i 10, lakše ćeš naučiti i ostatak tablice množenja."
+        },
+        {
+          "type": "remember",
+          "text": "Zamjena mjesta činilaca pomaže: ako znaš da je 3 · 7 = 21, znaš i da je 7 · 3 = 21."
+        },
+        {
+          "type": "example",
+          "title": "Trik za množenje sa 9",
+          "text": "6 · 9 = 6 · 10 − 6\n60 − 6 = 54"
+        },
+        {
+          "type": "text",
+          "text": "Vježbaj svaki dan pomalo. Tablica množenja se najbolje uči ponavljanjem."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Sedmica ima 7 dana. Koliko je dana u 4 sedmice?",
+          "answer": "28",
+          "explanation": "4 · 7 = 28"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Pauk ima 8 nogu. Koliko nogu imaju 3 pauka?",
+          "answer": "24",
+          "explanation": "3 · 8 = 24"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "U jednom redu je 6 stolica. Koliko je stolica u 5 redova?",
+          "answer": "30",
+          "explanation": "5 · 6 = 30"
+        },
+        {
+          "type": "truefalse",
+          "statement": "9 · 9 = 81",
+          "answer": true
+        },
+        {
+          "type": "choice",
+          "question": "Koliko je 7 · 8?",
+          "options": ["48", "54", "56", "64"],
+          "answer": "56",
+          "explanation": "7 · 8 = 56"
+        }
+      ],
+      "generators": [
+        {
+          "type": "multiplication",
+          "tables": [6, 7, 8, 9],
+          "count": 25
+        }
       ]
     },
     {
       "id": "tablica-mnozenja",
-      "title": "Tablica množenja (ponavljanje)",
-      "description": "Cijela tablica množenja do 10 · 10",
+      "title": "Cijela tablica množenja",
+      "description": "Množenje do 10 · 10 i veza s dijeljenjem",
       "lesson": [
-        { "type": "remember", "text": "Tablicu množenja treba znati napamet. Vježbaj svaki dan po nekoliko minuta." }
+        {
+          "type": "remember",
+          "text": "Tablicu množenja treba znati napamet. Vježbaj svaki dan po nekoliko minuta."
+        },
+        {
+          "type": "remember",
+          "text": "Množenje i dijeljenje su povezani: 6 · 8 = 48, pa je 48 : 6 = 8 i 48 : 8 = 6."
+        }
       ],
-      "generators": [{ "type": "multiplication", "tables": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "count": 30 }]
+      "generators": [
+        {
+          "type": "multiplication",
+          "tables": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+          "count": 30
+        }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "question": "Koliko je 7 · 7?",
+          "answer": "49"
+        },
+        {
+          "type": "input",
+          "question": "Koliko je 8 · 6?",
+          "answer": "48"
+        },
+        {
+          "type": "choice",
+          "question": "Koji proizvod je 36?",
+          "options": ["4 · 9", "5 · 7", "6 · 5", "3 · 8"],
+          "answer": "4 · 9"
+        },
+        {
+          "type": "truefalse",
+          "statement": "9 · 6 = 6 · 9",
+          "answer": true
+        }
+      ]
     },
     {
       "id": "dijeljenje",
-      "title": "Dijeljenje (ponavljanje)",
-      "description": "Dijeljenje u tablici množenja",
+      "title": "Dijeljenje",
+      "description": "Dijeljenje na jednake dijelove, veza s množenjem",
       "lesson": [
-        { "type": "remember", "text": "Dijeljenje provjeravamo množenjem: 56 : 8 = 7, jer je 7 · 8 = 56." }
+        {
+          "type": "text",
+          "text": "Dijeljenjem nešto dijelimo na **jednake dijelove**."
+        },
+        {
+          "type": "example",
+          "text": "12 bombona podijelimo jednako na troje djece:\n12 : 3 = 4\nSvako dijete dobije 4 bombone."
+        },
+        {
+          "type": "text",
+          "text": "U računu 12 : 3 = 4 broj 12 je **djeljenik**, 3 je **djelilac**, a 4 je **količnik**."
+        },
+        {
+          "type": "remember",
+          "text": "Dijeljenje je obrnuto od množenja. Ako je 3 · 4 = 12, onda je 12 : 3 = 4 i 12 : 4 = 3."
+        },
+        {
+          "type": "remember",
+          "text": "Dijeljenje provjeravamo množenjem: 56 : 8 = 7, jer je 7 · 8 = 56."
+        }
       ],
       "exercises": [
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Mama je 20 jagoda podijelila jednako na četvero djece. Koliko je jagoda dobilo svako dijete?",
+          "answer": "5",
+          "explanation": "20 : 4 = 5"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Učiteljica je 18 učenika podijelila u grupe po 3 učenika. Koliko je grupa?",
+          "answer": "6",
+          "explanation": "18 : 3 = 6"
+        },
+        {
+          "type": "input",
+          "instruction": "Tekstualni zadatak",
+          "question": "Djed je 30 jaja složio u kutije po 10 jaja. Koliko je kutija?",
+          "answer": "3",
+          "explanation": "30 : 10 = 3"
+        },
+        {
+          "type": "choice",
+          "question": "Kako se zove rezultat dijeljenja?",
+          "options": ["zbir", "razlika", "proizvod", "količnik"],
+          "answer": "količnik"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Ako je 6 · 7 = 42, onda je 42 : 7 = 6.",
+          "answer": true
+        },
         {
           "type": "input",
           "instruction": "Tekstualni zadatak",
@@ -63,7 +355,439 @@
           "explanation": "48 : 6 = 8"
         }
       ],
-      "generators": [{ "type": "division", "tables": [2, 3, 4, 5, 6, 7, 8, 9, 10], "count": 30 }]
+      "generators": [
+        {
+          "type": "division",
+          "tables": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+          "count": 30
+        }
+      ]
+    },
+    {
+      "id": "vantablicno-mnozenje-i-dijeljenje",
+      "title": "Vantablično množenje i dijeljenje",
+      "description": "Množenje zbira, npr. 23 · 3 i 84 : 4",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Kad množimo dvocifreni broj, rastavimo ga na desetice i jedinice i pomnožimo svaki dio: to je **množenje zbira**."
+        },
+        {
+          "type": "example",
+          "text": "23 · 3 = (20 + 3) · 3\n= 20 · 3 + 3 · 3\n= 60 + 9 = 69",
+          "title": "Množenje zbira"
+        },
+        {
+          "type": "example",
+          "text": "84 : 4 = (80 + 4) : 4\n= 80 : 4 + 4 : 4\n= 20 + 1 = 21",
+          "title": "Dijeljenje zbira"
+        },
+        {
+          "type": "remember",
+          "text": "Množenje provjeravamo dijeljenjem, a dijeljenje množenjem: 21 · 4 = 84."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "question": "U jednoj kutiji je 12 jaja. Koliko je jaja u 4 kutije?",
+          "answer": "48"
+        },
+        {
+          "type": "input",
+          "question": "96 učenika je raspoređeno u 3 jednake grupe. Koliko je učenika u grupi?",
+          "answer": "32"
+        },
+        {
+          "type": "input",
+          "question": "15 · 5 = ?",
+          "answer": "75",
+          "explanation": "10 · 5 + 5 · 5 = 50 + 25 = 75."
+        }
+      ],
+      "generators": [
+        {
+          "type": "long-multiplication",
+          "max": 100,
+          "count": 12
+        },
+        {
+          "type": "long-division",
+          "max": 100,
+          "count": 12
+        }
+      ]
+    },
+    {
+      "id": "redoslijed-racunskih-radnji",
+      "title": "Redoslijed računskih radnji",
+      "description": "Zagrade, množenje i dijeljenje prije sabiranja i oduzimanja",
+      "lesson": [
+        {
+          "type": "remember",
+          "text": "Prvo računamo ono u **zagradi**. Zatim **množimo i dijelimo**, a na kraju **sabiramo i oduzimamo**."
+        },
+        {
+          "type": "example",
+          "text": "5 + 3 · 4 = 5 + 12 = 17\n(5 + 3) · 4 = 8 · 4 = 32",
+          "title": "Zagrada mijenja rezultat"
+        },
+        {
+          "type": "text",
+          "text": "Znak **≥** čitamo „veće ili jednako“, a **≤** „manje ili jednako“."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "question": "5 + 3 · 4 = ?",
+          "answer": "17",
+          "explanation": "Prvo množimo: 3 · 4 = 12, pa 5 + 12 = 17."
+        },
+        {
+          "type": "input",
+          "question": "(5 + 3) · 4 = ?",
+          "answer": "32",
+          "explanation": "Prvo zagrada: 5 + 3 = 8, pa 8 · 4 = 32."
+        },
+        {
+          "type": "input",
+          "question": "20 − 12 : 3 = ?",
+          "answer": "16",
+          "explanation": "Prvo dijelimo: 12 : 3 = 4, pa 20 − 4 = 16."
+        },
+        {
+          "type": "input",
+          "question": "(20 − 12) : 2 = ?",
+          "answer": "4",
+          "explanation": "20 − 12 = 8, pa 8 : 2 = 4."
+        },
+        {
+          "type": "input",
+          "question": "6 · 5 − 10 = ?",
+          "answer": "20"
+        },
+        {
+          "type": "input",
+          "question": "40 : (2 + 6) = ?",
+          "answer": "5"
+        },
+        {
+          "type": "truefalse",
+          "statement": "9 ≥ 9",
+          "answer": true,
+          "explanation": "9 je jednako 9, pa je tačno „veće ili jednako“."
+        },
+        {
+          "type": "truefalse",
+          "statement": "7 ≤ 5",
+          "answer": false,
+          "explanation": "7 je veće od 5."
+        }
+      ]
+    },
+    {
+      "id": "jednacine",
+      "title": "Jednačine i nejednačine",
+      "description": "Nepoznati broj x i provjera",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "U **jednačini** tražimo nepoznati broj, koji označavamo slovom **x**."
+        },
+        {
+          "type": "example",
+          "text": "x + 25 = 60\nx = 60 − 25\nx = 35\nProvjera: 35 + 25 = 60 ✓",
+          "title": "Sabiranje → oduzimanje"
+        },
+        {
+          "type": "example",
+          "text": "x · 4 = 28\nx = 28 : 4\nx = 7\nProvjera: 7 · 4 = 28 ✓",
+          "title": "Množenje → dijeljenje"
+        },
+        {
+          "type": "remember",
+          "text": "Nepoznati broj nalazimo **suprotnom** računskom radnjom. Uvijek uradi **provjeru**."
+        },
+        {
+          "type": "text",
+          "text": "U **nejednačini** tražimo sve brojeve koji odgovaraju: x + 3 < 7 vrijedi za x = 0, 1, 2 i 3."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koji brojevi rješavaju x + 3 < 7?",
+          "options": ["0, 1, 2, 3", "4, 5, 6", "7", "svi brojevi"],
+          "answer": "0, 1, 2, 3"
+        },
+        {
+          "type": "choice",
+          "question": "Koji broj ne rješava x + 5 > 9?",
+          "options": ["3", "5", "8", "10"],
+          "answer": "3",
+          "explanation": "3 + 5 = 8, a 8 nije veće od 9."
+        },
+        {
+          "type": "input",
+          "question": "Zamislila sam broj. Kad mu dodam 18, dobijem 50. Koji je to broj?",
+          "answer": "32",
+          "explanation": "x + 18 = 50, x = 32."
+        }
+      ],
+      "generators": [
+        {
+          "type": "equation",
+          "max": 100,
+          "ops": ["+", "−"],
+          "count": 12
+        },
+        {
+          "type": "equation",
+          "max": 100,
+          "ops": ["·", ":"],
+          "count": 12
+        }
+      ]
+    },
+    {
+      "id": "rimske-cifre-i-redni-brojevi",
+      "title": "Rimske cifre i redni brojevi do 100",
+      "description": "I, V, X, L, C",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Za brojeve do 100 koristimo i znakove **L** = 50 i **C** = 100."
+        },
+        {
+          "type": "example",
+          "text": "XL = 40, L = 50, LX = 60\nXC = 90, C = 100, XCIX = 99"
+        },
+        {
+          "type": "remember",
+          "text": "Redni broj pišemo s tačkom: 21. mjesto, 100. rođendan škole."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Koji broj je XL?",
+          "options": ["40", "60", "15", "90"],
+          "answer": "40"
+        },
+        {
+          "type": "choice",
+          "question": "Koji broj je LX?",
+          "options": ["60", "40", "110", "15"],
+          "answer": "60"
+        },
+        {
+          "type": "input",
+          "question": "Kako ciframa pišemo „pedeset prvi“?",
+          "answer": "51."
+        }
+      ],
+      "generators": [
+        {
+          "type": "roman",
+          "max": 100,
+          "count": 15
+        }
+      ]
+    },
+    {
+      "id": "mjerne-jedinice",
+      "title": "Mjerne jedinice",
+      "description": "m, dm, cm; kg, dag, g; l, dl, cl; vrijeme i novac",
+      "lesson": [
+        {
+          "type": "example",
+          "text": "1 m = 10 dm = 100 cm\n1 dm = 10 cm",
+          "title": "Dužina"
+        },
+        {
+          "type": "example",
+          "text": "1 kg = 100 dag = 1000 g\n1 dag = 10 g",
+          "title": "Masa"
+        },
+        {
+          "type": "example",
+          "text": "1 l = 10 dl = 100 cl\n1 dl = 10 cl",
+          "title": "Zapremina tečnosti"
+        },
+        {
+          "type": "example",
+          "text": "1 godina = 12 mjeseci\n1 sedmica = 7 dana\n1 dan = 24 sata\n1 sat = 60 minuta",
+          "title": "Vrijeme"
+        },
+        {
+          "type": "remember",
+          "text": "1 KM = 100 F (feninga)."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "input",
+          "question": "3 m = ? cm",
+          "answer": "300"
+        },
+        {
+          "type": "input",
+          "question": "5 dm = ? cm",
+          "answer": "50"
+        },
+        {
+          "type": "input",
+          "question": "2 kg = ? dag",
+          "answer": "200"
+        },
+        {
+          "type": "input",
+          "question": "4 dag = ? g",
+          "answer": "40"
+        },
+        {
+          "type": "input",
+          "question": "2 l = ? dl",
+          "answer": "20"
+        },
+        {
+          "type": "input",
+          "question": "3 dl = ? cl",
+          "answer": "30"
+        },
+        {
+          "type": "input",
+          "question": "Koliko dana imaju 3 sedmice?",
+          "answer": "21"
+        },
+        {
+          "type": "input",
+          "question": "Koliko minuta su 2 sata?",
+          "answer": "120"
+        },
+        {
+          "type": "input",
+          "question": "Hljeb košta 1 KM i 50 F. Koliko je to feninga?",
+          "answer": "150"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je duže: 1 m ili 90 cm?",
+          "options": ["1 m", "90 cm", "jednako"],
+          "answer": "1 m",
+          "shuffle": false
+        }
+      ]
+    },
+    {
+      "id": "geometrija",
+      "title": "Duž, poluprava, prava, krug i kružnica",
+      "description": "Linije i kružnica",
+      "lesson": [
+        {
+          "type": "list",
+          "items": [
+            "**Duž** ima početak i kraj: duž AB.",
+            "**Poluprava** ima početak, a nema kraja.",
+            "**Prava** nema ni početak ni kraj. Označavamo je malim slovom, npr. prava p."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "**Kružnica** je zatvorena kriva linija. Sve njene tačke jednako su udaljene od **središta**. **Krug** je dio ravni omeđen kružnicom. Kružnicu crtamo **šestarom**."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "Šta ima početak i kraj?",
+          "options": ["duž", "prava", "poluprava"],
+          "answer": "duž",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Šta ima početak, a nema kraja?",
+          "options": ["poluprava", "duž", "prava"],
+          "answer": "poluprava",
+          "shuffle": false
+        },
+        {
+          "type": "choice",
+          "question": "Čime crtamo kružnicu?",
+          "options": ["šestarom", "lenjirom", "trouglom", "gumicom"],
+          "answer": "šestarom"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Prava nema ni početak ni kraj.",
+          "answer": true
+        },
+        {
+          "type": "truefalse",
+          "statement": "Krug i kružnica su isto.",
+          "answer": false,
+          "explanation": "Kružnica je linija, a krug je dio ravni unutar nje."
+        },
+        {
+          "type": "input",
+          "question": "Duž AB je 6 cm, a duž CD 2 cm duža. Koliko je duga duž CD (u cm)?",
+          "answer": "8"
+        }
+      ]
+    },
+    {
+      "id": "podaci",
+      "title": "Podaci: tabela i grafikon",
+      "description": "Kružni dijagram i linijski grafikon",
+      "lesson": [
+        {
+          "type": "text",
+          "text": "Podatke možemo prikazati **tabelom**, **kružnim dijagramom** (krug podijeljen na dijelove) ili **linijskim grafikonom** (tačke spojene linijom)."
+        },
+        {
+          "type": "example",
+          "text": "Ponedjeljak 5 °C\nUtorak 8 °C\nSrijeda 6 °C\nČetvrtak 10 °C",
+          "title": "Temperatura u podne"
+        },
+        {
+          "type": "remember",
+          "text": "Na linijskom grafikonu lijepo se vidi kako se nešto **mijenja**: raste ili opada."
+        }
+      ],
+      "exercises": [
+        {
+          "type": "choice",
+          "question": "U koji dan je u podne bilo najtoplije?",
+          "options": ["četvrtak", "ponedjeljak", "utorak", "srijeda"],
+          "answer": "četvrtak",
+          "instruction": "Pogledaj tabelu: pon 5 °C, uto 8 °C, sri 6 °C, čet 10 °C"
+        },
+        {
+          "type": "input",
+          "question": "Za koliko stepeni je u utorak bilo toplije nego u ponedjeljak?",
+          "answer": "3",
+          "instruction": "Pogledaj tabelu: pon 5 °C, uto 8 °C, sri 6 °C, čet 10 °C"
+        },
+        {
+          "type": "choice",
+          "question": "Šta je kružni dijagram?",
+          "options": ["krug podijeljen na dijelove", "tačke spojene linijom", "spisak riječi", "brojevna linija"],
+          "answer": "krug podijeljen na dijelove"
+        },
+        {
+          "type": "choice",
+          "question": "Pola kruga na dijagramu „omiljeno voće“ je jabuka. Koliko je to od svih učenika?",
+          "options": ["polovina", "četvrtina", "svi", "niko"],
+          "answer": "polovina"
+        },
+        {
+          "type": "truefalse",
+          "statement": "Linijski grafikon pokazuje kako se nešto mijenja.",
+          "answer": true
+        }
+      ]
     }
   ]
 }

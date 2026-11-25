@@ -19,11 +19,15 @@ const GENERATOR_MIN_MAX: Record<string, number> = {
   'long-multiplication': 100,
   'long-division': 100,
   'division-remainder': 20,
+  roman: 5,
+  equation: 10,
 }
 const TABLE_GENERATORS = ['multiplication', 'division']
 const DIGIT_GENERATORS = ['long-multiplication', 'long-division', 'division-remainder']
 const ROUNDING_TO = [10, 100, 1000]
 const UNIT_GROUPS = ['length', 'mass', 'volume']
+const EQUATION_OPS = ['+', '−', '·', ':']
+const ROMAN_MAX = 3999
 const GENERATOR_TYPES = [...Object.keys(GENERATOR_MIN_MAX), ...TABLE_GENERATORS, 'rounding', 'unit-conversion']
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const COLOR_PATTERN = /^#[0-9a-fA-F]{6}$/
@@ -139,6 +143,16 @@ function validateGenerator(gen: unknown, where: string, errors: string[]) {
     if (!ok) {
       errors.push(`${where}: "units" mora biti lista od: "length" (dužina), "mass" (masa), "volume" (zapremina).`)
     }
+  }
+  if ((type === 'addition' || type === 'subtraction') && 'carry' in gen && typeof gen.carry !== 'boolean') {
+    errors.push(`${where}: "carry" mora biti true ili false (false znači bez prelaza preko desetice).`)
+  }
+  if (type === 'roman' && isPositiveInt(gen.max) && gen.max > ROMAN_MAX) {
+    errors.push(`${where}: "max" za rimske cifre može biti najviše ${ROMAN_MAX}.`)
+  }
+  if (type === 'equation') {
+    const ok = Array.isArray(gen.ops) && gen.ops.length > 0 && gen.ops.every((o) => EQUATION_OPS.includes(String(o)))
+    if (!ok) errors.push(`${where}: "ops" mora biti lista znakova od: ${EQUATION_OPS.join(' ')}.`)
   }
   if ('count' in gen && !isPositiveInt(gen.count)) errors.push(`${where}: "count" mora biti pozitivan cijeli broj.`)
 }
